@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "bou:block/animal_chest_inactive"
+    },
+    "facing=east": {
+      "model": "bou:block/animal_chest_inactive",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "bou:block/animal_chest_inactive",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bou:block/animal_chest_inactive",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:item_frame"
+    },
+    "b": {
+      "tag": "forge:ingot"
+    }
+  },
+  "result": {
+    "item": "bou:vendor_chest_key",
+    "count": 1
+  }
+}

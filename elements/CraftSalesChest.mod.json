@@ -1,0 +1,49 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.BOOK"
+      },
+      {
+        "value": "TAG:forge:trapdoor"
+      },
+      {
+        "value": "Items.NAME_TAG"
+      },
+      {
+        "value": "Items.ITEM_FRAME"
+      },
+      {
+        "value": "CUSTOM:VendorChestKey"
+      },
+      {
+        "value": "Items.ITEM_FRAME"
+      },
+      {
+        "value": "TAG:forge:planks"
+      },
+      {
+        "value": "TAG:forge:bookshelf"
+      },
+      {
+        "value": "TAG:forge:planks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AnimalChest"
+    },
+    "name": "craft_sales_chest",
+    "namespace": "mod"
+  }
+}

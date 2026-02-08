@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "1": "animal_chest_portrait",
+        "2": "animal_chest_texture"
+      }
+    }
+  }
+}

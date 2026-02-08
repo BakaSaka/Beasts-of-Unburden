@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "abc",
+    "ded",
+    "fgf"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:book"
+    },
+    "b": {
+      "tag": "forge:trapdoor"
+    },
+    "c": {
+      "item": "minecraft:name_tag"
+    },
+    "d": {
+      "item": "minecraft:item_frame"
+    },
+    "e": {
+      "item": "bou:vendor_chest_key"
+    },
+    "f": {
+      "tag": "forge:planks"
+    },
+    "g": {
+      "tag": "forge:bookshelf"
+    }
+  },
+  "result": {
+    "item": "bou:animal_chest",
+    "count": 1
+  }
+}
