@@ -8,7 +8,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.beastsofunburden.client.model.Modelwolf_villager;
 import net.mcreator.beastsofunburden.client.model.Modelparrot_villager;
+import net.mcreator.beastsofunburden.client.model.Modelfox_villager;
 import net.mcreator.beastsofunburden.client.model.Modelbaby_parrot_villager;
 import net.mcreator.beastsofunburden.client.model.ModelAnimalChest;
 

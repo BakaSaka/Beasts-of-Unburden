@@ -245,8 +245,18 @@
         "name": "variant",
         "type": "integer",
         "value": 13
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "timer",
+        "type": "integer",
+        "value": 0
       }
     ],
+    "onMobTickUpdate": {
+      "name": "BabyParrotGrowth"
+    },
     "onInitialSpawn": {
       "name": "BabyParrotVariationSpawn"
     },

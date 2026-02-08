@@ -29,12 +29,14 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.procedures.BabyParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.BabyParrotGrowthProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
 
 public class BabyParrotVillagerEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(BabyParrotVillagerEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_timer = SynchedEntityData.defineId(BabyParrotVillagerEntity.class, EntityDataSerializers.INT);
 
 	public BabyParrotVillagerEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(BouModEntities.BABY_PARROT_VILLAGER.get(), world);
@@ -57,6 +59,7 @@ public class BabyParrotVillagerEntity extends Monster {
 	protected void defineSynchedData() {
 		super.defineSynchedData();
 		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_timer, 0);
 	}
 
 	@Override
@@ -121,6 +124,7 @@ public class BabyParrotVillagerEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Datavariant", this.entityData.get(DATA_variant));
+		compound.putInt("Datatimer", this.entityData.get(DATA_timer));
 	}
 
 	@Override
@@ -128,6 +132,14 @@ public class BabyParrotVillagerEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Datavariant"))
 			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
+		if (compound.contains("Datatimer"))
+			this.entityData.set(DATA_timer, compound.getInt("Datatimer"));
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		BabyParrotGrowthProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
