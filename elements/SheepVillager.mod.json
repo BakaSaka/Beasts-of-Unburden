@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Sheep Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelsheep_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -23,120 +23,147 @@
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "SheepBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_darkgrey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "SheepDarkGrey"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "SheepGrey"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "SheepWhite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villagerr_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "SheepBrown"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_red.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "SheepRed"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_orange.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
+          "name": "SheepOrange"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_yellow.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotNavy"
+          "name": "SheepYellow"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_lime.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPink"
+          "name": "SheepLime"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_green.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPurple"
+          "name": "SheepGreen"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_cyan.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotWhite"
+          "name": "SheepCyan"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_lightblue.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRainbow"
+          "name": "SheepLightBlue"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
+        "model": "Modelsheep_villager",
+        "texture": "sheep_villager_blue.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotYellow"
+          "name": "SheepBlue"
+        }
+      },
+      {
+        "model": "Modelsheep_villager",
+        "texture": "baby_sheep_villager_purple.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SheepPurple"
+        }
+      },
+      {
+        "model": "Modelsheep_villager",
+        "texture": "baby_sheep_villager_magenta.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SheepMagenta"
+        }
+      },
+      {
+        "model": "Modelsheep_villager",
+        "texture": "baby_sheep_villager_pink.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SheepPink"
         }
       }
     ],
@@ -147,7 +174,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -13108,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -210,10 +237,10 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
@@ -225,16 +252,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.sheep.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.sheep.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.sheep.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.sheep.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,11 +272,11 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 16
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "SheepVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -258,7 +285,7 @@
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.WHEAT"
       }
     ],
     "ranged": false,
@@ -276,13 +303,22 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "badlands"
       },
       {
-        "value": "grove"
+        "value": "meadow"
       },
       {
-        "value": "jungle"
+        "value": "pale_garden"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
       }
     ],
     "spawnInDungeons": false,

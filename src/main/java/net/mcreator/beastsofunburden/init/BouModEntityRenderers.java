@@ -35,5 +35,9 @@ public class BouModEntityRenderers {
 		event.registerEntityRenderer(BouModEntities.SQUID_VILLAGER.get(), SquidVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.HUMAN_VILLAGER.get(), HumanVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.DRAGON_VILLAGER.get(), DragonVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_FOX_VILLAGER.get(), BabyFoxVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_WOLF_VILLAGER.get(), BabyWolfVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_SHEEP_VILLAGER.get(), BabySheepVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_TURTLE_VILLAGER.get(), BabyTurtleVillagerRenderer::new);
 	}
 }

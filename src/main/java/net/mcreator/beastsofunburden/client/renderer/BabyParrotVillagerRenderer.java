@@ -13,7 +13,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.beastsofunburden.procedures.*;
 import net.mcreator.beastsofunburden.entity.BabyParrotVillagerEntity;
-import net.mcreator.beastsofunburden.client.model.Modelparrot_villager;
 import net.mcreator.beastsofunburden.client.model.Modelbaby_parrot_villager;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -90,7 +89,7 @@ public class BabyParrotVillagerRenderer extends MobRenderer<BabyParrotVillagerEn
 				double z = entity.getZ();
 				if (BabyParrotGreenProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelbaby_parrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_parrot_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);

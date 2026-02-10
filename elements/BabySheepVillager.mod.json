@@ -1,0 +1,349 @@
+{
+  "_fv": 79,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Sheep Villager",
+    "mobLabel": "",
+    "mobModelName": "Modelbaby_sheep_villager",
+    "mobModelTexture": "blank_standin_texture.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 0.6
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_black.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepBlack"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_darkgrey.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepDarkGrey"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_grey.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepGrey"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepWhite"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_brown.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepBrown"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_red.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepRed"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_orange.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepOrange"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_yellow.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepYellow"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_lime.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepLime"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_green.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepGreen"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_cyan.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepCyan"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_lightblue.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepLightBlue"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_blue.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepBlue"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_purple.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepPurple"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_magenta.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepMagenta"
+        }
+      },
+      {
+        "model": "Modelbaby_sheep_villager",
+        "texture": "baby_sheep_villager_pink.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "BabySheepPink"
+        }
+      }
+    ],
+    "animations": [],
+    "modelWidth": 0.4,
+    "modelHeight": 1.0,
+    "modelShadowSize": 0.30000000000000004,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": false,
+    "spawnEggBaseColor": {
+      "value": -13108,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -5997981,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.3,
+    "stepHeight": 0.6,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 10,
+    "xpAmount": 0,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": false,
+    "inventorySize": 17,
+    "inventoryStackSize": 99,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": true,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "entity.sheep.ambient"
+    },
+    "hurtSound": {
+      "value": "entity.sheep.hurt"
+    },
+    "deathSound": {
+      "value": "entity.sheep.death"
+    },
+    "stepSound": {
+      "value": "entity.sheep.step"
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "variant",
+        "type": "integer",
+        "value": 16
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "timer",
+        "type": "integer",
+        "value": 0
+      }
+    ],
+    "onMobTickUpdate": {
+      "name": "BabySheepGrowth"
+    },
+    "onInitialSpawn": {
+      "name": "BabySheepVariationSpawn"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [
+      {
+        "value": "Items.WHEAT"
+      }
+    ],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "pale_garden"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      }
+    ],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

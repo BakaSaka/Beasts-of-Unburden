@@ -103,6 +103,22 @@ public class BouModEntities {
 			EntityType.Builder.<DragonVillagerEntity>of(DragonVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonVillagerEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BabyFoxVillagerEntity>> BABY_FOX_VILLAGER = register("baby_fox_villager",
+			EntityType.Builder.<BabyFoxVillagerEntity>of(BabyFoxVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyFoxVillagerEntity::new)
+
+					.sized(0.6f, 1f));
+	public static final RegistryObject<EntityType<BabyWolfVillagerEntity>> BABY_WOLF_VILLAGER = register("baby_wolf_villager",
+			EntityType.Builder.<BabyWolfVillagerEntity>of(BabyWolfVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyWolfVillagerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BabySheepVillagerEntity>> BABY_SHEEP_VILLAGER = register("baby_sheep_villager",
+			EntityType.Builder.<BabySheepVillagerEntity>of(BabySheepVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabySheepVillagerEntity::new)
+
+					.sized(0.4f, 1f));
+	public static final RegistryObject<EntityType<BabyTurtleVillagerEntity>> BABY_TURTLE_VILLAGER = register("baby_turtle_villager",
+			EntityType.Builder.<BabyTurtleVillagerEntity>of(BabyTurtleVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyTurtleVillagerEntity::new)
+
+					.sized(0.4f, 1.1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -134,6 +150,10 @@ public class BouModEntities {
 			SquidVillagerEntity.init();
 			HumanVillagerEntity.init();
 			DragonVillagerEntity.init();
+			BabyFoxVillagerEntity.init();
+			BabyWolfVillagerEntity.init();
+			BabySheepVillagerEntity.init();
+			BabyTurtleVillagerEntity.init();
 		});
 	}
 
@@ -160,5 +180,9 @@ public class BouModEntities {
 		event.put(SQUID_VILLAGER.get(), SquidVillagerEntity.createAttributes().build());
 		event.put(HUMAN_VILLAGER.get(), HumanVillagerEntity.createAttributes().build());
 		event.put(DRAGON_VILLAGER.get(), DragonVillagerEntity.createAttributes().build());
+		event.put(BABY_FOX_VILLAGER.get(), BabyFoxVillagerEntity.createAttributes().build());
+		event.put(BABY_WOLF_VILLAGER.get(), BabyWolfVillagerEntity.createAttributes().build());
+		event.put(BABY_SHEEP_VILLAGER.get(), BabySheepVillagerEntity.createAttributes().build());
+		event.put(BABY_TURTLE_VILLAGER.get(), BabyTurtleVillagerEntity.createAttributes().build());
 	}
 }

@@ -50,7 +50,7 @@
         }
       },
       {
-        "model": "Modelparrot_villager",
+        "model": "Modelbaby_parrot_villager",
         "texture": "baby_parrot_green_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
@@ -145,7 +145,7 @@
     "modelHeight": 1.8,
     "modelShadowSize": 0.3,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -15952116,
       "falpha": 0.0
@@ -191,7 +191,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 10,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -277,7 +277,7 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "misc",

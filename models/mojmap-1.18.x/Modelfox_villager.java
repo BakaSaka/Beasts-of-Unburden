@@ -12,6 +12,7 @@ public class Modelfox_villager<T extends Entity> extends EntityModel<T> {
 	private final ModelPart headwear;
 	private final ModelPart headwear2;
 	private final ModelPart body;
+	private final ModelPart tail;
 	private final ModelPart bodywear;
 	private final ModelPart arms;
 	private final ModelPart mirrored;
@@ -24,6 +25,7 @@ public class Modelfox_villager<T extends Entity> extends EntityModel<T> {
 		this.headwear = root.getChild("headwear");
 		this.headwear2 = root.getChild("headwear2");
 		this.body = root.getChild("body");
+		this.tail = this.body.getChild("tail");
 		this.bodywear = root.getChild("bodywear");
 		this.arms = root.getChild("arms");
 		this.mirrored = this.arms.getChild("mirrored");
@@ -55,14 +57,16 @@ public class Modelfox_villager<T extends Entity> extends EntityModel<T> {
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, 0.0F));
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body",
-				CubeListBuilder.create().texOffs(12, 16)
-						.addBox(-4.0F, 0.0F, -3.0F, 8.0F, 12.0F, 6.0F, new CubeDeformation(0.0F)).texOffs(50, 0)
-						.addBox(-1.5F, 8.0F, 3.0F, 3.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(46, 5)
-						.addBox(-2.5F, 8.0F, 5.0F, 5.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(46, 14)
-						.addBox(-2.5F, 9.0F, 9.0F, 5.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(49, 23)
-						.addBox(-1.5F, 10.0F, 13.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(12, 16).addBox(
+				-4.0F, 0.0F, -3.0F, 8.0F, 12.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+		PartDefinition tail = body.addOrReplaceChild("tail",
+				CubeListBuilder.create().texOffs(50, 0)
+						.addBox(-1.5F, -1.5F, 0.0F, 3.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(46, 5)
+						.addBox(-2.5F, -1.5F, 2.0F, 5.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(46, 14)
+						.addBox(-2.5F, -0.5F, 6.0F, 5.0F, 5.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(49, 23)
+						.addBox(-1.5F, 0.5F, 10.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offset(0.0F, 9.5F, 3.0F));
 
 		PartDefinition bodywear = partdefinition.addOrReplaceChild("bodywear", CubeListBuilder.create().texOffs(0, 38)
 				.addBox(-4.0F, 0.0F, -3.0F, 8.0F, 20.0F, 6.0F, new CubeDeformation(0.5F)),
@@ -116,5 +120,6 @@ public class Modelfox_villager<T extends Entity> extends EntityModel<T> {
 		this.headwear2.xRot = headPitch / (180F / (float) Math.PI);
 		this.left_leg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.right_leg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.tail.xRot = netHeadYaw / (180F / (float) Math.PI);
 	}
 }
