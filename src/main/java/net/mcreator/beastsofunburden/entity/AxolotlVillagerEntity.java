@@ -21,6 +21,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +37,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -53,7 +53,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.AxolotlVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.AxolotlFindWaterProcedure;
+import net.mcreator.beastsofunburden.procedures.AxolotlBreedInWaterProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -66,7 +68,8 @@ import io.netty.buffer.Unpooled;
 @Mod.EventBusSubscriber
 public class AxolotlVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(AxolotlVillagerEntity.class, EntityDataSerializers.INT);
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("jungle"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("basalt_deltas"), new ResourceLocation("beach"), new ResourceLocation("plains"), new ResourceLocation("deep_lukewarm_ocean"),
+			new ResourceLocation("dripstone_caves"), new ResourceLocation("lukewarm_ocean"), new ResourceLocation("lush_caves"), new ResourceLocation("swamp"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -94,7 +97,7 @@ public class AxolotlVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_variant, 8);
 	}
 
 	@Override
@@ -103,13 +106,14 @@ public class AxolotlVillagerEntity extends Animal {
 		this.getNavigation().getNodeEvaluator().setCanOpenDoors(true);
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.2));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.goalSelector.addGoal(6, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(9, new BreedGoal(this, 1));
+		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 2, 40));
+		this.goalSelector.addGoal(4, new FollowBoatGoal(this));
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(7, new OpenDoorGoal(this, false));
+		this.goalSelector.addGoal(8, new OpenDoorGoal(this, true));
+		this.goalSelector.addGoal(9, new MoveBackToVillageGoal(this, 0.6, false));
+		this.goalSelector.addGoal(10, new BreedGoal(this, 1));
 	}
 
 	@Override
@@ -124,35 +128,42 @@ public class AxolotlVillagerEntity extends Animal {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.axolotl.idle_air"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.axolotl.idle_air")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.axolotl.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.axolotl.death"));
 	}
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		if (damagesource == DamageSource.FALL)
+		if (damagesource == DamageSource.DROWN)
+			return false;
+		if (damagesource.isExplosion())
 			return false;
 		return super.hurt(damagesource, amount);
 	}
 
 	@Override
+	public boolean ignoreExplosion() {
+		return true;
+	}
+
+	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ParrotVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		AxolotlVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -201,7 +212,7 @@ public class AxolotlVillagerEntity extends Animal {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Parrot Villager");
+					return new TextComponent("Axolotl Villager");
 				}
 
 				@Override
@@ -219,7 +230,20 @@ public class AxolotlVillagerEntity extends Animal {
 			});
 		}
 		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		AxolotlBreedInWaterProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		AxolotlFindWaterProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -231,7 +255,17 @@ public class AxolotlVillagerEntity extends Animal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:seed"))).test(stack);
+		return Ingredient.of(new ItemStack(Items.TROPICAL_FISH_BUCKET), new ItemStack(Items.TROPICAL_FISH)).test(stack);
+	}
+
+	@Override
+	public boolean canBreatheUnderwater() {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level;
+		Entity entity = this;
+		return true;
 	}
 
 	public static void init() {

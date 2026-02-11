@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Llama Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelllama_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,111 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.1
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_cream.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "LlamaCream"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "LlamaWhite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "LlamaBrown"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_eggshell.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "LlamaEggshell"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "LlamaGrey"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "LlamaBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_chocolate.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
+          "name": "LlamaChocolate"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_tan.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotNavy"
+          "name": "LlamaTan"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_red.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPink"
+          "name": "LlamaRed"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
+        "model": "Modelllama_villager",
+        "texture": "llama_villager_pink.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "LlamaPink"
         }
       }
     ],
     "animations": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.7999999999999999,
+    "modelHeight": 1.0,
+    "modelShadowSize": 0.7,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -1991161,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -209,8 +182,8 @@
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": false,
-    "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToArrows": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
@@ -225,16 +198,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.llama.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.llama.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.llama.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.llama.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,11 +218,11 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 10
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "LlamaVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -258,7 +231,10 @@
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Blocks.HAY_BLOCK"
+      },
+      {
+        "value": "TAG:forge:hay_bale"
       }
     ],
     "ranged": false,
@@ -276,13 +252,37 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "badlands"
       },
       {
-        "value": "grove"
+        "value": "desert"
       },
       {
-        "value": "jungle"
+        "value": "mutated_mesa"
+      },
+      {
+        "value": "jagged_peaks"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "snowy_slopes"
+      },
+      {
+        "value": "stony_peaks"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mutated_savanna"
+      },
+      {
+        "value": "wooded_badlands_plateau"
       }
     ],
     "spawnInDungeons": false,

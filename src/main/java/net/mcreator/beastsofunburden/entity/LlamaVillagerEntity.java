@@ -12,10 +12,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.crafting.CompoundIngredient;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -23,6 +25,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.animal.Animal;
@@ -53,7 +56,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.LlamaVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -66,7 +69,9 @@ import io.netty.buffer.Unpooled;
 @Mod.EventBusSubscriber
 public class LlamaVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(LlamaVillagerEntity.class, EntityDataSerializers.INT);
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("jungle"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("badlands"), new ResourceLocation("desert"), new ResourceLocation("eroded_badlands"), new ResourceLocation("jagged_peaks"),
+			new ResourceLocation("savanna_plateau"), new ResourceLocation("snowy_slopes"), new ResourceLocation("stony_peaks"), new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("windswept_hills"),
+			new ResourceLocation("windswept_savanna"), new ResourceLocation("wooded_badlands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -94,7 +99,7 @@ public class LlamaVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_variant, 10);
 	}
 
 	@Override
@@ -124,27 +129,27 @@ public class LlamaVillagerEntity extends Animal {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.llama.ambient"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.llama.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.llama.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.llama.death"));
 	}
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		if (damagesource == DamageSource.FALL)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		return super.hurt(damagesource, amount);
 	}
@@ -152,7 +157,7 @@ public class LlamaVillagerEntity extends Animal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ParrotVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		LlamaVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -201,7 +206,7 @@ public class LlamaVillagerEntity extends Animal {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Parrot Villager");
+					return new TextComponent("Llama Villager");
 				}
 
 				@Override
@@ -231,7 +236,7 @@ public class LlamaVillagerEntity extends Animal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:seed"))).test(stack);
+		return CompoundIngredient.of(Ingredient.of(new ItemStack(Blocks.HAY_BLOCK)), Ingredient.of(ItemTags.create(new ResourceLocation("forge:hay_bale")))).test(stack);
 	}
 
 	public static void init() {

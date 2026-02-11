@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Horse Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelhorse_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,84 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.15
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_chestnut.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "HorseChestnut"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_tan.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "HorseTan"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_mahogany.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "HorseMahogany"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "HorseWhite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "HorseGrey"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "HorseBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modelhorse_villager",
+        "texture": "horse_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "HorseHorsey"
         }
       }
     ],
     "animations": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.7999999999999999,
+    "modelHeight": 1.2,
+    "modelShadowSize": 0.7,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -1119153,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -186,8 +132,8 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.25,
-    "stepHeight": 0.6,
+    "movementSpeed": 0.35,
+    "stepHeight": 0.7,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -208,9 +154,9 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
@@ -225,16 +171,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.horse.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.horse.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.horse.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.horse.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,20 +191,23 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 7
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "HorseVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.4</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.GOLDEN_APPLE"
+      },
+      {
+        "value": "Items.GOLDEN_CARROT"
       }
     ],
     "ranged": false,
@@ -276,13 +225,40 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "badlands"
+      },
+      {
+        "value": "forest"
       },
       {
         "value": "grove"
       },
       {
-        "value": "jungle"
+        "value": "jagged_peaks"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "pale_garden"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "stony_peaks"
+      },
+      {
+        "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mutated_savanna"
       }
     ],
     "spawnInDungeons": false,

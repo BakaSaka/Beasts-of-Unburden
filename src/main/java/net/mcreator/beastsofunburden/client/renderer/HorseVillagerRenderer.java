@@ -13,16 +13,16 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.beastsofunburden.procedures.*;
 import net.mcreator.beastsofunburden.entity.HorseVillagerEntity;
-import net.mcreator.beastsofunburden.client.model.Modelparrot_villager;
+import net.mcreator.beastsofunburden.client.model.Modelhorse_villager;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>> {
+public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>> {
 	public HorseVillagerRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelparrot_villager<HorseVillagerEntity>(context.bakeLayer(Modelparrot_villager.LAYER_LOCATION)), 0.5f);
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_cyan.png");
+		super(context, new Modelhorse_villager<HorseVillagerEntity>(context.bakeLayer(Modelhorse_villager.LAYER_LOCATION)), 0.7f);
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_chestnut.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -30,9 +30,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotCyanProcedure.execute(entity)) {
+				if (HorseChestnutProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -40,8 +40,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_red.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_tan.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -49,9 +49,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotRedProcedure.execute(entity)) {
+				if (HorseTanProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -59,8 +59,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_grey.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_mahogany.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -68,9 +68,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotGreyProcedure.execute(entity)) {
+				if (HorseMahoganyProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -78,8 +78,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_green.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_white.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -87,9 +87,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotGreenProcedure.execute(entity)) {
+				if (HorseWhiteProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -97,8 +97,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_blue.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_grey.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -106,9 +106,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotBlueProcedure.execute(entity)) {
+				if (HorseGreyProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -116,8 +116,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_alex.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager_black.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -125,9 +125,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotAlexProcedure.execute(entity)) {
+				if (HorseBlackProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -135,8 +135,8 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_black.png");
+		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelhorse_villager<HorseVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/horse_villager.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -144,123 +144,9 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotBlackProcedure.execute(entity)) {
+				if (HorseHorseyProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_navy.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotNavyProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_pink.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotPinkProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_purple.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotPurpleProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_white.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotWhiteProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_rainbow.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotRainbowProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<HorseVillagerEntity, Modelparrot_villager<HorseVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_yellow.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, HorseVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotYellowProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modelhorse_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelhorse_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -272,6 +158,7 @@ public class HorseVillagerRenderer extends MobRenderer<HorseVillagerEntity, Mode
 
 	@Override
 	protected void scale(HorseVillagerEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(1.15f, 1.15f, 1.15f);
 		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 

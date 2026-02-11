@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Cow Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelcow_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,84 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.2
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "CowBrown"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_highland.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "CowHighland"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_jersey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "CowJersey"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_golden.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "CowGolden"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_holstein.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "CowHolstien"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_snowy.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "CowSnowy"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modelcow_villager",
+        "texture": "cow_villager_mooshroom.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "CowMooshroom"
         }
       }
     ],
     "animations": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.7999999999999999,
+    "modelHeight": 2.0,
+    "modelShadowSize": 0.6,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -13754093,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -210,7 +156,7 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
@@ -218,23 +164,23 @@
     "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
-    "immuneToAnvil": false,
+    "immuneToAnvil": true,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.cow.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.cow.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.cow.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.cow.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,11 +191,11 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 7
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "CowVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -258,7 +204,7 @@
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.WHEAT"
       }
     ],
     "ranged": false,
@@ -276,13 +222,31 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "meadow"
       },
       {
-        "value": "grove"
+        "value": "mushroom_fields"
       },
       {
-        "value": "jungle"
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "stony_peaks"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "mutated_savanna"
       }
     ],
     "spawnInDungeons": false,

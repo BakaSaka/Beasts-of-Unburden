@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_cyan.png",
+        "texture": "cat_villager_ocelot.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -33,7 +33,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_red.png",
+        "texture": "cat_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -42,7 +42,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_grey.png",
+        "texture": "cat_villager_jellie.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -51,7 +51,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_green.png",
+        "texture": "cat_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -60,7 +60,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_blue.png",
+        "texture": "cat_villager_calico.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -69,7 +69,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_alex.png",
+        "texture": "cat_villager_ragdoll.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -78,7 +78,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_black.png",
+        "texture": "cat_villager_persian.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -87,7 +87,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_navy.png",
+        "texture": "cat_villager_siamese.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -96,7 +96,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_pink.png",
+        "texture": "cat_villager_red.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -105,7 +105,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_purple.png",
+        "texture": "cat_villager_tuxedo.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -114,7 +114,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_white.png",
+        "texture": "cat_villager_tabby.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -123,7 +123,7 @@
       },
       {
         "model": "Modelcat_villager",
-        "texture": "parrot_villager_rainbow.png",
+        "texture": "cat_villager_shorthair.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {

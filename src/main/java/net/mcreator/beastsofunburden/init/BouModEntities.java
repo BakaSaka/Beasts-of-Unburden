@@ -43,10 +43,8 @@ public class BouModEntities {
 			EntityType.Builder.<AxolotlVillagerEntity>of(AxolotlVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AxolotlVillagerEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<HorseVillagerEntity>> HORSE_VILLAGER = register("horse_villager",
-			EntityType.Builder.<HorseVillagerEntity>of(HorseVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HorseVillagerEntity::new)
-
-					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HorseVillagerEntity>> HORSE_VILLAGER = register("horse_villager", EntityType.Builder.<HorseVillagerEntity>of(HorseVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HorseVillagerEntity::new).fireImmune().sized(0.8f, 1.2f));
 	public static final RegistryObject<EntityType<CatVillagerEntity>> CAT_VILLAGER = register("cat_villager",
 			EntityType.Builder.<CatVillagerEntity>of(CatVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CatVillagerEntity::new)
 
@@ -54,15 +52,15 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<CowVillagerEntity>> COW_VILLAGER = register("cow_villager",
 			EntityType.Builder.<CowVillagerEntity>of(CowVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CowVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.8f, 2f));
 	public static final RegistryObject<EntityType<LlamaVillagerEntity>> LLAMA_VILLAGER = register("llama_villager",
 			EntityType.Builder.<LlamaVillagerEntity>of(LlamaVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LlamaVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.8f, 1f));
 	public static final RegistryObject<EntityType<BearVillagerEntity>> BEAR_VILLAGER = register("bear_villager",
 			EntityType.Builder.<BearVillagerEntity>of(BearVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BearVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.9f, 2f));
 	public static final RegistryObject<EntityType<PigVillagerEntity>> PIG_VILLAGER = register("pig_villager",
 			EntityType.Builder.<PigVillagerEntity>of(PigVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PigVillagerEntity::new)
 
@@ -119,6 +117,28 @@ public class BouModEntities {
 			EntityType.Builder.<BabyTurtleVillagerEntity>of(BabyTurtleVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyTurtleVillagerEntity::new)
 
 					.sized(0.4f, 1.1f));
+	public static final RegistryObject<EntityType<BabyAxolotlVillagerEntity>> BABY_AXOLOTL_VILLAGER = register("baby_axolotl_villager",
+			EntityType.Builder.<BabyAxolotlVillagerEntity>of(BabyAxolotlVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyAxolotlVillagerEntity::new)
+
+					.sized(0.6f, 1f));
+	public static final RegistryObject<EntityType<BabyCatVillagerEntity>> BABY_CAT_VILLAGER = register("baby_cat_villager",
+			EntityType.Builder.<BabyCatVillagerEntity>of(BabyCatVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyCatVillagerEntity::new)
+
+					.sized(0.4f, 1f));
+	public static final RegistryObject<EntityType<BabyCowVillagerEntity>> BABY_COW_VILLAGER = register("baby_cow_villager",
+			EntityType.Builder.<BabyCowVillagerEntity>of(BabyCowVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyCowVillagerEntity::new)
+
+					.sized(0.5f, 1.1f));
+	public static final RegistryObject<EntityType<BabyHorseVillagerEntity>> BABY_HORSE_VILLAGER = register("baby_horse_villager", EntityType.Builder.<BabyHorseVillagerEntity>of(BabyHorseVillagerEntity::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyHorseVillagerEntity::new).fireImmune().sized(0.4f, 0.8f));
+	public static final RegistryObject<EntityType<BabyLlamaVillagerEntity>> BABY_LLAMA_VILLAGER = register("baby_llama_villager",
+			EntityType.Builder.<BabyLlamaVillagerEntity>of(BabyLlamaVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyLlamaVillagerEntity::new)
+
+					.sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<BabyBearVillagerEntity>> BABY_BEAR_VILLAGER = register("baby_bear_villager",
+			EntityType.Builder.<BabyBearVillagerEntity>of(BabyBearVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyBearVillagerEntity::new)
+
+					.sized(0.6f, 1.9f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -154,6 +174,12 @@ public class BouModEntities {
 			BabyWolfVillagerEntity.init();
 			BabySheepVillagerEntity.init();
 			BabyTurtleVillagerEntity.init();
+			BabyAxolotlVillagerEntity.init();
+			BabyCatVillagerEntity.init();
+			BabyCowVillagerEntity.init();
+			BabyHorseVillagerEntity.init();
+			BabyLlamaVillagerEntity.init();
+			BabyBearVillagerEntity.init();
 		});
 	}
 
@@ -184,5 +210,11 @@ public class BouModEntities {
 		event.put(BABY_WOLF_VILLAGER.get(), BabyWolfVillagerEntity.createAttributes().build());
 		event.put(BABY_SHEEP_VILLAGER.get(), BabySheepVillagerEntity.createAttributes().build());
 		event.put(BABY_TURTLE_VILLAGER.get(), BabyTurtleVillagerEntity.createAttributes().build());
+		event.put(BABY_AXOLOTL_VILLAGER.get(), BabyAxolotlVillagerEntity.createAttributes().build());
+		event.put(BABY_CAT_VILLAGER.get(), BabyCatVillagerEntity.createAttributes().build());
+		event.put(BABY_COW_VILLAGER.get(), BabyCowVillagerEntity.createAttributes().build());
+		event.put(BABY_HORSE_VILLAGER.get(), BabyHorseVillagerEntity.createAttributes().build());
+		event.put(BABY_LLAMA_VILLAGER.get(), BabyLlamaVillagerEntity.createAttributes().build());
+		event.put(BABY_BEAR_VILLAGER.get(), BabyBearVillagerEntity.createAttributes().build());
 	}
 }

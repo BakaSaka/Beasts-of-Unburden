@@ -269,7 +269,7 @@ public class SheepVillagerRenderer extends MobRenderer<SheepVillagerEntity, Mode
 			}
 		});
 		this.addLayer(new RenderLayer<SheepVillagerEntity, Modelsheep_villager<SheepVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_sheep_villager_purple.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/sheep_villager_purple.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SheepVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -288,7 +288,7 @@ public class SheepVillagerRenderer extends MobRenderer<SheepVillagerEntity, Mode
 			}
 		});
 		this.addLayer(new RenderLayer<SheepVillagerEntity, Modelsheep_villager<SheepVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_sheep_villager_magenta.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/sheep_villager_magenta.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SheepVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -307,7 +307,7 @@ public class SheepVillagerRenderer extends MobRenderer<SheepVillagerEntity, Mode
 			}
 		});
 		this.addLayer(new RenderLayer<SheepVillagerEntity, Modelsheep_villager<SheepVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_sheep_villager_pink.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/sheep_villager_pink.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SheepVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

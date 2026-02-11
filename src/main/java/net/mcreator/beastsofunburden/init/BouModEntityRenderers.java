@@ -39,5 +39,11 @@ public class BouModEntityRenderers {
 		event.registerEntityRenderer(BouModEntities.BABY_WOLF_VILLAGER.get(), BabyWolfVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_SHEEP_VILLAGER.get(), BabySheepVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_TURTLE_VILLAGER.get(), BabyTurtleVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_AXOLOTL_VILLAGER.get(), BabyAxolotlVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_CAT_VILLAGER.get(), BabyCatVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_COW_VILLAGER.get(), BabyCowVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_HORSE_VILLAGER.get(), BabyHorseVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_LLAMA_VILLAGER.get(), BabyLlamaVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_BEAR_VILLAGER.get(), BabyBearVillagerRenderer::new);
 	}
 }

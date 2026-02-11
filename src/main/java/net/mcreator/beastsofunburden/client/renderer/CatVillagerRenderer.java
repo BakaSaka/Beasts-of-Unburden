@@ -22,7 +22,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 	public CatVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelcat_villager<CatVillagerEntity>(context.bakeLayer(Modelcat_villager.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_cyan.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_ocelot.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -41,7 +41,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_red.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_black.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -60,7 +60,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_grey.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_jellie.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -79,7 +79,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_green.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_white.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -98,7 +98,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_blue.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_calico.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -117,7 +117,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_alex.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_ragdoll.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -136,7 +136,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_black.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_persian.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -155,7 +155,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_navy.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_siamese.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -174,7 +174,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_pink.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_red.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -193,7 +193,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_purple.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_tuxedo.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -212,7 +212,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_white.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_tabby.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -231,7 +231,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 			}
 		});
 		this.addLayer(new RenderLayer<CatVillagerEntity, Modelcat_villager<CatVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_rainbow.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cat_villager_shorthair.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CatVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
