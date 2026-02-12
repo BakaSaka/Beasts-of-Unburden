@@ -13,16 +13,16 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.beastsofunburden.procedures.*;
 import net.mcreator.beastsofunburden.entity.DragonVillagerEntity;
-import net.mcreator.beastsofunburden.client.model.Modelparrot_villager;
+import net.mcreator.beastsofunburden.client.model.Modeldragon_villager;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>> {
+public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>> {
 	public DragonVillagerRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelparrot_villager<DragonVillagerEntity>(context.bakeLayer(Modelparrot_villager.LAYER_LOCATION)), 0.5f);
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_cyan.png");
+		super(context, new Modeldragon_villager<DragonVillagerEntity>(context.bakeLayer(Modeldragon_villager.LAYER_LOCATION)), 0.5f);
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_obsidian.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -30,9 +30,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotCyanProcedure.execute(entity)) {
+				if (DragonObsidianProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -40,8 +40,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_red.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_silver.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -49,9 +49,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotRedProcedure.execute(entity)) {
+				if (DragonSilverProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -59,8 +59,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_grey.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_platinum.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -68,9 +68,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotGreyProcedure.execute(entity)) {
+				if (DragonPlatinumProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -78,8 +78,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_green.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_ruby.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -87,9 +87,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotGreenProcedure.execute(entity)) {
+				if (DragonRubyProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -97,8 +97,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_blue.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_copper.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -106,9 +106,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotBlueProcedure.execute(entity)) {
+				if (DragonCopperProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -116,8 +116,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_alex.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_gold.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -125,9 +125,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotAlexProcedure.execute(entity)) {
+				if (DragonGoldProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -135,8 +135,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_black.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_emerald.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -144,9 +144,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotBlackProcedure.execute(entity)) {
+				if (DragonEmeraldProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -154,8 +154,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_navy.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_fluorite.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -163,9 +163,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotNavyProcedure.execute(entity)) {
+				if (DragonFluoriteProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -173,8 +173,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_pink.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_sapphire.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -182,9 +182,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotPinkProcedure.execute(entity)) {
+				if (DragonSapphireProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -192,8 +192,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_purple.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_amethyst.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -201,9 +201,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotPurpleProcedure.execute(entity)) {
+				if (DragonAmethystProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -211,8 +211,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_white.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_rosegold.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -220,9 +220,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotWhiteProcedure.execute(entity)) {
+				if (DragonRoseGoldProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -230,8 +230,8 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_rainbow.png");
+		this.addLayer(new RenderLayer<DragonVillagerEntity, Modeldragon_villager<DragonVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/dragon_villager_chromatic.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -239,28 +239,9 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ParrotRainbowProcedure.execute(entity)) {
+				if (DragonChromaticProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
-					this.getParentModel().copyPropertiesTo(model);
-					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
-					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<DragonVillagerEntity, Modelparrot_villager<DragonVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/parrot_villager_yellow.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, DragonVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level;
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (ParrotYellowProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelparrot_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelparrot_villager.LAYER_LOCATION));
+					EntityModel model = new Modeldragon_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modeldragon_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -272,6 +253,7 @@ public class DragonVillagerRenderer extends MobRenderer<DragonVillagerEntity, Mo
 
 	@Override
 	protected void scale(DragonVillagerEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(1.2f, 1.2f, 1.2f);
 		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 

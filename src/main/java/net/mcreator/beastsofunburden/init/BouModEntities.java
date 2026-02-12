@@ -60,11 +60,11 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<BearVillagerEntity>> BEAR_VILLAGER = register("bear_villager",
 			EntityType.Builder.<BearVillagerEntity>of(BearVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BearVillagerEntity::new)
 
-					.sized(0.9f, 2f));
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<PigVillagerEntity>> PIG_VILLAGER = register("pig_villager",
 			EntityType.Builder.<PigVillagerEntity>of(PigVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PigVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.6f, 1.7f));
 	public static final RegistryObject<EntityType<ChickenVillagerEntity>> CHICKEN_VILLAGER = register("chicken_villager",
 			EntityType.Builder.<ChickenVillagerEntity>of(ChickenVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChickenVillagerEntity::new)
 
@@ -97,10 +97,8 @@ public class BouModEntities {
 			EntityType.Builder.<HumanVillagerEntity>of(HumanVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HumanVillagerEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<DragonVillagerEntity>> DRAGON_VILLAGER = register("dragon_villager",
-			EntityType.Builder.<DragonVillagerEntity>of(DragonVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonVillagerEntity::new)
-
-					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DragonVillagerEntity>> DRAGON_VILLAGER = register("dragon_villager", EntityType.Builder.<DragonVillagerEntity>of(DragonVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonVillagerEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BabyFoxVillagerEntity>> BABY_FOX_VILLAGER = register("baby_fox_villager",
 			EntityType.Builder.<BabyFoxVillagerEntity>of(BabyFoxVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyFoxVillagerEntity::new)
 

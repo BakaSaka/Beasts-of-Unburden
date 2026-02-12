@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Dragon Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modeldragon_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,127 +16,118 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.2
     },
     "boundingBoxScale": {
-      "fixedValue": 1.0
+      "fixedValue": 1.2
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_obsidian.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "DragonObsidian"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_silver.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "DragonSilver"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_platinum.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "DragonPlatinum"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_ruby.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "DragonRuby"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_copper.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "DragonCopper"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_gold.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "DragonGold"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_emerald.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
+          "name": "DragonEmerald"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_fluorite.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotNavy"
+          "name": "DragonFluorite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_sapphire.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPink"
+          "name": "DragonSapphire"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_amethyst.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPurple"
+          "name": "DragonAmethyst"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_rosegold.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotWhite"
+          "name": "DragonRoseGold"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
+        "model": "Modeldragon_villager",
+        "texture": "dragon_villager_chromatic.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "DragonChromatic"
         }
       }
     ],
@@ -147,7 +138,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -13171384,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -183,15 +174,15 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 6,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.25,
-    "stepHeight": 0.6,
-    "armorBaseValue": 0.0,
+    "movementSpeed": 0.2,
+    "stepHeight": 0.9,
+    "armorBaseValue": 3.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 25,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -208,33 +199,33 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
     "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
     "immuneToAnvil": false,
     "immuneToWither": false,
-    "immuneToDragonBreath": false,
+    "immuneToDragonBreath": true,
     "mobDrop": {
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.enderdragon.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.enderdragon.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.enderdragon.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.enderdragon.flap"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,20 +236,20 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 12
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "DragonVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.COOKIE"
       }
     ],
     "ranged": false,
@@ -272,17 +263,47 @@
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "misc",
-    "minNumberOfMobsPerGroup": 2,
-    "maxNumberOfMobsPerGroup": 4,
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "cherry_grove"
       },
       {
-        "value": "grove"
+        "value": "crimson_forest"
       },
       {
-        "value": "jungle"
+        "value": "deep_dark"
+      },
+      {
+        "value": "end_barrens"
+      },
+      {
+        "value": "end_highlands"
+      },
+      {
+        "value": "end_midlands"
+      },
+      {
+        "value": "mushroom_fields"
+      },
+      {
+        "value": "nether"
+      },
+      {
+        "value": "pale_garden"
+      },
+      {
+        "value": "soul_sand_valley"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "the_end"
+      },
+      {
+        "value": "void"
       }
     ],
     "spawnInDungeons": false,

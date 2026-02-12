@@ -1816,26 +1816,6 @@
       "path": "~/Dragon"
     },
     {
-      "name": "DragonBlack",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_black",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonBlackProcedure.java"
-        ]
-      },
-      "path": "~/Dragon"
-    },
-    {
       "name": "BabyFoxGrowth",
       "type": "procedure",
       "compiles": true,
@@ -6139,6 +6119,359 @@
         ]
       },
       "path": "~/Bear"
+    },
+    {
+      "name": "PigPale",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_pale",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/PigPaleProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "PigSpotted",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_spotted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/PigSpottedProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "PigBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/PigBlackProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "PigBoar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_boar",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/PigBoarProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "PigGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pig_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/PigGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "DragonSilver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_silver",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonSilverProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonCopper",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_copper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonCopperProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonGold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_gold",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonGoldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonSapphire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_sapphire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonSapphireProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonEmerald",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_emerald",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonEmeraldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonRuby",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_ruby",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonRubyProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonAmethyst",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_amethyst",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonAmethystProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonRoseGold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_rose_gold",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonRoseGoldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonPlatinum",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_platinum",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonPlatinumProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonObsidian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_obsidian",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonObsidianProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonChromatic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_chromatic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonChromaticProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "DragonFluorite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_fluorite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/DragonFluoriteProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "OneShotter",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "one_shotter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bou/models/item/one_shotter.json",
+          "src/main/java/net/mcreator/beastsofunburden/item/OneShotterItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -6196,8 +6529,8 @@
       "item.bou.llama_villager_spawn_egg": "Llama Villager Spawn Egg",
       "entity.bou.bear_villager": "Bear Villager",
       "item.bou.bear_villager_spawn_egg": "Bear Villager Spawn Egg",
-      "entity.bou.pig_villager": "Parrot Villager",
-      "item.bou.pig_villager_spawn_egg": "Parrot Villager Spawn Egg",
+      "entity.bou.pig_villager": "Pig Villager",
+      "item.bou.pig_villager_spawn_egg": "Pig Villager Spawn Egg",
       "entity.bou.chicken_villager": "Parrot Villager",
       "item.bou.chicken_villager_spawn_egg": "Parrot Villager Spawn Egg",
       "item.bou.rabbit_villager_spawn_egg": "Parrot Villager Spawn Egg",
@@ -6214,8 +6547,8 @@
       "entity.bou.squid_villager": "Parrot Villager",
       "entity.bou.human_villager": "Parrot Villager",
       "item.bou.human_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "entity.bou.dragon_villager": "Parrot Villager",
-      "item.bou.dragon_villager_spawn_egg": "Parrot Villager Spawn Egg",
+      "entity.bou.dragon_villager": "Dragon Villager",
+      "item.bou.dragon_villager_spawn_egg": "Dragon Villager Spawn Egg",
       "entity.bou.baby_fox_villager": "Fox Villager",
       "entity.bou.baby_wolf_villager": "Wolf Villager",
       "entity.bou.baby_sheep_villager": "Sheep Villager",
@@ -6232,7 +6565,8 @@
       "entity.bou.baby_llama_villager": "Llama Villager",
       "item.bou.baby_bear_villager_spawn_egg": "Bear Villager Spawn Egg",
       "entity.bou.baby_bear_villager": "Bear Villager",
-      "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg"
+      "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg",
+      "item.bou.one_shotter": "One Shotter"
     }
   },
   "metadata": {

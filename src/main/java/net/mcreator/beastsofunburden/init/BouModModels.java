@@ -31,6 +31,7 @@ public class BouModModels {
 		event.registerLayerDefinition(Modelchicken_villager.LAYER_LOCATION, Modelchicken_villager::createBodyLayer);
 		event.registerLayerDefinition(Modeldragon_villager.LAYER_LOCATION, Modeldragon_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelcow_villager.LAYER_LOCATION, Modelcow_villager::createBodyLayer);
+		event.registerLayerDefinition(Modelpig_villager.LAYER_LOCATION, Modelpig_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelbaby_parrot_villager.LAYER_LOCATION, Modelbaby_parrot_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelhorse_villager.LAYER_LOCATION, Modelhorse_villager::createBodyLayer);
 		event.registerLayerDefinition(ModelAnimalChest.LAYER_LOCATION, ModelAnimalChest::createBodyLayer);
@@ -38,7 +39,6 @@ public class BouModModels {
 		event.registerLayerDefinition(Modelsheep_villager.LAYER_LOCATION, Modelsheep_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelbaby_chicken_villager.LAYER_LOCATION, Modelbaby_chicken_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelfox_villager.LAYER_LOCATION, Modelfox_villager::createBodyLayer);
-		event.registerLayerDefinition(Modeldragon_villager_animation.LAYER_LOCATION, Modeldragon_villager_animation::createBodyLayer);
 		event.registerLayerDefinition(Modelpanda_villager.LAYER_LOCATION, Modelpanda_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelbaby_fox_villager.LAYER_LOCATION, Modelbaby_fox_villager::createBodyLayer);
 		event.registerLayerDefinition(Modelbaby_pig_villager.LAYER_LOCATION, Modelbaby_pig_villager::createBodyLayer);

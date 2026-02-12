@@ -38,8 +38,8 @@
   "item.bou.llama_villager_spawn_egg": "Llama Villager Spawn Egg",
   "entity.bou.bear_villager": "Bear Villager",
   "item.bou.bear_villager_spawn_egg": "Bear Villager Spawn Egg",
-  "entity.bou.pig_villager": "Parrot Villager",
-  "item.bou.pig_villager_spawn_egg": "Parrot Villager Spawn Egg",
+  "entity.bou.pig_villager": "Pig Villager",
+  "item.bou.pig_villager_spawn_egg": "Pig Villager Spawn Egg",
   "entity.bou.chicken_villager": "Parrot Villager",
   "item.bou.chicken_villager_spawn_egg": "Parrot Villager Spawn Egg",
   "item.bou.rabbit_villager_spawn_egg": "Parrot Villager Spawn Egg",
@@ -56,8 +56,8 @@
   "entity.bou.squid_villager": "Parrot Villager",
   "entity.bou.human_villager": "Parrot Villager",
   "item.bou.human_villager_spawn_egg": "Parrot Villager Spawn Egg",
-  "entity.bou.dragon_villager": "Parrot Villager",
-  "item.bou.dragon_villager_spawn_egg": "Parrot Villager Spawn Egg",
+  "entity.bou.dragon_villager": "Dragon Villager",
+  "item.bou.dragon_villager_spawn_egg": "Dragon Villager Spawn Egg",
   "entity.bou.baby_fox_villager": "Fox Villager",
   "entity.bou.baby_wolf_villager": "Wolf Villager",
   "entity.bou.baby_sheep_villager": "Sheep Villager",
@@ -74,5 +74,6 @@
   "entity.bou.baby_llama_villager": "Llama Villager",
   "item.bou.baby_bear_villager_spawn_egg": "Bear Villager Spawn Egg",
   "entity.bou.baby_bear_villager": "Bear Villager",
-  "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg"
+  "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg",
+  "item.bou.one_shotter": "One Shotter"
 }
