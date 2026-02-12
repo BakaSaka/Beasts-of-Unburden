@@ -14,7 +14,7 @@ public class OneShotterItem extends SwordItem {
 	public OneShotterItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 100;
+				return 0;
 			}
 
 			public float getSpeed() {
@@ -22,7 +22,7 @@ public class OneShotterItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 0f;
+				return 96f;
 			}
 
 			public int getLevel() {
@@ -36,7 +36,7 @@ public class OneShotterItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -3f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
+		}, 3, -2f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 	}
 
 	@Override

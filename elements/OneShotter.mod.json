@@ -19,10 +19,10 @@
       }
     ],
     "efficiency": 12.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 2.0,
     "enchantability": 2,
-    "damageVsEntity": 4.0,
-    "usageCount": 100,
+    "damageVsEntity": 100.0,
+    "usageCount": 0,
     "glowCondition": {
       "fixedValue": true
     },

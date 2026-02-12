@@ -54,8 +54,10 @@ public class Modelpig_villager<T extends Entity> extends EntityModel<T> {
 		PartDefinition headwear = partdefinition.addOrReplaceChild("headwear", CubeListBuilder.create().texOffs(0, 46).addBox(-5.0F, -10.0F, -4.0F, 10.0F, 10.0F, 8.0F, new CubeDeformation(0.51F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition headwear2 = partdefinition.addOrReplaceChild("headwear2", CubeListBuilder.create().texOffs(32, 38).addBox(-7.5F, -7.5F, -6.0F, 15.0F, 15.0F, 1.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -1.0F, 0.0F, -1.5708F, 0.0F, 0.0F));
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 18).addBox(-4.0F, 0.0F, -3.0F, 8.0F, 15.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(30, 28)
-				.addBox(-4.0F, 7.0F, -5.0F, 8.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(1, 20).addBox(-1.0F, 10.0F, 4.1F, 2.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body",
+				CubeListBuilder.create().texOffs(0, 18).addBox(-4.0F, 0.0F, -3.0F, 8.0F, 15.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(30, 28).addBox(-4.0F, 7.0F, -5.0F, 8.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition body_r1 = body.addOrReplaceChild("body_r1", CubeListBuilder.create().texOffs(1, 20).addBox(-1.0F, 0.0F, 0.0F, 2.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 10.0F, 4.1F, 0.3927F, 0.0F, 0.0F));
 		PartDefinition arms = partdefinition.addOrReplaceChild("arms",
 				CubeListBuilder.create().texOffs(28, 0).addBox(-4.0F, 2.0F, -2.0F, 8.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(48, 18).addBox(-8.0F, -2.0F, -2.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 2.95F, -1.05F, -0.7505F, 0.0F, 0.0F));

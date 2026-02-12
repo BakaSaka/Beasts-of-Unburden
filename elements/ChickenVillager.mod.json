@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Chicken Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelchicken_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,102 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.85
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "ChickenWhite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "ChickenLavender"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "ChickenBlue"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "ChickenBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
+          "name": "ChickenChocolate"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotAlex"
+          "name": "ChickenBrown"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlack"
+          "name": "ChickenGolden"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotNavy"
+          "name": "ChickenSpeckled"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
+        "model": "Modelchicken_villager",
+        "texture": "chicken_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "BabyChickenSplash"
         }
       }
     ],
     "animations": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelHeight": 1.2,
+    "modelShadowSize": 0.4,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -9171956,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -186,7 +150,7 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.25,
+    "movementSpeed": 0.35,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
@@ -225,16 +189,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.chicken.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.chicken.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.chicken.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.chicken.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,20 +209,20 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 9
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "ChickenVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.WHEAT_SEEDS"
       }
     ],
     "ranged": false,
@@ -276,13 +240,22 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
+        "value": "bamboo_jungle"
+      },
+      {
         "value": "mutated_forest"
+      },
+      {
+        "value": "forest"
       },
       {
         "value": "grove"
       },
       {
         "value": "jungle"
+      },
+      {
+        "value": "jungle_edge"
       }
     ],
     "spawnInDungeons": false,

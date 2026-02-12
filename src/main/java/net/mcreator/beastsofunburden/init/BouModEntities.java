@@ -68,7 +68,7 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<ChickenVillagerEntity>> CHICKEN_VILLAGER = register("chicken_villager",
 			EntityType.Builder.<ChickenVillagerEntity>of(ChickenVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ChickenVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.6f, 1.2f));
 	public static final RegistryObject<EntityType<RabbitVillagerEntity>> RABBIT_VILLAGER = register("rabbit_villager",
 			EntityType.Builder.<RabbitVillagerEntity>of(RabbitVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RabbitVillagerEntity::new)
 
@@ -137,6 +137,18 @@ public class BouModEntities {
 			EntityType.Builder.<BabyBearVillagerEntity>of(BabyBearVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyBearVillagerEntity::new)
 
 					.sized(0.6f, 1.9f));
+	public static final RegistryObject<EntityType<BabyPigVillagerEntity>> BABY_PIG_VILLAGER = register("baby_pig_villager",
+			EntityType.Builder.<BabyPigVillagerEntity>of(BabyPigVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyPigVillagerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BabyChickenVillagerEntity>> BABY_CHICKEN_VILLAGER = register("baby_chicken_villager",
+			EntityType.Builder.<BabyChickenVillagerEntity>of(BabyChickenVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyChickenVillagerEntity::new)
+
+					.sized(0.6f, 1f));
+	public static final RegistryObject<EntityType<BabyRabbitVillagerEntity>> BABY_RABBIT_VILLAGER = register("baby_rabbit_villager",
+			EntityType.Builder.<BabyRabbitVillagerEntity>of(BabyRabbitVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyRabbitVillagerEntity::new)
+
+					.sized(0.4f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -178,6 +190,9 @@ public class BouModEntities {
 			BabyHorseVillagerEntity.init();
 			BabyLlamaVillagerEntity.init();
 			BabyBearVillagerEntity.init();
+			BabyPigVillagerEntity.init();
+			BabyChickenVillagerEntity.init();
+			BabyRabbitVillagerEntity.init();
 		});
 	}
 
@@ -214,5 +229,8 @@ public class BouModEntities {
 		event.put(BABY_HORSE_VILLAGER.get(), BabyHorseVillagerEntity.createAttributes().build());
 		event.put(BABY_LLAMA_VILLAGER.get(), BabyLlamaVillagerEntity.createAttributes().build());
 		event.put(BABY_BEAR_VILLAGER.get(), BabyBearVillagerEntity.createAttributes().build());
+		event.put(BABY_PIG_VILLAGER.get(), BabyPigVillagerEntity.createAttributes().build());
+		event.put(BABY_CHICKEN_VILLAGER.get(), BabyChickenVillagerEntity.createAttributes().build());
+		event.put(BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerEntity.createAttributes().build());
 	}
 }

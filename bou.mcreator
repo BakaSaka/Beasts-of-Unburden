@@ -6472,6 +6472,788 @@
           "src/main/java/net/mcreator/beastsofunburden/item/OneShotterItem.java"
         ]
       }
+    },
+    {
+      "name": "BabyPigVillager",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_villager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/entity/BabyPigVillagerEntity.java",
+          "src/main/resources/assets/bou/models/item/baby_pig_villager_spawn_egg.json",
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyPigVillagerRenderer.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigVariationSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_variation_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigVariationSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigPink",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_pink",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigPinkProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigPale",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_pale",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigPaleProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigSpotted",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_spotted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigSpottedProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigBlackProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigBoar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_boar",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigBoarProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyPigGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "ChickenLavender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_lavender",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenLavenderProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenBlue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_blue",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenBlueProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenBlackProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenBrown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_brown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenBrownProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenSpeckled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_speckled",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenSpeckledProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenVillager",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_villager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/entity/BabyChickenVillagerEntity.java",
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyChickenVillagerRenderer.java",
+          "src/main/resources/assets/bou/models/item/baby_chicken_villager_spawn_egg.json"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenVariationSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_variation_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenVariationSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenWhite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_white",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenWhiteProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenLavender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_lavender",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenLavenderProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenBlue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_blue",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenBlueProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenBlackProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenBrown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_brown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenBrownProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenSpeckled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_speckled",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenSpeckledProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyChickenSplash",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_splash",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenSplashProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "ChickenSplash",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_splash",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChickenSplashProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "RabbitBuff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_buff",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitBuffProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "RabbitGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "RabbitWhite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_white",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitWhiteProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "RabbitBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitBlackProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "RabbitMottled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_mottled",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitMottledProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitVillager",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_villager",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bou/models/item/baby_rabbit_villager_spawn_egg.json",
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyRabbitVillagerRenderer.java",
+          "src/main/java/net/mcreator/beastsofunburden/entity/BabyRabbitVillagerEntity.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitBrown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_brown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitBrownProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitBuff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_buff",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitBuffProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitGolden",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_golden",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitGoldenProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitWhite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_white",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitWhiteProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitBlackProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitMottled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_mottled",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitMottledProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitVariationSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_variation_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitVariationSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
     }
   ],
   "variable_elements": [],
@@ -6531,10 +7313,10 @@
       "item.bou.bear_villager_spawn_egg": "Bear Villager Spawn Egg",
       "entity.bou.pig_villager": "Pig Villager",
       "item.bou.pig_villager_spawn_egg": "Pig Villager Spawn Egg",
-      "entity.bou.chicken_villager": "Parrot Villager",
-      "item.bou.chicken_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "item.bou.rabbit_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "entity.bou.rabbit_villager": "Parrot Villager",
+      "entity.bou.chicken_villager": "Chicken Villager",
+      "item.bou.chicken_villager_spawn_egg": "Chicken Villager Spawn Egg",
+      "item.bou.rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg",
+      "entity.bou.rabbit_villager": "Rabbit Villager",
       "item.bou.sheep_villager_spawn_egg": "Sheep Villager Spawn Egg",
       "entity.bou.sheep_villager": "Sheep Villager",
       "item.bou.turtle_villager_spawn_egg": "Turtle Villager Spawn Egg",
@@ -6566,7 +7348,13 @@
       "item.bou.baby_bear_villager_spawn_egg": "Bear Villager Spawn Egg",
       "entity.bou.baby_bear_villager": "Bear Villager",
       "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg",
-      "item.bou.one_shotter": "One Shotter"
+      "item.bou.one_shotter": "One Shotter",
+      "entity.bou.baby_pig_villager": "Pig Villager",
+      "item.bou.baby_pig_villager_spawn_egg": "Pig Villager Spawn Egg",
+      "entity.bou.baby_chicken_villager": "Chicken Villager",
+      "item.bou.baby_chicken_villager_spawn_egg": "Chicken Villager Spawn Egg",
+      "entity.bou.baby_rabbit_villager": "Rabbit Villager",
+      "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg"
     }
   },
   "metadata": {

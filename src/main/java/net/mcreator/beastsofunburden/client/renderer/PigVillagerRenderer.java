@@ -11,11 +11,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.beastsofunburden.procedures.PigSpottedProcedure;
-import net.mcreator.beastsofunburden.procedures.PigPaleProcedure;
-import net.mcreator.beastsofunburden.procedures.PigGoldenProcedure;
-import net.mcreator.beastsofunburden.procedures.PigBoarProcedure;
-import net.mcreator.beastsofunburden.procedures.PigBlackProcedure;
+import net.mcreator.beastsofunburden.procedures.*;
 import net.mcreator.beastsofunburden.entity.PigVillagerEntity;
 import net.mcreator.beastsofunburden.client.model.Modelpig_villager;
 
@@ -34,7 +30,7 @@ public class PigVillagerRenderer extends MobRenderer<PigVillagerEntity, Modelpig
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (PigBoarProcedure.execute(entity)) {
+				if (PigPinkProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelpig_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelpig_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
