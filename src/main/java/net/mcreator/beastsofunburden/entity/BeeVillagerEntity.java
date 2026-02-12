@@ -14,6 +14,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -25,9 +26,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.BreedGoal;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
@@ -53,20 +63,21 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.BeeVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import java.util.Set;
+import java.util.Random;
 
 import io.netty.buffer.Unpooled;
 
 @Mod.EventBusSubscriber
 public class BeeVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(BeeVillagerEntity.class, EntityDataSerializers.INT);
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("jungle"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("plains"), new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("meadow"), new ResourceLocation("sunflower_plains"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -80,10 +91,11 @@ public class BeeVillagerEntity extends Animal {
 
 	public BeeVillagerEntity(EntityType<BeeVillagerEntity> type, Level world) {
 		super(type, world);
-		maxUpStep = 0.6f;
+		maxUpStep = 1f;
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
+		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -94,22 +106,40 @@ public class BeeVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_variant, 4);
+	}
+
+	@Override
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
 	}
 
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.getNavigation().getNodeEvaluator().setCanOpenDoors(true);
-		this.goalSelector.addGoal(1, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.goalSelector.addGoal(6, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(7, new OpenDoorGoal(this, true));
-		this.goalSelector.addGoal(8, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(9, new BreedGoal(this, 1));
+		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 0.5, 20) {
+			@Override
+			protected Vec3 getPosition() {
+				Random random = BeeVillagerEntity.this.getRandom();
+				double dir_x = BeeVillagerEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = BeeVillagerEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = BeeVillagerEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				return new Vec3(dir_x, dir_y, dir_z);
+			}
+		});
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Monster.class, true, false));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
+			}
+		});
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new MoveBackToVillageGoal(this, 0.6, false));
+		this.goalSelector.addGoal(10, new BreedGoal(this, 1));
 	}
 
 	@Override
@@ -124,27 +154,34 @@ public class BeeVillagerEntity extends Animal {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.loop"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.pollinate")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.bee.death"));
+	}
+
+	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
 	}
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
 		if (damagesource == DamageSource.FALL)
+			return false;
+		if (damagesource.getMsgId().equals("trident"))
 			return false;
 		return super.hurt(damagesource, amount);
 	}
@@ -152,7 +189,7 @@ public class BeeVillagerEntity extends Animal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ParrotVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		BeeVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -201,7 +238,7 @@ public class BeeVillagerEntity extends Animal {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Parrot Villager");
+					return new TextComponent("Bee Villager");
 				}
 
 				@Override
@@ -231,7 +268,21 @@ public class BeeVillagerEntity extends Animal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:seed"))).test(stack);
+		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:flower"))).test(stack);
+	}
+
+	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		this.setNoGravity(true);
 	}
 
 	public static void init() {
@@ -240,11 +291,12 @@ public class BeeVillagerEntity extends Animal {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.35);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.35);
 		return builder;
 	}
 }

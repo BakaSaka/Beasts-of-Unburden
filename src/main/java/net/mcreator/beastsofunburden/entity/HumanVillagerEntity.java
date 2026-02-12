@@ -21,6 +21,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +37,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -53,7 +53,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.HumanVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -66,12 +66,11 @@ import io.netty.buffer.Unpooled;
 @Mod.EventBusSubscriber
 public class HumanVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(HumanVillagerEntity.class, EntityDataSerializers.INT);
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("jungle"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = null;
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MISC).add(new MobSpawnSettings.SpawnerData(BouModEntities.HUMAN_VILLAGER.get(), 20, 2, 4));
+		event.getSpawns().getSpawner(MobCategory.MISC).add(new MobSpawnSettings.SpawnerData(BouModEntities.HUMAN_VILLAGER.get(), 20, 2, 4));
 	}
 
 	public HumanVillagerEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -94,7 +93,7 @@ public class HumanVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_variant, 4);
 	}
 
 	@Override
@@ -123,28 +122,33 @@ public class HumanVillagerEntity extends Animal {
 	}
 
 	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
+	}
+
+	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.ambient"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie_villager.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.death"));
 	}
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		if (damagesource == DamageSource.FALL)
+		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
 		return super.hurt(damagesource, amount);
 	}
@@ -152,7 +156,7 @@ public class HumanVillagerEntity extends Animal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ParrotVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		HumanVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -201,7 +205,7 @@ public class HumanVillagerEntity extends Animal {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Parrot Villager");
+					return new TextComponent("Human Villager");
 				}
 
 				@Override
@@ -231,7 +235,7 @@ public class HumanVillagerEntity extends Animal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:seed"))).test(stack);
+		return Ingredient.of(new ItemStack(Items.COCOA_BEANS)).test(stack);
 	}
 
 	public static void init() {

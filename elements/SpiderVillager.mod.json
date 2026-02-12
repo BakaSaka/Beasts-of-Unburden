@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Spider Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelspider_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,66 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.8
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelspider_villager",
+        "texture": "spider_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "SpiderBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelspider_villager",
+        "texture": "spider_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "SpiderBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelspider_villager",
+        "texture": "spider_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "SpiderBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelspider_villager",
+        "texture": "spider_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
+          "name": "SpiderBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
+        "model": "Modelspider_villager",
+        "texture": "spider_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotBlue"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotAlex"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "SpiderBlack"
         }
       }
     ],
     "animations": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelHeight": 1.2999999999999998,
+    "modelShadowSize": 0.4,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -14868171,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -187,11 +115,11 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
-    "stepHeight": 0.6,
+    "stepHeight": 1.5,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 15,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -219,22 +147,22 @@
     "immuneToExplosion": false,
     "immuneToTrident": false,
     "immuneToAnvil": false,
-    "immuneToWither": false,
+    "immuneToWither": true,
     "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.spider.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.spider.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.spider.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.spider.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,11 +173,11 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 4
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "SpiderVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -258,7 +186,7 @@
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.SPIDER_EYE"
       }
     ],
     "ranged": false,
@@ -276,13 +204,31 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "crimson_forest"
       },
       {
-        "value": "grove"
+        "value": "roofed_forest"
       },
       {
-        "value": "jungle"
+        "value": "deep_dark"
+      },
+      {
+        "value": "dripstone_caves"
+      },
+      {
+        "value": "lush_caves"
+      },
+      {
+        "value": "mangrove_swamp"
+      },
+      {
+        "value": "soul_sand_valley"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "wooded_badlands_plateau"
       }
     ],
     "spawnInDungeons": false,

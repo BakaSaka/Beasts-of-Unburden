@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Human Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Biped",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -23,120 +23,39 @@
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
+        "model": "Default",
         "texture": "parrot_villager_cyan.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "HumanDruid"
         }
       },
       {
-        "model": "Modelparrot_villager",
+        "model": "Default",
         "texture": "parrot_villager_red.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "HumanDruid"
         }
       },
       {
-        "model": "Modelparrot_villager",
+        "model": "Default",
         "texture": "parrot_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "HumanDruid"
         }
       },
       {
-        "model": "Modelparrot_villager",
+        "model": "Default",
         "texture": "parrot_villager_green.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlue"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotAlex"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "HumanDruid"
         }
       }
     ],
@@ -147,7 +66,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -3298419,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -210,12 +129,12 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
-    "immuneToPlayer": false,
+    "immuneToPlayer": true,
     "immuneToExplosion": false,
     "immuneToTrident": false,
     "immuneToAnvil": false,
@@ -225,16 +144,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.villager.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.villager.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.villager.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.zombie_villager.step"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,11 +164,11 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 4
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "HumanVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -258,7 +177,7 @@
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Items.DYE#3"
       }
     ],
     "ranged": false,
@@ -274,17 +193,7 @@
     "mobSpawningType": "misc",
     "minNumberOfMobsPerGroup": 2,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [
-      {
-        "value": "mutated_forest"
-      },
-      {
-        "value": "grove"
-      },
-      {
-        "value": "jungle"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

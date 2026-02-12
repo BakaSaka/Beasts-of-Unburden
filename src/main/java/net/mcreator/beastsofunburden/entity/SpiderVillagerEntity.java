@@ -21,6 +21,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +37,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -53,7 +53,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.SpiderVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -66,7 +66,8 @@ import io.netty.buffer.Unpooled;
 @Mod.EventBusSubscriber
 public class SpiderVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(SpiderVillagerEntity.class, EntityDataSerializers.INT);
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("flower_forest"), new ResourceLocation("grove"), new ResourceLocation("jungle"));
+	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("crimson_forest"), new ResourceLocation("dark_forest"), new ResourceLocation("plains"), new ResourceLocation("dripstone_caves"),
+			new ResourceLocation("lush_caves"), new ResourceLocation("soul_sand_valley"), new ResourceLocation("swamp"), new ResourceLocation("wooded_badlands"));
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
@@ -80,7 +81,7 @@ public class SpiderVillagerEntity extends Animal {
 
 	public SpiderVillagerEntity(EntityType<SpiderVillagerEntity> type, Level world) {
 		super(type, world);
-		maxUpStep = 0.6f;
+		maxUpStep = 1.5f;
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
@@ -94,7 +95,7 @@ public class SpiderVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 13);
+		this.entityData.define(DATA_variant, 4);
 	}
 
 	@Override
@@ -124,27 +125,29 @@ public class SpiderVillagerEntity extends Animal {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.ambient"));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.step")), 0.15f, 1);
+		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.death"));
 	}
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
 		if (damagesource == DamageSource.FALL)
+			return false;
+		if (damagesource == DamageSource.WITHER || damagesource.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(damagesource, amount);
 	}
@@ -152,7 +155,7 @@ public class SpiderVillagerEntity extends Animal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ParrotVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		SpiderVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -201,7 +204,7 @@ public class SpiderVillagerEntity extends Animal {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Parrot Villager");
+					return new TextComponent("Spider Villager");
 				}
 
 				@Override
@@ -231,7 +234,7 @@ public class SpiderVillagerEntity extends Animal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:seed"))).test(stack);
+		return Ingredient.of(new ItemStack(Items.SPIDER_EYE)).test(stack);
 	}
 
 	public static void init() {
@@ -241,7 +244,7 @@ public class SpiderVillagerEntity extends Animal {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.MAX_HEALTH, 15);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);

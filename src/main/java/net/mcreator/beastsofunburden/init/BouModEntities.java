@@ -84,15 +84,13 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<BeeVillagerEntity>> BEE_VILLAGER = register("bee_villager",
 			EntityType.Builder.<BeeVillagerEntity>of(BeeVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BeeVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(1.2f, 0.6f));
 	public static final RegistryObject<EntityType<SpiderVillagerEntity>> SPIDER_VILLAGER = register("spider_villager",
 			EntityType.Builder.<SpiderVillagerEntity>of(SpiderVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SpiderVillagerEntity::new)
 
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<SquidVillagerEntity>> SQUID_VILLAGER = register("squid_villager",
-			EntityType.Builder.<SquidVillagerEntity>of(SquidVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SquidVillagerEntity::new)
-
-					.sized(0.6f, 1.8f));
+					.sized(0.6f, 1.3f));
+	public static final RegistryObject<EntityType<SquidVillagerEntity>> SQUID_VILLAGER = register("squid_villager", EntityType.Builder.<SquidVillagerEntity>of(SquidVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SquidVillagerEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<HumanVillagerEntity>> HUMAN_VILLAGER = register("human_villager",
 			EntityType.Builder.<HumanVillagerEntity>of(HumanVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HumanVillagerEntity::new)
 

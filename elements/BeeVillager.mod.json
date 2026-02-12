@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Bee Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelbee_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -16,138 +16,57 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.6
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelbee_villager",
+        "texture": "bee_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "BeeHoney"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelbee_villager",
+        "texture": "bee_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "BeeBlack"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelbee_villager",
+        "texture": "bee_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
+          "name": "BeeWhite"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
+        "model": "Modelbee_villager",
+        "texture": "bee_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGreen"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlue"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotAlex"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "BeeOrchid"
         }
       }
     ],
     "animations": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 1.2,
+    "modelHeight": 0.6,
+    "modelShadowSize": 0.6,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -11776,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -186,12 +105,12 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.25,
-    "stepHeight": 0.6,
+    "movementSpeed": 0.35,
+    "stepHeight": 1.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 10,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -200,7 +119,7 @@
     "pushedByFluids": {
       "fixedValue": true
     },
-    "flyingMob": false,
+    "flyingMob": true,
     "guiBoundTo": "AnimalChestGUI",
     "inventorySize": 17,
     "inventoryStackSize": 99,
@@ -217,7 +136,7 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
-    "immuneToTrident": false,
+    "immuneToTrident": true,
     "immuneToAnvil": false,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
@@ -225,16 +144,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.bee.loop"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.bee.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.bee.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.bee.pollinate"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,20 +164,20 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 4
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "BeeVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"fly\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityMonster</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "TAG:forge:flower"
       }
     ],
     "ranged": false,
@@ -276,13 +195,22 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
+        "value": "cherry_grove"
+      },
+      {
         "value": "mutated_forest"
       },
       {
         "value": "grove"
       },
       {
-        "value": "jungle"
+        "value": "meadow"
+      },
+      {
+        "value": "pale_garden"
+      },
+      {
+        "value": "mutated_plains"
       }
     ],
     "spawnInDungeons": false,

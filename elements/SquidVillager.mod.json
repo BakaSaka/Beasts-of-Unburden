@@ -2,9 +2,9 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Parrot Villager",
+    "mobName": "Squid Villager",
     "mobLabel": "",
-    "mobModelName": "Modelparrot_villager",
+    "mobModelName": "Modelsquid_villager",
     "mobModelTexture": "blank_standin_texture.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -23,120 +23,30 @@
     },
     "modelLayers": [
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_cyan.png",
+        "model": "Modelsquid_villager",
+        "texture": "squid_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotCyan"
+          "name": "SquidNavy"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_red.png",
+        "model": "Modelsquid_villager",
+        "texture": "squid_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotRed"
+          "name": "SquidNavy"
         }
       },
       {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_grey.png",
+        "model": "Modelsquid_villager",
+        "texture": "squid_villager.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ParrotGrey"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_green.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotGreen"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_blue.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlue"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_alex.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotAlex"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_black.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotBlack"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_navy.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotNavy"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_pink.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPink"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_purple.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotPurple"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_white.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotWhite"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_rainbow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotRainbow"
-        }
-      },
-      {
-        "model": "Modelparrot_villager",
-        "texture": "parrot_villager_yellow.png",
-        "disableHurtOverlay": false,
-        "glow": false,
-        "condition": {
-          "name": "ParrotYellow"
+          "name": "SquidNavy"
         }
       }
     ],
@@ -147,7 +57,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15952116,
+      "value": -14139336,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -193,12 +103,12 @@
     "followRange": 16,
     "health": 20,
     "xpAmount": 0,
-    "waterMob": false,
+    "waterMob": true,
     "breatheUnderwater": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "pushedByFluids": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "flyingMob": false,
     "guiBoundTo": "AnimalChestGUI",
@@ -208,16 +118,16 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
-    "immuneToDrowning": false,
+    "immuneToDrowning": true,
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
-    "immuneToTrident": false,
+    "immuneToTrident": true,
     "immuneToAnvil": false,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
@@ -225,16 +135,16 @@
       "value": ""
     },
     "livingSound": {
-      "value": "entity.parrot.ambient"
+      "value": "entity.squid.ambient"
     },
     "hurtSound": {
-      "value": "entity.parrot.hurt"
+      "value": "entity.squid.hurt"
     },
     "deathSound": {
-      "value": "entity.parrot.death"
+      "value": "entity.squid.death"
     },
     "stepSound": {
-      "value": "entity.parrot.step"
+      "value": "entity.squid.squirt"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -245,20 +155,20 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 13
+        "value": 3
       }
     ],
     "onInitialSpawn": {
-      "name": "ParrotVariationSpawn"
+      "name": "SquidVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": false,
     "breedTriggerItems": [
       {
-        "value": "TAG:forge:seed"
+        "value": "Blocks.SEA_PICKLE"
       }
     ],
     "ranged": false,
@@ -276,13 +186,22 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "mutated_forest"
+        "value": "deep_cold_ocean"
       },
       {
-        "value": "grove"
+        "value": "deep_frozen_ocean"
       },
       {
-        "value": "jungle"
+        "value": "deep_lukewarm_ocean"
+      },
+      {
+        "value": "deep_ocean"
+      },
+      {
+        "value": "ocean"
+      },
+      {
+        "value": "warm_ocean"
       }
     ],
     "spawnInDungeons": false,

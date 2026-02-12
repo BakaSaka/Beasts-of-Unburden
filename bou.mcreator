@@ -2236,41 +2236,6 @@
       "path": "~/Turtle"
     },
     {
-      "name": "BabyBeeGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_bee_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyBeeGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Bee"
-    },
-    {
       "name": "BabySpiderGrowth",
       "type": "procedure",
       "compiles": true,
@@ -2339,41 +2304,6 @@
         ]
       },
       "path": "~/Squid"
-    },
-    {
-      "name": "BabyHumanGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_human_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyHumanGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Human"
     },
     {
       "name": "BabyDragonGrowth",
@@ -7254,6 +7184,106 @@
         ]
       },
       "path": "~/Rabbit"
+    },
+    {
+      "name": "BeeBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BeeBlackProcedure.java"
+        ]
+      },
+      "path": "~/Bee"
+    },
+    {
+      "name": "BeeOrchid",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_orchid",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BeeOrchidProcedure.java"
+        ]
+      },
+      "path": "~/Bee"
+    },
+    {
+      "name": "BeeWhite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_white",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BeeWhiteProcedure.java"
+        ]
+      },
+      "path": "~/Bee"
+    },
+    {
+      "name": "SquidGlow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squid_glow",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SquidGlowProcedure.java"
+        ]
+      },
+      "path": "~/Squid"
+    },
+    {
+      "name": "SquidRed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squid_red",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SquidRedProcedure.java"
+        ]
+      },
+      "path": "~/Squid"
     }
   ],
   "variable_elements": [],
@@ -7321,14 +7351,14 @@
       "entity.bou.sheep_villager": "Sheep Villager",
       "item.bou.turtle_villager_spawn_egg": "Turtle Villager Spawn Egg",
       "entity.bou.turtle_villager": "Turtle Villager",
-      "entity.bou.bee_villager": "Parrot Villager",
-      "item.bou.bee_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "entity.bou.spider_villager": "Parrot Villager",
-      "item.bou.spider_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "item.bou.squid_villager_spawn_egg": "Parrot Villager Spawn Egg",
-      "entity.bou.squid_villager": "Parrot Villager",
-      "entity.bou.human_villager": "Parrot Villager",
-      "item.bou.human_villager_spawn_egg": "Parrot Villager Spawn Egg",
+      "entity.bou.bee_villager": "Bee Villager",
+      "item.bou.bee_villager_spawn_egg": "Bee Villager Spawn Egg",
+      "entity.bou.spider_villager": "Spider Villager",
+      "item.bou.spider_villager_spawn_egg": "Spider Villager Spawn Egg",
+      "item.bou.squid_villager_spawn_egg": "Squid Villager Spawn Egg",
+      "entity.bou.squid_villager": "Squid Villager",
+      "entity.bou.human_villager": "Human Villager",
+      "item.bou.human_villager_spawn_egg": "Human Villager Spawn Egg",
       "entity.bou.dragon_villager": "Dragon Villager",
       "item.bou.dragon_villager_spawn_egg": "Dragon Villager Spawn Egg",
       "entity.bou.baby_fox_villager": "Fox Villager",
