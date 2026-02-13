@@ -147,6 +147,10 @@ public class BouModEntities {
 			EntityType.Builder.<BabyRabbitVillagerEntity>of(BabyRabbitVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyRabbitVillagerEntity::new)
 
 					.sized(0.4f, 1f));
+	public static final RegistryObject<EntityType<BabySpiderVillagerEntity>> BABY_SPIDER_VILLAGER = register("baby_spider_villager",
+			EntityType.Builder.<BabySpiderVillagerEntity>of(BabySpiderVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabySpiderVillagerEntity::new)
+
+					.sized(0.5f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -191,6 +195,7 @@ public class BouModEntities {
 			BabyPigVillagerEntity.init();
 			BabyChickenVillagerEntity.init();
 			BabyRabbitVillagerEntity.init();
+			BabySpiderVillagerEntity.init();
 		});
 	}
 
@@ -230,5 +235,6 @@ public class BouModEntities {
 		event.put(BABY_PIG_VILLAGER.get(), BabyPigVillagerEntity.createAttributes().build());
 		event.put(BABY_CHICKEN_VILLAGER.get(), BabyChickenVillagerEntity.createAttributes().build());
 		event.put(BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerEntity.createAttributes().build());
+		event.put(BABY_SPIDER_VILLAGER.get(), BabySpiderVillagerEntity.createAttributes().build());
 	}
 }

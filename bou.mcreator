@@ -2271,41 +2271,6 @@
       "path": "~/Spider"
     },
     {
-      "name": "BabySquidGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_squid_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySquidGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Squid"
-    },
-    {
       "name": "BabyDragonGrowth",
       "type": "procedure",
       "compiles": true,
@@ -7284,6 +7249,380 @@
         ]
       },
       "path": "~/Squid"
+    },
+    {
+      "name": "RabbitChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "RabbitGrey",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rabbit_grey",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/RabbitGreyProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabyRabbitGrey",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_grey",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitGreyProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "SpiderDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_desert",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderDesertProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "SpiderForest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_forest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderForestProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "SpiderJungle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_jungle",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderJungleProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "SpiderIce",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_ice",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderIceProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "SpiderCave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_cave",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderCaveProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderVillager",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_villager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabySpiderVillagerRenderer.java",
+          "src/main/java/net/mcreator/beastsofunburden/entity/BabySpiderVillagerEntity.java",
+          "src/main/resources/assets/bou/models/item/baby_spider_villager_spawn_egg.json"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderVariationSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_variation_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderVariationSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderBlackProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderDesert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_desert",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderDesertProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderForest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_forest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderForestProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderJungle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_jungle",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderJungleProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderIce",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_ice",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderIceProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderCave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_cave",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderCaveProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "SquidBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squid_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SquidBlackProcedure.java"
+        ]
+      },
+      "path": "~/Squid"
+    },
+    {
+      "name": "SquidNether",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squid_nether",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SquidNetherProcedure.java"
+        ]
+      },
+      "path": "~/Squid"
     }
   ],
   "variable_elements": [],
@@ -7384,7 +7723,9 @@
       "entity.bou.baby_chicken_villager": "Chicken Villager",
       "item.bou.baby_chicken_villager_spawn_egg": "Chicken Villager Spawn Egg",
       "entity.bou.baby_rabbit_villager": "Rabbit Villager",
-      "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg"
+      "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg",
+      "entity.bou.baby_spider_villager": "Spider Villager",
+      "item.bou.baby_spider_villager_spawn_egg": "Spider Villager Spawn Egg"
     }
   },
   "metadata": {

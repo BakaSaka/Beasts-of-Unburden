@@ -95,7 +95,7 @@ public class SpiderVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 4);
+		this.entityData.define(DATA_variant, 6);
 	}
 
 	@Override

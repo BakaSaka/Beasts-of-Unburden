@@ -28,7 +28,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.beastsofunburden.procedures.ChickenVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.BabyChickenVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -125,7 +125,7 @@ public class BabyChickenVillagerEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ChickenVariationSpawnProcedure.execute(this);
+		BabyChickenVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 

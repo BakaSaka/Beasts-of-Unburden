@@ -11,7 +11,11 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.beastsofunburden.procedures.SquidRedProcedure;
+import net.mcreator.beastsofunburden.procedures.SquidNetherProcedure;
 import net.mcreator.beastsofunburden.procedures.SquidNavyProcedure;
+import net.mcreator.beastsofunburden.procedures.SquidGlowProcedure;
+import net.mcreator.beastsofunburden.procedures.SquidBlackProcedure;
 import net.mcreator.beastsofunburden.entity.SquidVillagerEntity;
 import net.mcreator.beastsofunburden.client.model.Modelsquid_villager;
 
@@ -41,7 +45,7 @@ public class SquidVillagerRenderer extends MobRenderer<SquidVillagerEntity, Mode
 			}
 		});
 		this.addLayer(new RenderLayer<SquidVillagerEntity, Modelsquid_villager<SquidVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager_black.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SquidVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -49,7 +53,7 @@ public class SquidVillagerRenderer extends MobRenderer<SquidVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (SquidNavyProcedure.execute(entity)) {
+				if (SquidBlackProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelsquid_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsquid_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -60,7 +64,7 @@ public class SquidVillagerRenderer extends MobRenderer<SquidVillagerEntity, Mode
 			}
 		});
 		this.addLayer(new RenderLayer<SquidVillagerEntity, Modelsquid_villager<SquidVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager_glow.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SquidVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -68,7 +72,45 @@ public class SquidVillagerRenderer extends MobRenderer<SquidVillagerEntity, Mode
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (SquidNavyProcedure.execute(entity)) {
+				if (SquidGlowProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					EntityModel model = new Modelsquid_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsquid_villager.LAYER_LOCATION));
+					this.getParentModel().copyPropertiesTo(model);
+					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
+					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<SquidVillagerEntity, Modelsquid_villager<SquidVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager_nether.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SquidVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level;
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (SquidNetherProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					EntityModel model = new Modelsquid_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsquid_villager.LAYER_LOCATION));
+					this.getParentModel().copyPropertiesTo(model);
+					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
+					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<SquidVillagerEntity, Modelsquid_villager<SquidVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/squid_villager_red.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, SquidVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level;
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (SquidRedProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelsquid_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsquid_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);

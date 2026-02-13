@@ -22,7 +22,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 	public BabyChickenVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelbaby_chicken_villager<BabyChickenVillagerEntity>(context.bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION)), 0.4f);
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_yellow.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -30,7 +30,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenWhiteProcedure.execute(entity)) {
+				if (BabyChickenWhiteProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -41,7 +41,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_grey.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -49,7 +49,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenLavenderProcedure.execute(entity)) {
+				if (BabyChickenLavenderProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -60,7 +60,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_grey.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -68,7 +68,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenBlueProcedure.execute(entity)) {
+				if (BabyChickenBlueProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -79,7 +79,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_grey.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -87,7 +87,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenBlackProcedure.execute(entity)) {
+				if (BabyChickenBlackProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -98,7 +98,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_brown.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -106,7 +106,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenChocolateProcedure.execute(entity)) {
+				if (BabyChickenBrownProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -117,7 +117,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_brown.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -125,7 +125,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenBrownProcedure.execute(entity)) {
+				if (BabyChickenChocolateProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -136,7 +136,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_buff.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -144,7 +144,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenGoldenProcedure.execute(entity)) {
+				if (BabyChickenGoldenProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -155,7 +155,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_striped.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -163,7 +163,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (ChickenSpeckledProcedure.execute(entity)) {
+				if (BabyChickenSpeckledProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelbaby_chicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_chicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
@@ -174,7 +174,7 @@ public class BabyChickenVillagerRenderer extends MobRenderer<BabyChickenVillager
 			}
 		});
 		this.addLayer(new RenderLayer<BabyChickenVillagerEntity, Modelbaby_chicken_villager<BabyChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_chicken_villager_yellow.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabyChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

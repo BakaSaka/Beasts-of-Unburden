@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Modelbee_villager",
-        "texture": "bee_villager.png",
+        "texture": "bee_villager_honey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -33,7 +33,7 @@
       },
       {
         "model": "Modelbee_villager",
-        "texture": "bee_villager.png",
+        "texture": "bee_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -42,7 +42,7 @@
       },
       {
         "model": "Modelbee_villager",
-        "texture": "bee_villager.png",
+        "texture": "bee_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -51,7 +51,7 @@
       },
       {
         "model": "Modelbee_villager",
-        "texture": "bee_villager.png",
+        "texture": "bee_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {

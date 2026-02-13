@@ -48,5 +48,6 @@ public class BouModEntityRenderers {
 		event.registerEntityRenderer(BouModEntities.BABY_PIG_VILLAGER.get(), BabyPigVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_CHICKEN_VILLAGER.get(), BabyChickenVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.BABY_SPIDER_VILLAGER.get(), BabySpiderVillagerRenderer::new);
 	}
 }

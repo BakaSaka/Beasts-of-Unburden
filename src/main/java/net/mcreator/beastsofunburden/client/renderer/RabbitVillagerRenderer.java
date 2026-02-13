@@ -22,7 +22,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 	public RabbitVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelrabbit_villager<RabbitVillagerEntity>(context.bakeLayer(Modelrabbit_villager.LAYER_LOCATION)), 0.5f);
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_brown.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -41,7 +41,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 			}
 		});
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_buff.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -60,7 +60,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 			}
 		});
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_cream.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -79,7 +79,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 			}
 		});
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_white.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -98,7 +98,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 			}
 		});
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_mottled.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -117,7 +117,7 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 			}
 		});
 		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_black.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -126,6 +126,44 @@ public class RabbitVillagerRenderer extends MobRenderer<RabbitVillagerEntity, Mo
 				double y = entity.getY();
 				double z = entity.getZ();
 				if (RabbitBlackProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					EntityModel model = new Modelrabbit_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelrabbit_villager.LAYER_LOCATION));
+					this.getParentModel().copyPropertiesTo(model);
+					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
+					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_chocolate.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level;
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (RabbitChocolateProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					EntityModel model = new Modelrabbit_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelrabbit_villager.LAYER_LOCATION));
+					this.getParentModel().copyPropertiesTo(model);
+					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
+					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<RabbitVillagerEntity, Modelrabbit_villager<RabbitVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/rabbit_villager_grey.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, RabbitVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level;
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (RabbitGreyProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelrabbit_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelrabbit_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);

@@ -97,7 +97,7 @@ public class RabbitVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 6);
+		this.entityData.define(DATA_variant, 8);
 	}
 
 	@Override

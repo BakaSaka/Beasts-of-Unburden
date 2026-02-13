@@ -81,5 +81,7 @@
   "entity.bou.baby_chicken_villager": "Chicken Villager",
   "item.bou.baby_chicken_villager_spawn_egg": "Chicken Villager Spawn Egg",
   "entity.bou.baby_rabbit_villager": "Rabbit Villager",
-  "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg"
+  "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg",
+  "entity.bou.baby_spider_villager": "Spider Villager",
+  "item.bou.baby_spider_villager_spawn_egg": "Spider Villager Spawn Egg"
 }

@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -33,7 +33,7 @@
       },
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_buff.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -42,7 +42,7 @@
       },
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_cream.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -51,7 +51,7 @@
       },
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -60,7 +60,7 @@
       },
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_mottled.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -69,11 +69,29 @@
       },
       {
         "model": "Modelrabbit_villager",
-        "texture": "rabbit_villager.png",
+        "texture": "rabbit_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
           "name": "RabbitBlack"
+        }
+      },
+      {
+        "model": "Modelrabbit_villager",
+        "texture": "rabbit_villager_chocolate.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "RabbitChocolate"
+        }
+      },
+      {
+        "model": "Modelrabbit_villager",
+        "texture": "rabbit_villager_grey.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "RabbitGrey"
         }
       }
     ],
@@ -182,7 +200,7 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 6
+        "value": 8
       }
     ],
     "onInitialSpawn": {

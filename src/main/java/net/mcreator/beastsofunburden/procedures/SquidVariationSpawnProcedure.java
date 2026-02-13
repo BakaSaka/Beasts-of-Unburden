@@ -13,6 +13,6 @@ public class SquidVariationSpawnProcedure {
 			return;
 		double variant = 0;
 		if (entity instanceof SquidVillagerEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(SquidVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 3));
+			_datEntSetI.getEntityData().set(SquidVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 5));
 	}
 }

@@ -24,79 +24,79 @@
     "modelLayers": [
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_yellow.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenWhite"
+          "name": "BabyChickenWhite"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenLavender"
+          "name": "BabyChickenLavender"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenBlue"
+          "name": "BabyChickenBlue"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_grey.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenBlack"
+          "name": "BabyChickenBlack"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenChocolate"
+          "name": "BabyChickenBrown"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenBrown"
+          "name": "BabyChickenChocolate"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_buff.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenGolden"
+          "name": "BabyChickenGolden"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_striped.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "ChickenSpeckled"
+          "name": "BabyChickenSpeckled"
         }
       },
       {
         "model": "Modelbaby_chicken_villager",
-        "texture": "baby_chicken_villager.png",
+        "texture": "baby_chicken_villager_yellow.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -219,7 +219,7 @@
       }
     ],
     "onInitialSpawn": {
-      "name": "ChickenVariationSpawn"
+      "name": "BabyChickenVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

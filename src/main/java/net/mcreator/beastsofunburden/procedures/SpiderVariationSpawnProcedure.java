@@ -13,6 +13,6 @@ public class SpiderVariationSpawnProcedure {
 			return;
 		double variant = 0;
 		if (entity instanceof SpiderVillagerEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(SpiderVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 5));
+			_datEntSetI.getEntityData().set(SpiderVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 6));
 	}
 }

@@ -48,6 +48,7 @@ public class BouModItems {
 	public static final RegistryObject<Item> BABY_PIG_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_CHICKEN_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_RABBIT_VILLAGER_SPAWN_EGG;
+	public static final RegistryObject<Item> BABY_SPIDER_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> ANIMAL_CHEST;
 	public static final RegistryObject<Item> ANIMAL_CHEST_INACTIVE;
 	public static final RegistryObject<Item> ONE_SHOTTER;
@@ -82,6 +83,7 @@ public class BouModItems {
 		BABY_PIG_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_pig_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_PIG_VILLAGER, -1462103, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_CHICKEN_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_chicken_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_CHICKEN_VILLAGER, -9171956, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_RABBIT_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_rabbit_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_RABBIT_VILLAGER, -9552611, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		BABY_SPIDER_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_spider_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_SPIDER_VILLAGER, -14868171, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		ANIMAL_CHEST = block(BouModBlocks.ANIMAL_CHEST, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
 		ANIMAL_CHEST_INACTIVE = block(BouModBlocks.ANIMAL_CHEST_INACTIVE, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
 		ONE_SHOTTER = REGISTRY.register("one_shotter", OneShotterItem::new);

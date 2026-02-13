@@ -22,7 +22,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 	public ChickenVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelchicken_villager<ChickenVillagerEntity>(context.bakeLayer(Modelchicken_villager.LAYER_LOCATION)), 0.4f);
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_white.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -41,7 +41,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_lavender.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -60,7 +60,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_blue.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -79,7 +79,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_black.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -98,7 +98,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_chocolate.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -117,7 +117,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_brown.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -136,7 +136,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_golden.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -155,7 +155,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_speckled.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -174,7 +174,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 			}
 		});
 		this.addLayer(new RenderLayer<ChickenVillagerEntity, Modelchicken_villager<ChickenVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/chicken_villager_splash.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, ChickenVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -182,7 +182,7 @@ public class ChickenVillagerRenderer extends MobRenderer<ChickenVillagerEntity, 
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (BabyChickenSplashProcedure.execute(entity)) {
+				if (ChickenSplashProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelchicken_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelchicken_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);

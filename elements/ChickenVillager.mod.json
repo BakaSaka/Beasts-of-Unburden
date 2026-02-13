@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_white.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -33,7 +33,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_lavender.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -42,7 +42,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_blue.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -51,7 +51,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -60,7 +60,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_chocolate.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -69,7 +69,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_brown.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -78,7 +78,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_golden.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -87,7 +87,7 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_speckled.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -96,11 +96,11 @@
       },
       {
         "model": "Modelchicken_villager",
-        "texture": "chicken_villager.png",
+        "texture": "chicken_villager_splash.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "BabyChickenSplash"
+          "name": "ChickenSplash"
         }
       }
     ],
@@ -155,7 +155,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 20,
+    "health": 18,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {

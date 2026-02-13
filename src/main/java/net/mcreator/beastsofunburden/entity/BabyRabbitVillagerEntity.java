@@ -70,7 +70,7 @@ public class BabyRabbitVillagerEntity extends Monster {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 6);
+		this.entityData.define(DATA_variant, 8);
 		this.entityData.define(DATA_timer, 0);
 	}
 

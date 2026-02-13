@@ -138,7 +138,7 @@ public class SquidVillagerEntity extends Animal {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 3);
+		this.entityData.define(DATA_variant, 5);
 	}
 
 	@Override

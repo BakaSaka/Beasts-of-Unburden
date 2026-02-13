@@ -33,20 +33,38 @@
       },
       {
         "model": "Modelsquid_villager",
-        "texture": "squid_villager.png",
+        "texture": "squid_villager_black.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SquidNavy"
+          "name": "SquidBlack"
         }
       },
       {
         "model": "Modelsquid_villager",
-        "texture": "squid_villager.png",
+        "texture": "squid_villager_glow.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SquidNavy"
+          "name": "SquidGlow"
+        }
+      },
+      {
+        "model": "Modelsquid_villager",
+        "texture": "squid_villager_nether.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SquidNether"
+        }
+      },
+      {
+        "model": "Modelsquid_villager",
+        "texture": "squid_villager_red.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SquidRed"
         }
       }
     ],
@@ -155,7 +173,7 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 3
+        "value": 5
       }
     ],
     "onInitialSpawn": {

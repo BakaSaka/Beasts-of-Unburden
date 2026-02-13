@@ -24,7 +24,7 @@
     "modelLayers": [
       {
         "model": "Modelspider_villager",
-        "texture": "spider_villager.png",
+        "texture": "spider_villager_surface.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
@@ -33,38 +33,47 @@
       },
       {
         "model": "Modelspider_villager",
-        "texture": "spider_villager.png",
+        "texture": "spider_villager_forest.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SpiderBlack"
+          "name": "SpiderForest"
         }
       },
       {
         "model": "Modelspider_villager",
-        "texture": "spider_villager.png",
+        "texture": "spider_villager_desert.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SpiderBlack"
+          "name": "SpiderDesert"
         }
       },
       {
         "model": "Modelspider_villager",
-        "texture": "spider_villager.png",
+        "texture": "spider_villager_jungle.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SpiderBlack"
+          "name": "SpiderJungle"
         }
       },
       {
         "model": "Modelspider_villager",
-        "texture": "spider_villager.png",
+        "texture": "spider_villager_ice.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "SpiderBlack"
+          "name": "SpiderIce"
+        }
+      },
+      {
+        "model": "Modelspider_villager",
+        "texture": "spider_villager_cave.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SpiderCave"
         }
       }
     ],
@@ -173,7 +182,7 @@
         "max": 2147483647,
         "name": "variant",
         "type": "integer",
-        "value": 4
+        "value": 6
       }
     ],
     "onInitialSpawn": {

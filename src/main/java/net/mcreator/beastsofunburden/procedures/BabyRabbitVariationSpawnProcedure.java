@@ -13,6 +13,6 @@ public class BabyRabbitVariationSpawnProcedure {
 			return;
 		double variant = 0;
 		if (entity instanceof BabyRabbitVillagerEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(BabyRabbitVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 6));
+			_datEntSetI.getEntityData().set(BabyRabbitVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 8));
 	}
 }

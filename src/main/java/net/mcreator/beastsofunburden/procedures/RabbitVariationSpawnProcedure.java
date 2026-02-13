@@ -13,6 +13,6 @@ public class RabbitVariationSpawnProcedure {
 			return;
 		double variant = 0;
 		if (entity instanceof RabbitVillagerEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(RabbitVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 6));
+			_datEntSetI.getEntityData().set(RabbitVillagerEntity.DATA_variant, Mth.nextInt(new Random(), 1, 8));
 	}
 }
