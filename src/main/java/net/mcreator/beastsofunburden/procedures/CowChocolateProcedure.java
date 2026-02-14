@@ -4,7 +4,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.beastsofunburden.entity.CowVillagerEntity;
 
-public class CowBrownProcedure {
+public class CowChocolateProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;

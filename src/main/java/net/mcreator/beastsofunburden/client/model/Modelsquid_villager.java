@@ -64,12 +64,14 @@ public class Modelsquid_villager<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(0, 39).mirror().addBox(-4.0F, 4.682F, -0.7313F, 8.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false).texOffs(22, 35).addBox(-6.0F, -1.318F, -0.7313F, 2.0F, 8.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 4.95F, -0.05F, -0.7505F, 0.0F, 0.0F));
 		PartDefinition mirrored2 = arms2.addOrReplaceChild("mirrored2", CubeListBuilder.create().texOffs(22, 35).addBox(4.0F, -23.05F, -1.05F, 2.0F, 8.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 21.732F, 0.3186F));
-		PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 45).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-3.0F, 7.0F, -2.0F));
-		PartDefinition right_leg_back = partdefinition.addOrReplaceChild("right_leg_back", CubeListBuilder.create().texOffs(9, 45).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, 7.0F, 2.0F));
+		PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 45).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-3.0F, 7.0F, -2.0F, 0.0F, -0.3927F, 0.0F));
+		PartDefinition right_leg_back = partdefinition.addOrReplaceChild("right_leg_back", CubeListBuilder.create().texOffs(9, 45).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-2.0F, 7.0F, 2.0F, 0.0F, 0.3927F, 0.0F));
 		PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(9, 45).mirror().addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
-				PartPose.offset(3.0F, 7.0F, -2.0F));
+				PartPose.offsetAndRotation(3.0F, 7.0F, -2.0F, 0.0F, 0.6545F, 0.0F));
 		PartDefinition left_leg_back = partdefinition.addOrReplaceChild("left_leg_back", CubeListBuilder.create().texOffs(0, 45).mirror().addBox(-1.0F, 0.0F, -1.0F, 2.0F, 17.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
-				PartPose.offset(2.0F, 7.0F, 2.0F));
+				PartPose.offsetAndRotation(2.0F, 7.0F, 2.0F, 0.0F, -0.3927F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
@@ -91,9 +93,9 @@ public class Modelsquid_villager<T extends Entity> extends EntityModel<T> {
 		this.head.xRot = headPitch / (180F / (float) Math.PI);
 		this.headwear.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.headwear.xRot = headPitch / (180F / (float) Math.PI);
-		this.left_leg.yRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
-		this.right_leg.yRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
-		this.left_leg_back.yRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
-		this.right_leg_back.yRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
+		this.left_leg.zRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.right_leg.zRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.left_leg_back.zRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.right_leg_back.zRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 	}
 }

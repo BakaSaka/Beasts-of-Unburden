@@ -24,11 +24,11 @@
     "modelLayers": [
       {
         "model": "Modelbaby_cow_villager",
-        "texture": "baby_cow_villager.png",
+        "texture": "baby_cow_villager_chocolate.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "BabyCowBrown"
+          "name": "BabyCowChocolate"
         }
       },
       {

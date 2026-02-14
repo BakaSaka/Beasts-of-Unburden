@@ -253,6 +253,7 @@ public class CatVillagerRenderer extends MobRenderer<CatVillagerEntity, Modelcat
 
 	@Override
 	protected void scale(CatVillagerEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(0.87f, 0.87f, 0.87f);
 		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 

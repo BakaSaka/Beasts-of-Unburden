@@ -22,7 +22,7 @@ public class CowVillagerRenderer extends MobRenderer<CowVillagerEntity, Modelcow
 	public CowVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelcow_villager<CowVillagerEntity>(context.bakeLayer(Modelcow_villager.LAYER_LOCATION)), 0.6f);
 		this.addLayer(new RenderLayer<CowVillagerEntity, Modelcow_villager<CowVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cow_villager.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/cow_villager_chocolate.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, CowVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -30,7 +30,7 @@ public class CowVillagerRenderer extends MobRenderer<CowVillagerEntity, Modelcow
 				double x = entity.getX();
 				double y = entity.getY();
 				double z = entity.getZ();
-				if (CowBrownProcedure.execute(entity)) {
+				if (CowChocolateProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
 					EntityModel model = new Modelcow_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelcow_villager.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);

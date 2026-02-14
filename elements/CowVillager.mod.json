@@ -24,11 +24,11 @@
     "modelLayers": [
       {
         "model": "Modelcow_villager",
-        "texture": "cow_villager.png",
+        "texture": "cow_villager_chocolate.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {
-          "name": "CowBrown"
+          "name": "CowChocolate"
         }
       },
       {
@@ -93,7 +93,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -13754093,
+      "value": -12636902,
       "falpha": 0.0
     },
     "spawnEggDotColor": {

@@ -148,8 +148,8 @@ public class Modelbee_villager<T extends Entity> extends EntityModel<T> {
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch) {
-		this.right_wing.xRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
-		this.tail.xRot = headPitch / (180F / (float) Math.PI);
+		this.right_wing.zRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
+		this.tail.zRot = headPitch / (180F / (float) Math.PI);
 		this.headgear.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.headgear.xRot = headPitch / (180F / (float) Math.PI);
 		this.right_leg_back.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
@@ -157,8 +157,8 @@ public class Modelbee_villager<T extends Entity> extends EntityModel<T> {
 		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.head.xRot = headPitch / (180F / (float) Math.PI);
 		this.left_leg_front.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
-		this.tailwear.xRot = headPitch / (180F / (float) Math.PI);
-		this.left_wing.xRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
+		this.tailwear.zRot = headPitch / (180F / (float) Math.PI);
+		this.left_wing.zRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
 		this.left_leg_back.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 	}
 }

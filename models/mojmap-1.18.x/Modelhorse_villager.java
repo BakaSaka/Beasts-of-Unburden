@@ -8,8 +8,8 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
 			new ResourceLocation("modid", "horse_villager"), "main");
 	private final ModelPart head;
-	private final ModelPart headwear;
 	private final ModelPart nose;
+	private final ModelPart headwear;
 	private final ModelPart body;
 	private final ModelPart bodywear;
 	private final ModelPart tail;
@@ -20,8 +20,8 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 
 	public Modelhorse_villager(ModelPart root) {
 		this.head = root.getChild("head");
+		this.nose = this.head.getChild("nose");
 		this.headwear = root.getChild("headwear");
-		this.nose = root.getChild("nose");
 		this.body = root.getChild("body");
 		this.bodywear = root.getChild("bodywear");
 		this.tail = root.getChild("tail");
@@ -44,14 +44,22 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 						.addBox(1.0F, -12.0F, 1.0F, 2.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offset(0.0F, -2.0F, 0.0F));
 
+		PartDefinition nose = head.addOrReplaceChild("nose", CubeListBuilder.create(),
+				PartPose.offset(0.0F, -0.4406F, 1.8028F));
+
+		PartDefinition jaw_r1 = nose.addOrReplaceChild("jaw_r1",
+				CubeListBuilder.create().texOffs(22, 0).addBox(-2.5F, 1.0F, -6.3284F, 5.0F, -1.0F, 6.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, -0.9895F, -2.9686F, 0.3927F, 0.0F, 0.0F));
+
+		PartDefinition nose_r1 = nose
+				.addOrReplaceChild("nose_r1",
+						CubeListBuilder.create().texOffs(32, 0).addBox(-3.0F, -6.0502F, -9.1924F, 6.0F, 4.0F, 6.0F,
+								new CubeDeformation(0.0F)),
+						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.3927F, 0.0F, 0.0F));
+
 		PartDefinition headwear = partdefinition.addOrReplaceChild("headwear", CubeListBuilder.create().texOffs(0, 47)
 				.addBox(-4.0F, -10.0F, -4.0F, 8.0F, 9.0F, 8.0F, new CubeDeformation(0.5F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
-
-		PartDefinition nose = partdefinition.addOrReplaceChild("nose",
-				CubeListBuilder.create().texOffs(32, 0)
-						.addBox(-3.0F, -6.0F, -9.5F, 6.0F, 4.0F, 6.0F, new CubeDeformation(0.0F)).texOffs(22, 0)
-						.addBox(-2.5F, -1.0F, -8.0F, 5.0F, -1.0F, 6.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition body = partdefinition.addOrReplaceChild("body",
@@ -97,7 +105,6 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 			float red, float green, float blue, float alpha) {
 		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		headwear.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		nose.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		bodywear.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		tail.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
@@ -116,6 +123,6 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 		this.headwear.xRot = headPitch / (180F / (float) Math.PI);
 		this.left_leg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.right_leg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.tail.xRot = headPitch / (180F / (float) Math.PI);
+		this.tail.zRot = netHeadYaw / (180F / (float) Math.PI);
 	}
 }

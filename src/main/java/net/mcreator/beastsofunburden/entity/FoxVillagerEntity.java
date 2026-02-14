@@ -144,7 +144,7 @@ public class FoxVillagerEntity extends Animal {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		if (damagesource.getDirectEntity() instanceof Player)
+		if (damagesource == DamageSource.ANVIL)
 			return false;
 		return super.hurt(damagesource, amount);
 	}

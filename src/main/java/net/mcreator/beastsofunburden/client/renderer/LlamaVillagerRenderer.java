@@ -215,7 +215,7 @@ public class LlamaVillagerRenderer extends MobRenderer<LlamaVillagerEntity, Mode
 
 	@Override
 	protected void scale(LlamaVillagerEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(1.1f, 1.1f, 1.1f);
+		poseStack.scale(1.07f, 1.07f, 1.07f);
 		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 

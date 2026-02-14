@@ -16,7 +16,7 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.9
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
@@ -143,10 +143,10 @@
     "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
-    "immuneToPlayer": true,
+    "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
-    "immuneToAnvil": false,
+    "immuneToAnvil": true,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {

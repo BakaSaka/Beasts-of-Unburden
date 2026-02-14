@@ -16,7 +16,7 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.87
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
@@ -138,7 +138,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -2383539,
+      "value": -6527464,
       "falpha": 0.0
     },
     "spawnEggDotColor": {

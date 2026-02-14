@@ -124,6 +124,7 @@ public class FoxVillagerRenderer extends MobRenderer<FoxVillagerEntity, Modelfox
 
 	@Override
 	protected void scale(FoxVillagerEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(0.9f, 0.9f, 0.9f);
 		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 

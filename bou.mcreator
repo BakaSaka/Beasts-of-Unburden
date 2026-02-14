@@ -1208,26 +1208,6 @@
       "path": "~/Cow"
     },
     {
-      "name": "CowBrown",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cow_brown",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/CowBrownProcedure.java"
-        ]
-      },
-      "path": "~/Cow"
-    },
-    {
       "name": "LlamaVillager",
       "type": "livingentity",
       "compiles": true,
@@ -4821,26 +4801,6 @@
       "path": "~/Cow"
     },
     {
-      "name": "BabyCowBrown",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_cow_brown",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCowBrownProcedure.java"
-        ]
-      },
-      "path": "~/Cow"
-    },
-    {
       "name": "BabyCowHighland",
       "type": "procedure",
       "compiles": true,
@@ -7623,6 +7583,46 @@
         ]
       },
       "path": "~/Squid"
+    },
+    {
+      "name": "CowChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cow_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/CowChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Cow"
+    },
+    {
+      "name": "BabyCowChocolate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_cow_chocolate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCowChocolateProcedure.java"
+        ]
+      },
+      "path": "~/Cow"
     }
   ],
   "variable_elements": [],
