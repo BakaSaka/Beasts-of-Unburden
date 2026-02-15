@@ -13,8 +13,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.beastsofunburden.item.WandOfVariationItem;
 import net.mcreator.beastsofunburden.item.VendorChestKeyItem;
 import net.mcreator.beastsofunburden.item.OneShotterItem;
+import net.mcreator.beastsofunburden.item.KeyringToolItem;
 import net.mcreator.beastsofunburden.BouMod;
 
 public class BouModItems {
@@ -51,6 +53,8 @@ public class BouModItems {
 	public static final RegistryObject<Item> BABY_SPIDER_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> ANIMAL_CHEST;
 	public static final RegistryObject<Item> ANIMAL_CHEST_INACTIVE;
+	public static final RegistryObject<Item> KEYRING_TOOL;
+	public static final RegistryObject<Item> WAND_OF_VARIATION;
 	public static final RegistryObject<Item> ONE_SHOTTER;
 	public static final RegistryObject<Item> VENDOR_CHEST_KEY;
 	static {
@@ -66,7 +70,7 @@ public class BouModItems {
 		BEAR_VILLAGER_SPAWN_EGG = REGISTRY.register("bear_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BEAR_VILLAGER, -15330028, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		PIG_VILLAGER_SPAWN_EGG = REGISTRY.register("pig_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.PIG_VILLAGER, -1462103, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		CHICKEN_VILLAGER_SPAWN_EGG = REGISTRY.register("chicken_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.CHICKEN_VILLAGER, -9171956, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-		RABBIT_VILLAGER_SPAWN_EGG = REGISTRY.register("rabbit_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.RABBIT_VILLAGER, -7972053, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		RABBIT_VILLAGER_SPAWN_EGG = REGISTRY.register("rabbit_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.RABBIT_VILLAGER, -7567996, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		SHEEP_VILLAGER_SPAWN_EGG = REGISTRY.register("sheep_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.SHEEP_VILLAGER, -138269, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		TURTLE_VILLAGER_SPAWN_EGG = REGISTRY.register("turtle_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.TURTLE_VILLAGER, -16737895, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BEE_VILLAGER_SPAWN_EGG = REGISTRY.register("bee_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BEE_VILLAGER, -11776, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -86,6 +90,8 @@ public class BouModItems {
 		BABY_SPIDER_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_spider_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_SPIDER_VILLAGER, -14868171, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		ANIMAL_CHEST = block(BouModBlocks.ANIMAL_CHEST, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
 		ANIMAL_CHEST_INACTIVE = block(BouModBlocks.ANIMAL_CHEST_INACTIVE, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
+		KEYRING_TOOL = REGISTRY.register("keyring_tool", KeyringToolItem::new);
+		WAND_OF_VARIATION = REGISTRY.register("wand_of_variation", WandOfVariationItem::new);
 		ONE_SHOTTER = REGISTRY.register("one_shotter", OneShotterItem::new);
 		VENDOR_CHEST_KEY = REGISTRY.register("vendor_chest_key", VendorChestKeyItem::new);
 	}

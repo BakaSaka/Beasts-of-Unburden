@@ -51,7 +51,7 @@
       },
       {
         "model": "Modelbee_villager",
-        "texture": "bee_villager_white.png",
+        "texture": "bee_villager_orchid.png",
         "disableHurtOverlay": false,
         "glow": false,
         "condition": {

@@ -82,7 +82,7 @@ public class BeeVillagerRenderer extends MobRenderer<BeeVillagerEntity, Modelbee
 			}
 		});
 		this.addLayer(new RenderLayer<BeeVillagerEntity, Modelbee_villager<BeeVillagerEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/bee_villager_white.png");
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/bee_villager_orchid.png");
 
 			@Override
 			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BeeVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {

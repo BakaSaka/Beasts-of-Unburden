@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.beastsofunburden.world.inventory.OwnAnimalChestGUIMenu;
+import net.mcreator.beastsofunburden.world.inventory.KeyringGUIMenu;
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
 import net.mcreator.beastsofunburden.network.MenuStateUpdateMessage;
 import net.mcreator.beastsofunburden.BouMod;
@@ -26,6 +27,7 @@ public class BouModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.CONTAINERS, BouMod.MODID);
 	public static final RegistryObject<MenuType<AnimalChestGUIMenu>> ANIMAL_CHEST_GUI = REGISTRY.register("animal_chest_gui", () -> IForgeMenuType.create(AnimalChestGUIMenu::new));
 	public static final RegistryObject<MenuType<OwnAnimalChestGUIMenu>> OWN_ANIMAL_CHEST_GUI = REGISTRY.register("own_animal_chest_gui", () -> IForgeMenuType.create(OwnAnimalChestGUIMenu::new));
+	public static final RegistryObject<MenuType<KeyringGUIMenu>> KEYRING_GUI = REGISTRY.register("keyring_gui", () -> IForgeMenuType.create(KeyringGUIMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

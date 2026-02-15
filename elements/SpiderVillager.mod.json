@@ -75,6 +75,15 @@
         "condition": {
           "name": "SpiderCave"
         }
+      },
+      {
+        "model": "Modelspider_villager",
+        "texture": "spider_villager_ender.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "SpiderEnder"
+        }
       }
     ],
     "animations": [],

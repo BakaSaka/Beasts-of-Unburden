@@ -7623,6 +7623,105 @@
         ]
       },
       "path": "~/Cow"
+    },
+    {
+      "name": "KeyringTool",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keyring_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/item/KeyringToolItem.java",
+          "src/main/resources/assets/bou/models/item/keyring_tool.json"
+        ]
+      },
+      "path": "~/ShopChestKeys"
+    },
+    {
+      "name": "KeyringGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keyring_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/gui/KeyringGUIScreen.java",
+          "src/main/java/net/mcreator/beastsofunburden/world/inventory/KeyringGUIMenu.java"
+        ]
+      },
+      "path": "~/ShopChestKeys"
+    },
+    {
+      "name": "WandOfVariation",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_of_variation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/item/WandOfVariationItem.java",
+          "src/main/resources/assets/bou/models/item/wand_of_variation.json"
+        ]
+      }
+    },
+    {
+      "name": "WandOfVariationEntityHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_of_variation_entity_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/WandOfVariationEntityHitProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SpiderEnder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_ender",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/SpiderEnderProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabySpiderEnder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_ender",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderEnderProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
     }
   ],
   "variable_elements": [],
@@ -7725,7 +7824,9 @@
       "entity.bou.baby_rabbit_villager": "Rabbit Villager",
       "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg",
       "entity.bou.baby_spider_villager": "Spider Villager",
-      "item.bou.baby_spider_villager_spawn_egg": "Spider Villager Spawn Egg"
+      "item.bou.baby_spider_villager_spawn_egg": "Spider Villager Spawn Egg",
+      "item.bou.keyring_tool": "Key Ring",
+      "item.bou.wand_of_variation": "Wand Of Variation"
     }
   },
   "metadata": {

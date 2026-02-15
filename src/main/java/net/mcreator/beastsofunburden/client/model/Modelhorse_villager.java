@@ -99,6 +99,6 @@ public class Modelhorse_villager<T extends Entity> extends EntityModel<T> {
 		this.headwear.xRot = headPitch / (180F / (float) Math.PI);
 		this.left_leg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.right_leg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.tail.zRot = netHeadYaw / (180F / (float) Math.PI);
+		this.tail.zRot = headPitch / (180F / (float) Math.PI);
 	}
 }

@@ -201,7 +201,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "AnimalChestGUI",
     "inventorySize": 17,
     "inventoryStackSize": 99,
     "disableCollisions": false,

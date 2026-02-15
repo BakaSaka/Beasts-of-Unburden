@@ -135,6 +135,25 @@ public class BabySpiderVillagerRenderer extends MobRenderer<BabySpiderVillagerEn
 				}
 			}
 		});
+		this.addLayer(new RenderLayer<BabySpiderVillagerEntity, Modelbaby_spider_villager<BabySpiderVillagerEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/baby_spider_villager_ender.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, BabySpiderVillagerEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level;
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (BabySpiderEnderProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					EntityModel model = new Modelbaby_spider_villager(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbaby_spider_villager.LAYER_LOCATION));
+					this.getParentModel().copyPropertiesTo(model);
+					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
+					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+				}
+			}
+		});
 	}
 
 	@Override

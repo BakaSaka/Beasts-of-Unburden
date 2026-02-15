@@ -56,7 +56,7 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<LlamaVillagerEntity>> LLAMA_VILLAGER = register("llama_villager",
 			EntityType.Builder.<LlamaVillagerEntity>of(LlamaVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LlamaVillagerEntity::new)
 
-					.sized(0.8f, 1f));
+					.sized(0.8f, 2f));
 	public static final RegistryObject<EntityType<BearVillagerEntity>> BEAR_VILLAGER = register("bear_villager",
 			EntityType.Builder.<BearVillagerEntity>of(BearVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BearVillagerEntity::new)
 
