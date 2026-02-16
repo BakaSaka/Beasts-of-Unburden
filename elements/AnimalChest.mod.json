@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "animalchest:default",
+    "customModelName": "animalchest_inactive:default",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -45,7 +45,7 @@
         "value": false
       }
     ],
-    "name": "Animal Chest",
+    "name": "Animal Shop Chest",
     "specialInformation": {
       "fixedValue": []
     },
@@ -88,7 +88,7 @@
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
+    "aiPathNodeType": "BLOCKED",
     "strippingResult": {
       "value": ""
     },
@@ -96,10 +96,10 @@
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
-    "slipperiness": 0.6,
+    "slipperiness": 0.5,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "IGNORE",
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -129,10 +129,9 @@
     "vibrationSensitivityRadius": {
       "fixedValue": 7.0
     },
-    "hasInventory": false,
-    "guiBoundTo": "AnimalChestGUI",
+    "hasInventory": true,
     "openGUIOnRightClick": true,
-    "inventorySize": 17,
+    "inventorySize": 8,
     "inventoryStackSize": 99,
     "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,

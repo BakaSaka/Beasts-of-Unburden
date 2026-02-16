@@ -18,16 +18,16 @@
         "value": "TOOLS"
       }
     ],
-    "efficiency": 4.0,
-    "attackSpeed": 1.0,
+    "efficiency": 0.0,
+    "attackSpeed": 0.0,
     "enchantability": 2,
-    "damageVsEntity": 4.0,
-    "usageCount": 100,
+    "damageVsEntity": 0.0,
+    "usageCount": 0,
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [],
-    "immuneToFire": false,
+    "immuneToFire": true,
     "blockDropsTier": "IRON",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,

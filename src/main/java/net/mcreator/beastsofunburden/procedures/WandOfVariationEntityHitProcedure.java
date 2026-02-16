@@ -74,5 +74,7 @@ public class WandOfVariationEntityHitProcedure {
 			_datEntSetI.getEntityData().set(DragonVillagerEntity.DATA_variant, (int) ((entity instanceof DragonVillagerEntity _datEntI ? _datEntI.getEntityData().get(DragonVillagerEntity.DATA_variant) : 0) % 12 + 1));
 		if (entity instanceof SquidVillagerEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(SquidVillagerEntity.DATA_variant, (int) ((entity instanceof SquidVillagerEntity _datEntI ? _datEntI.getEntityData().get(SquidVillagerEntity.DATA_variant) : 0) % 5 + 1));
+		if (entity instanceof AnimalChestEntityEntity _datEntSetI)
+			_datEntSetI.getEntityData().set(AnimalChestEntityEntity.DATA_variant, (int) ((entity instanceof AnimalChestEntityEntity _datEntI ? _datEntI.getEntityData().get(AnimalChestEntityEntity.DATA_variant) : 0) % 11 + 1));
 	}
 }

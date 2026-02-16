@@ -30,7 +30,7 @@ public class BouModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity", EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new).fireImmune().sized(1f, 1.8f));
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new).fireImmune().sized(1f, 1.5f));
 	public static final RegistryObject<EntityType<FoxVillagerEntity>> FOX_VILLAGER = register("fox_villager",
 			EntityType.Builder.<FoxVillagerEntity>of(FoxVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FoxVillagerEntity::new)
 

@@ -153,7 +153,7 @@ public class WolfVillagerEntity extends Animal {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		WolfVariationSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		WolfVariationSpawnProcedure.execute(this);
 		return retval;
 	}
 

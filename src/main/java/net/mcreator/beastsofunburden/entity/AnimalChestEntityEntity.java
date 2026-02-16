@@ -19,14 +19,9 @@ import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
@@ -46,16 +41,17 @@ import net.minecraft.core.Direction;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
 import net.mcreator.beastsofunburden.init.BouModEntities;
+import net.mcreator.beastsofunburden.init.BouModBlocks;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
 import io.netty.buffer.Unpooled;
 
-public class AnimalChestEntityEntity extends Monster {
+public class AnimalChestEntityEntity extends PathfinderMob {
 	public static final EntityDataAccessor<Boolean> DATA_active = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<Integer> DATA_animalpair = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<String> DATA_owner = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.INT);
 
 	public AnimalChestEntityEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(BouModEntities.ANIMAL_CHEST_ENTITY.get(), world);
@@ -78,8 +74,8 @@ public class AnimalChestEntityEntity extends Monster {
 	protected void defineSynchedData() {
 		super.defineSynchedData();
 		this.entityData.define(DATA_active, false);
-		this.entityData.define(DATA_animalpair, 14);
 		this.entityData.define(DATA_owner, "");
+		this.entityData.define(DATA_variant, 0);
 	}
 
 	@Override
@@ -90,6 +86,11 @@ public class AnimalChestEntityEntity extends Monster {
 	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(BouModBlocks.ANIMAL_CHEST_INACTIVE.get()));
 	}
 
 	@Override
@@ -156,8 +157,8 @@ public class AnimalChestEntityEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putBoolean("Dataactive", this.entityData.get(DATA_active));
-		compound.putInt("Dataanimalpair", this.entityData.get(DATA_animalpair));
 		compound.putString("Dataowner", this.entityData.get(DATA_owner));
+		compound.putInt("Datavariant", this.entityData.get(DATA_variant));
 		compound.put("InventoryCustom", inventory.serializeNBT());
 	}
 
@@ -166,10 +167,10 @@ public class AnimalChestEntityEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataactive"))
 			this.entityData.set(DATA_active, compound.getBoolean("Dataactive"));
-		if (compound.contains("Dataanimalpair"))
-			this.entityData.set(DATA_animalpair, compound.getInt("Dataanimalpair"));
 		if (compound.contains("Dataowner"))
 			this.entityData.set(DATA_owner, compound.getString("Dataowner"));
+		if (compound.contains("Datavariant"))
+			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
 		if (compound.get("InventoryCustom") instanceof CompoundTag inventoryTag)
 			inventory.deserializeNBT(inventoryTag);
 	}
@@ -182,7 +183,7 @@ public class AnimalChestEntityEntity extends Monster {
 			NetworkHooks.openGui(serverPlayer, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return new TextComponent("Animal Chest Entity");
+					return new TextComponent("Animal Shop Chest");
 				}
 
 				@Override

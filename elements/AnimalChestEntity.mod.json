@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Animal Chest Entity",
+    "mobName": "Animal Shop Chest",
     "mobLabel": "",
     "mobModelName": "ModelAnimalChest",
-    "mobModelTexture": "sheep_chest.png",
+    "mobModelTexture": "animal_chest_texture.png",
     "transparentModelCondition": {
       "fixedValue": true
     },
@@ -21,11 +21,111 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
+    "modelLayers": [
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestBasic"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_fox.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestRed"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_orange.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestOrange"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_yellow.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestYellow"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_green.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestGreen"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_cyan.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestCyan"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_blue.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestBlue"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_purple.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestPurple"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_pink.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestPink"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_white.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestWhite"
+        }
+      },
+      {
+        "model": "ModelAnimalChest",
+        "texture": "animal_chest_texture_black.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "ChestBlack"
+        }
+      }
+    ],
     "animations": [],
     "modelWidth": 1.0,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelHeight": 1.5,
+    "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": false,
     "spawnEggBaseColor": {
@@ -63,7 +163,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Mob",
+    "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 0,
     "attackKnockback": 0.0,
@@ -104,7 +204,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:AnimalChestInactive"
     },
     "livingSound": {
       "value": ""
@@ -128,16 +228,16 @@
         "value": false
       },
       {
-        "min": -2147483648,
-        "max": 2147483647,
-        "name": "animalpair",
-        "type": "integer",
-        "value": 14
-      },
-      {
         "name": "owner",
         "type": "string",
         "value": ""
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "variant",
+        "type": "integer",
+        "value": 0
       }
     ],
     "hasAI": false,
