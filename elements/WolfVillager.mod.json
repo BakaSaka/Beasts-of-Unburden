@@ -221,6 +221,9 @@
         "value": 10
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "WolfVariationSpawn"
     },

@@ -21,7 +21,6 @@ import net.mcreator.beastsofunburden.init.BouModMenus;
 import net.mcreator.beastsofunburden.init.BouModItems;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 import net.mcreator.beastsofunburden.init.BouModBlocks;
-import net.mcreator.beastsofunburden.init.BouModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,7 +43,6 @@ public class BouMod {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BouModBlocks.REGISTRY.register(bus);
-		BouModBlockEntities.REGISTRY.register(bus);
 		BouModItems.REGISTRY.register(bus);
 		BouModEntities.REGISTRY.register(bus);
 		BouModMenus.REGISTRY.register(bus);

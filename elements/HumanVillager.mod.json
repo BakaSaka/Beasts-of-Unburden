@@ -167,6 +167,9 @@
         "value": 4
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "HumanVariationSpawn"
     },

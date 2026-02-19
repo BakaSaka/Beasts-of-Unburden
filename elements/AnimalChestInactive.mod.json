@@ -45,7 +45,7 @@
         "value": false
       }
     ],
-    "name": "Animal Chest",
+    "name": "Animal Shop Chest",
     "specialInformation": {
       "fixedValue": []
     },
@@ -130,7 +130,6 @@
       "fixedValue": 7.0
     },
     "hasInventory": false,
-    "guiBoundTo": "AnimalChestGUI",
     "openGUIOnRightClick": true,
     "inventorySize": 17,
     "inventoryStackSize": 99,
@@ -155,6 +154,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ChestBecomeEntity"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

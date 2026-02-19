@@ -53,9 +53,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
+import net.mcreator.beastsofunburden.procedures.WandOfVariationEntityHitProcedure;
 import net.mcreator.beastsofunburden.procedures.AxolotlVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.procedures.AxolotlFindWaterProcedure;
-import net.mcreator.beastsofunburden.procedures.AxolotlBreedInWaterProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -236,7 +236,7 @@ public class AxolotlVillagerEntity extends Animal {
 		Entity entity = this;
 		Level world = this.level;
 
-		AxolotlBreedInWaterProcedure.execute(world, x, y, z, entity, sourceentity);
+		WandOfVariationEntityHitProcedure.execute(entity);
 		return retval;
 	}
 

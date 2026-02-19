@@ -18,7 +18,7 @@ public class BabySheepGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabySheepVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabySheepVillagerEntity.DATA_timer) : 0) < 201) {
+		if ((entity instanceof BabySheepVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabySheepVillagerEntity.DATA_timer) : 0) < 2000) {
 			if (entity instanceof BabySheepVillagerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(BabySheepVillagerEntity.DATA_timer, (int) ((entity instanceof BabySheepVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabySheepVillagerEntity.DATA_timer) : 0) + 1));
 		} else {

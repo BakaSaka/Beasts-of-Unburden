@@ -126,6 +126,7 @@ public class BabyTurtleVillagerRenderer extends MobRenderer<BabyTurtleVillagerEn
 	@Override
 	protected void scale(BabyTurtleVillagerEntity entity, PoseStack poseStack, float f) {
 		poseStack.scale(0.6f, 0.6f, 0.6f);
+		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 
 	@Override

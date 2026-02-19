@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Cat Villager",
+    "mobName": "Kitten Villager",
     "mobLabel": "",
     "mobModelName": "Modelbaby_cat_villager",
     "mobModelTexture": "blank_standin_texture.png",
@@ -245,22 +245,18 @@
         "value": 0
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "BabyCatVariationSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "breedable": false,
+    "breedable": true,
     "tameable": false,
-    "breedTriggerItems": [
-      {
-        "value": "Items.COOKED_FISH#0"
-      },
-      {
-        "value": "Items.COOKED_FISH#1"
-      }
-    ],
+    "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""

@@ -29,8 +29,10 @@ public class BouModEntities {
 			EntityType.Builder.<BabyParrotVillagerEntity>of(BabyParrotVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyParrotVillagerEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity", EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new).fireImmune().sized(1f, 1.5f));
+	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity",
+			EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new)
+
+					.sized(1f, 1.8f));
 	public static final RegistryObject<EntityType<FoxVillagerEntity>> FOX_VILLAGER = register("fox_villager",
 			EntityType.Builder.<FoxVillagerEntity>of(FoxVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FoxVillagerEntity::new)
 
@@ -151,6 +153,8 @@ public class BouModEntities {
 			EntityType.Builder.<BabySpiderVillagerEntity>of(BabySpiderVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabySpiderVillagerEntity::new)
 
 					.sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<BabyDragonVillagerEntity>> BABY_DRAGON_VILLAGER = register("baby_dragon_villager", EntityType.Builder.<BabyDragonVillagerEntity>of(BabyDragonVillagerEntity::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyDragonVillagerEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -196,6 +200,7 @@ public class BouModEntities {
 			BabyChickenVillagerEntity.init();
 			BabyRabbitVillagerEntity.init();
 			BabySpiderVillagerEntity.init();
+			BabyDragonVillagerEntity.init();
 		});
 	}
 
@@ -236,5 +241,6 @@ public class BouModEntities {
 		event.put(BABY_CHICKEN_VILLAGER.get(), BabyChickenVillagerEntity.createAttributes().build());
 		event.put(BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerEntity.createAttributes().build());
 		event.put(BABY_SPIDER_VILLAGER.get(), BabySpiderVillagerEntity.createAttributes().build());
+		event.put(BABY_DRAGON_VILLAGER.get(), BabyDragonVillagerEntity.createAttributes().build());
 	}
 }

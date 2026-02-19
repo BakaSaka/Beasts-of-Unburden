@@ -18,7 +18,7 @@ public class BabyWolfGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabyWolfVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyWolfVillagerEntity.DATA_timer) : 0) < 201) {
+		if ((entity instanceof BabyWolfVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyWolfVillagerEntity.DATA_timer) : 0) < 2000) {
 			if (entity instanceof BabyWolfVillagerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(BabyWolfVillagerEntity.DATA_timer, (int) ((entity instanceof BabyWolfVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyWolfVillagerEntity.DATA_timer) : 0) + 1));
 		} else {

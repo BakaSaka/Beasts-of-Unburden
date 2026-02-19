@@ -203,6 +203,9 @@
         "value": 8
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "RabbitVariationSpawn"
     },

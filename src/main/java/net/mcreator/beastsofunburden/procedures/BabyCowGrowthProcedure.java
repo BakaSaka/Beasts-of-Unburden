@@ -9,8 +9,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.beastsofunburden.init.BouModEntities;
-import net.mcreator.beastsofunburden.entity.ParrotVillagerEntity;
-import net.mcreator.beastsofunburden.entity.BabyParrotVillagerEntity;
+import net.mcreator.beastsofunburden.entity.CowVillagerEntity;
+import net.mcreator.beastsofunburden.entity.BabyCowVillagerEntity;
 
 import java.util.Comparator;
 
@@ -18,19 +18,19 @@ public class BabyCowGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_timer) : 0) < 201) {
-			if (entity instanceof BabyParrotVillagerEntity _datEntSetI)
-				_datEntSetI.getEntityData().set(BabyParrotVillagerEntity.DATA_timer, (int) ((entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_timer) : 0) + 1));
+		if ((entity instanceof BabyCowVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyCowVillagerEntity.DATA_timer) : 0) < 2000) {
+			if (entity instanceof BabyCowVillagerEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(BabyCowVillagerEntity.DATA_timer, (int) ((entity instanceof BabyCowVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyCowVillagerEntity.DATA_timer) : 0) + 1));
 		} else {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new ParrotVillagerEntity(BouModEntities.PARROT_VILLAGER.get(), _level);
+				Entity entityToSpawn = new CowVillagerEntity(BouModEntities.COW_VILLAGER.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
 					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				_level.addFreshEntity(entityToSpawn);
 			}
-			if ((findEntityInWorldRange(world, ParrotVillagerEntity.class, x, y, z, 1)) instanceof ParrotVillagerEntity _datEntSetI)
-				_datEntSetI.getEntityData().set(ParrotVillagerEntity.DATA_variant, (int) (entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_variant) : 0));
+			if ((findEntityInWorldRange(world, CowVillagerEntity.class, x, y, z, 1)) instanceof CowVillagerEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CowVillagerEntity.DATA_variant, (int) (entity instanceof BabyCowVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyCowVillagerEntity.DATA_variant) : 0));
 			if (!entity.level.isClientSide())
 				entity.discard();
 		}

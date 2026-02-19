@@ -2,9 +2,9 @@ package net.mcreator.beastsofunburden.client.renderer;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -20,7 +20,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEntity, ModelAnimalChest<AnimalChestEntityEntity>> {
 	public AnimalChestEntityRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelAnimalChest<AnimalChestEntityEntity>(context.bakeLayer(ModelAnimalChest.LAYER_LOCATION)), 0f);
+		super(context, new ModelAnimalChest<AnimalChestEntityEntity>(context.bakeLayer(ModelAnimalChest.LAYER_LOCATION)), 1f);
 		this.addLayer(new RenderLayer<AnimalChestEntityEntity, ModelAnimalChest<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture.png");
 
@@ -36,7 +36,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -55,7 +55,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -74,7 +74,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -93,7 +93,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -112,7 +112,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -131,7 +131,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -150,7 +150,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -169,7 +169,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -188,7 +188,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -207,7 +207,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -226,7 +226,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-					model.renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0), 1, 1, 1, 1);
+					model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
 				}
 			}
 		});
@@ -235,10 +235,5 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 	@Override
 	public ResourceLocation getTextureLocation(AnimalChestEntityEntity entity) {
 		return new ResourceLocation("bou:textures/entities/animal_chest_texture.png");
-	}
-
-	@Override
-	protected boolean isBodyVisible(AnimalChestEntityEntity entity) {
-		return false;
 	}
 }

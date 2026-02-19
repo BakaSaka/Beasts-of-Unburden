@@ -212,6 +212,9 @@
         "value": 9
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "ChickenVariationSpawn"
     },

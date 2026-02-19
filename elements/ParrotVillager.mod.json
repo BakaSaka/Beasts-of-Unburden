@@ -247,6 +247,9 @@
         "value": 13
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "ParrotVariationSpawn"
     },

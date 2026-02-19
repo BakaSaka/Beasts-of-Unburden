@@ -5,7 +5,7 @@
     "toolType": "Special",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "aura_shovel",
+    "texture": "variation_wand",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "guiTexture": "",

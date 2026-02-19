@@ -16,16 +16,13 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.beastsofunburden.block.AnimalChestInactiveBlock;
-import net.mcreator.beastsofunburden.block.AnimalChestBlock;
 import net.mcreator.beastsofunburden.BouMod;
 
 @Mod.EventBusSubscriber
 public class BouModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, BouMod.MODID);
-	public static final RegistryObject<Block> ANIMAL_CHEST;
 	public static final RegistryObject<Block> ANIMAL_CHEST_INACTIVE;
 	static {
-		ANIMAL_CHEST = REGISTRY.register("animal_chest", AnimalChestBlock::new);
 		ANIMAL_CHEST_INACTIVE = REGISTRY.register("animal_chest_inactive", AnimalChestInactiveBlock::new);
 	}
 
@@ -35,7 +32,6 @@ public class BouModBlocks {
 	public static class BlocksClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			AnimalChestBlock.registerRenderLayer();
 			AnimalChestInactiveBlock.registerRenderLayer();
 		}
 	}
@@ -43,9 +39,7 @@ public class BouModBlocks {
 	@SubscribeEvent
 	public static void onNoteBlockPlay(NoteBlockEvent.Play event) {
 		Block below = event.getWorld().getBlockState(event.getPos().below()).getBlock();
-		if (below == BouModBlocks.ANIMAL_CHEST.get()) {
-			event.setInstrument(NoteBlockInstrument.BANJO);
-		} else if (below == BouModBlocks.ANIMAL_CHEST_INACTIVE.get()) {
+		if (below == BouModBlocks.ANIMAL_CHEST_INACTIVE.get()) {
 			event.setInstrument(NoteBlockInstrument.BANJO);
 		}
 	}

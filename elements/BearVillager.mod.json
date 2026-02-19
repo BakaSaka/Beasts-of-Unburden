@@ -185,6 +185,9 @@
         "value": 6
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "BearVariationSpawn"
     },

@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Fox Villager",
+    "mobName": "Fox Kit Villager",
     "mobLabel": "",
     "mobModelName": "Modelbaby_fox_villager",
     "mobModelTexture": "blank_standin_texture.png",
@@ -73,7 +73,7 @@
     "modelHeight": 1.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": false,
+    "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -15952116,
       "falpha": 0.0
@@ -182,6 +182,9 @@
         "value": 0
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onMobTickUpdate": {
       "name": "BabyFoxGrowth"
     },
@@ -191,7 +194,7 @@
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"doors_close\"><field name=\"condition\">null,null</field><next><block type=\"doors_open\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "breedable": false,
+    "breedable": true,
     "tameable": false,
     "breedTriggerItems": [],
     "ranged": false,

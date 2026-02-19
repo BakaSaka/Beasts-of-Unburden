@@ -29,7 +29,7 @@
     }
   },
   "result": {
-    "item": "bou:animal_chest",
+    "item": "bou:animal_chest_inactive",
     "count": 1
   }
 }

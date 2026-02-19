@@ -194,6 +194,9 @@
         "value": 7
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "CowVariationSpawn"
     },

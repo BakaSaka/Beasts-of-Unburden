@@ -330,6 +330,7 @@ public class BabySheepVillagerRenderer extends MobRenderer<BabySheepVillagerEnti
 	@Override
 	protected void scale(BabySheepVillagerEntity entity, PoseStack poseStack, float f) {
 		poseStack.scale(0.6f, 0.6f, 0.6f);
+		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 
 	@Override

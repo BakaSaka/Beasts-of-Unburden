@@ -239,6 +239,9 @@
         "value": 12
       }
     ],
+    "onRightClickedOn": {
+      "name": "BabyCowVariationSpawn"
+    },
     "onInitialSpawn": {
       "name": "DragonVariationSpawn"
     },

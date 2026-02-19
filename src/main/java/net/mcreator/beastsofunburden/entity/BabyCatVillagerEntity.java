@@ -12,15 +12,21 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -29,6 +35,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.beastsofunburden.procedures.WandOfVariationEntityHitProcedure;
 import net.mcreator.beastsofunburden.procedures.BabyCatVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
@@ -37,7 +44,7 @@ import javax.annotation.Nullable;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
-public class BabyCatVillagerEntity extends Monster {
+public class BabyCatVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(BabyCatVillagerEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_timer = SynchedEntityData.defineId(BabyCatVillagerEntity.class, EntityDataSerializers.INT);
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("bamboo_jungle"), new ResourceLocation("forest"), new ResourceLocation("jungle"), new ResourceLocation("lush_caves"), new ResourceLocation("sparse_jungle"),
@@ -145,6 +152,33 @@ public class BabyCatVillagerEntity extends Monster {
 			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
 		if (compound.contains("Datatimer"))
 			this.entityData.set(DATA_timer, compound.getInt("Datatimer"));
+	}
+
+	@Override
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		WandOfVariationEntityHitProcedure.execute(entity);
+		return retval;
+	}
+
+	@Override
+	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+		BabyCatVillagerEntity retval = BouModEntities.BABY_CAT_VILLAGER.get().create(serverWorld);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+		return retval;
+	}
+
+	@Override
+	public boolean isFood(ItemStack stack) {
+		return Ingredient.of().test(stack);
 	}
 
 	public static void init() {

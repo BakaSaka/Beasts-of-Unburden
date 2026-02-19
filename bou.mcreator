@@ -16,24 +16,6 @@
       "path": "~/Parrot"
     },
     {
-      "name": "AnimalChest",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animal_chest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/block/entity/AnimalChestBlockEntity.java",
-          "src/main/resources/assets/bou/models/item/animal_chest.json",
-          "src/main/resources/assets/bou/blockstates/animal_chest.json",
-          "src/main/java/net/mcreator/beastsofunburden/block/AnimalChestBlock.java",
-          "src/main/resources/assets/bou/models/block/animal_chest.json",
-          "src/main/resources/data/bou/loot_tables/blocks/animal_chest.json"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
       "name": "VendorChestKey",
       "type": "item",
       "compiles": true,
@@ -384,20 +366,6 @@
       "path": "~/Chests"
     },
     {
-      "name": "AnimalChestActivate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animal_chest_activate",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/AnimalChestActivateProcedure.java"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
       "name": "AnimalChestDisplay1",
       "type": "procedure",
       "compiles": true,
@@ -741,45 +709,6 @@
       "path": "~/Parrot"
     },
     {
-      "name": "BreedingTag",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "breeding_tag",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BreedingTagProcedure.java"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
       "name": "AnimalChestEntity",
       "type": "livingentity",
       "compiles": true,
@@ -788,20 +717,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/AnimalChestEntityRenderer.java",
-          "src/main/java/net/mcreator/beastsofunburden/entity/AnimalChestEntityEntity.java"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
-      "name": "CraftSalesChest",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "craft_sales_chest",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/bou/recipes/craft_sales_chest.json"
+          "src/main/java/net/mcreator/beastsofunburden/entity/AnimalChestEntityEntity.java",
+          "src/main/resources/assets/bou/models/item/animal_chest_entity_spawn_egg.json"
         ]
       },
       "path": "~/Chests"
@@ -830,20 +747,6 @@
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/world/inventory/OwnAnimalChestGUIMenu.java",
           "src/main/java/net/mcreator/beastsofunburden/client/gui/OwnAnimalChestGUIScreen.java"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
-      "name": "SyncAnimalChest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sync_animal_chest",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/SyncAnimalChestProcedure.java"
         ]
       },
       "path": "~/Chests"
@@ -1749,496 +1652,6 @@
       "path": "~/Dragon"
     },
     {
-      "name": "BabyFoxGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_fox_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyFoxGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Fox"
-    },
-    {
-      "name": "BabyWolfGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_wolf_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyWolfGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Wolf"
-    },
-    {
-      "name": "BabyHorseGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_horse_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyHorseGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Horse"
-    },
-    {
-      "name": "BabyCatGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_cat_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCatGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Cat"
-    },
-    {
-      "name": "BabyCowGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_cow_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCowGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Cow"
-    },
-    {
-      "name": "BabyLlamaGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_llama_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyLlamaGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Llama"
-    },
-    {
-      "name": "BabyBearGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_bear_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyBearGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Bear"
-    },
-    {
-      "name": "BabyPigGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_pig_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Pig"
-    },
-    {
-      "name": "BabyChickenGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_chicken_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Chicken"
-    },
-    {
-      "name": "BabyRabbitGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_rabbit_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Rabbit"
-    },
-    {
-      "name": "BabySheepGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_sheep_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySheepGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Sheep"
-    },
-    {
-      "name": "BabyTurtleGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_turtle_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyTurtleGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Turtle"
-    },
-    {
-      "name": "BabySpiderGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_spider_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Spider"
-    },
-    {
-      "name": "BabyDragonGrowth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_dragon_growth",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonGrowthProcedure.java"
-        ]
-      },
-      "path": "~/Dragon"
-    },
-    {
       "name": "FoxGrey",
       "type": "procedure",
       "compiles": true,
@@ -2326,6 +1739,7 @@
       "registry_name": "baby_fox_villager",
       "metadata": {
         "files": [
+          "src/main/resources/assets/bou/models/item/baby_fox_villager_spawn_egg.json",
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyFoxVillagerRenderer.java",
           "src/main/java/net/mcreator/beastsofunburden/entity/BabyFoxVillagerEntity.java"
         ]
@@ -2639,6 +2053,7 @@
       "registry_name": "baby_wolf_villager",
       "metadata": {
         "files": [
+          "src/main/resources/assets/bou/models/item/baby_wolf_villager_spawn_egg.json",
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyWolfVillagerRenderer.java",
           "src/main/java/net/mcreator/beastsofunburden/entity/BabyWolfVillagerEntity.java"
         ]
@@ -3212,6 +2627,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabySheepVillagerRenderer.java",
+          "src/main/resources/assets/bou/models/item/baby_sheep_villager_spawn_egg.json",
           "src/main/java/net/mcreator/beastsofunburden/entity/BabySheepVillagerEntity.java"
         ]
       },
@@ -3645,6 +3061,7 @@
       "registry_name": "baby_turtle_villager",
       "metadata": {
         "files": [
+          "src/main/resources/assets/bou/models/item/baby_turtle_villager_spawn_egg.json",
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyTurtleVillagerRenderer.java",
           "src/main/java/net/mcreator/beastsofunburden/entity/BabyTurtleVillagerEntity.java"
         ]
@@ -7914,6 +7331,866 @@
         ]
       },
       "path": "~/Chests"
+    },
+    {
+      "name": "ChestBecomeEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_become_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChestBecomeEntityProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "BabyWolfGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_wolf_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyWolfGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Wolf"
+    },
+    {
+      "name": "BabyFoxGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_fox_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyFoxGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Fox"
+    },
+    {
+      "name": "BabyHorseGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_horse_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyHorseGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Horse"
+    },
+    {
+      "name": "BabyAxolotlGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_axolotl_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyAxolotlGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Axolotl"
+    },
+    {
+      "name": "BabyCatGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_cat_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCatGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Cat"
+    },
+    {
+      "name": "BabyCowGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_cow_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyCowGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Cow"
+    },
+    {
+      "name": "BabyLlamaGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_llama_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyLlamaGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Llama"
+    },
+    {
+      "name": "BabyBearGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_bear_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyBearGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Bear"
+    },
+    {
+      "name": "BabyPigGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_pig_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyPigGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Pig"
+    },
+    {
+      "name": "BabyChickenGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_chicken_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyChickenGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Chicken"
+    },
+    {
+      "name": "BabyRabbitGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_rabbit_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyRabbitGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Rabbit"
+    },
+    {
+      "name": "BabySheepGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_sheep_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySheepGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Sheep"
+    },
+    {
+      "name": "BabyTurtleGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_turtle_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyTurtleGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Turtle"
+    },
+    {
+      "name": "BabySpiderGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_spider_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabySpiderGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Spider"
+    },
+    {
+      "name": "BabyDragonGrowth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_growth",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonGrowthProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonVillager",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_villager",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/bou/models/item/baby_dragon_villager_spawn_egg.json",
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/BabyDragonVillagerRenderer.java",
+          "src/main/java/net/mcreator/beastsofunburden/entity/BabyDragonVillagerEntity.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonVariationSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_variation_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonVariationSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonSilver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_silver",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonSilverProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonObsidian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_obsidian",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonObsidianProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonCopper",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_copper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonCopperProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonGold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_gold",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonGoldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonSapphire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_sapphire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonSapphireProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonEmerald",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_emerald",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonEmeraldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonRuby",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_ruby",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonRubyProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonAmethyst",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_amethyst",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonAmethystProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonRoseGold",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_rose_gold",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonRoseGoldProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonPlatinum",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_platinum",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonPlatinumProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonChromatic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_chromatic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonChromaticProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "BabyDragonFluorite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_dragon_fluorite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/BabyDragonFluoriteProcedure.java"
+        ]
+      },
+      "path": "~/Dragon"
+    },
+    {
+      "name": "CraftShopChest",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_shop_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bou/recipes/craft_shop_chest.json"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "NewShopOwner",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "new_shop_owner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/bou/advancements/new_shop_owner.json"
+        ]
+      },
+      "path": "~/Chests"
     }
   ],
   "variable_elements": [],
@@ -7927,6 +8204,10 @@
     ],
     "ITEMS:forge:breeding_item": [
       "TAG:forge:seed"
+    ],
+    "ITEMS:mod:keys": [
+      "CUSTOM:VendorChestKey",
+      "CUSTOM:KeyringTool"
     ]
   },
   "tab_element_order": {},
@@ -7950,10 +8231,9 @@
       "item.beasts_of_unburden_18_2.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg",
       "item.bou.parrot_villager_spawn_egg": "Parrot Villager Spawn Egg",
       "entity.bou.parrot_villager": "Parrot Villager",
-      "block.bou.animal_chest": "Animal Shop Chest",
       "item.bou.vendor_chest_key": "Vendor Chest Key",
-      "block.bou.animal_chest_inactive": "Animal Chest",
-      "entity.bou.baby_parrot_villager": "Baby Parrot Villager",
+      "block.bou.animal_chest_inactive": "Animal Shop Chest",
+      "entity.bou.baby_parrot_villager": "Hatchling Villager",
       "entity.bou.animal_chest_entity": "Animal Shop Chest",
       "entity.bou.fox_villager": "Fox Villager",
       "item.bou.fox_villager_spawn_egg": "Fox Villager Spawn Egg",
@@ -7991,34 +8271,43 @@
       "item.bou.human_villager_spawn_egg": "Human Villager Spawn Egg",
       "entity.bou.dragon_villager": "Dragon Villager",
       "item.bou.dragon_villager_spawn_egg": "Dragon Villager Spawn Egg",
-      "entity.bou.baby_fox_villager": "Fox Villager",
-      "entity.bou.baby_wolf_villager": "Wolf Villager",
-      "entity.bou.baby_sheep_villager": "Sheep Villager",
-      "entity.bou.baby_turtle_villager": "Turtle Villager",
-      "item.bou.baby_axolotl_villager_spawn_egg": "Axolotl Villager Spawn Egg",
-      "entity.bou.baby_axolotl_villager": "Axolotl Villager",
-      "item.bou.baby_cat_villager_spawn_egg": "Cat Villager Spawn Egg",
-      "entity.bou.baby_cat_villager": "Cat Villager",
-      "item.bou.baby_cow_villager_spawn_egg": "Cow Villager Spawn Egg",
-      "entity.bou.baby_cow_villager": "Cow Villager",
-      "item.bou.baby_horse_villager_spawn_egg": "Horse Villager Spawn Egg",
-      "entity.bou.baby_horse_villager": "Horse Villager",
-      "item.bou.baby_llama_villager_spawn_egg": "Llama Villager Spawn Egg",
-      "entity.bou.baby_llama_villager": "Llama Villager",
-      "item.bou.baby_bear_villager_spawn_egg": "Bear Villager Spawn Egg",
-      "entity.bou.baby_bear_villager": "Bear Villager",
-      "item.bou.baby_parrot_villager_spawn_egg": "Baby Parrot Villager Spawn Egg",
+      "entity.bou.baby_fox_villager": "Fox Kit Villager",
+      "entity.bou.baby_wolf_villager": "Pup Villager",
+      "entity.bou.baby_sheep_villager": "Lamb Villager",
+      "entity.bou.baby_turtle_villager": "Turtle Hatchling Villager",
+      "item.bou.baby_axolotl_villager_spawn_egg": "Larval Villager Spawn Egg",
+      "entity.bou.baby_axolotl_villager": "Larval Villager",
+      "item.bou.baby_cat_villager_spawn_egg": "Kitten Villager Spawn Egg",
+      "entity.bou.baby_cat_villager": "Kitten Villager",
+      "item.bou.baby_cow_villager_spawn_egg": "Calf Villager Spawn Egg",
+      "entity.bou.baby_cow_villager": "Calf Villager",
+      "item.bou.baby_horse_villager_spawn_egg": "Foal Villager Spawn Egg",
+      "entity.bou.baby_horse_villager": "Foal Villager",
+      "item.bou.baby_llama_villager_spawn_egg": "Cria Villager Spawn Egg",
+      "entity.bou.baby_llama_villager": "Cria Villager",
+      "item.bou.baby_bear_villager_spawn_egg": "Cub Villager Spawn Egg",
+      "entity.bou.baby_bear_villager": "Cub Villager",
+      "item.bou.baby_parrot_villager_spawn_egg": "Hatchling Villager Spawn Egg",
       "item.bou.one_shotter": "One Shotter",
-      "entity.bou.baby_pig_villager": "Pig Villager",
-      "item.bou.baby_pig_villager_spawn_egg": "Pig Villager Spawn Egg",
-      "entity.bou.baby_chicken_villager": "Chicken Villager",
-      "item.bou.baby_chicken_villager_spawn_egg": "Chicken Villager Spawn Egg",
-      "entity.bou.baby_rabbit_villager": "Rabbit Villager",
-      "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Villager Spawn Egg",
-      "entity.bou.baby_spider_villager": "Spider Villager",
-      "item.bou.baby_spider_villager_spawn_egg": "Spider Villager Spawn Egg",
+      "entity.bou.baby_pig_villager": "Piglet Villager",
+      "item.bou.baby_pig_villager_spawn_egg": "Piglet Villager Spawn Egg",
+      "entity.bou.baby_chicken_villager": "Chick Villager",
+      "item.bou.baby_chicken_villager_spawn_egg": "Chick Villager Spawn Egg",
+      "entity.bou.baby_rabbit_villager": "Rabbit Kit Villager",
+      "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Kit Villager Spawn Egg",
+      "entity.bou.baby_spider_villager": "Spiderling Villager",
+      "item.bou.baby_spider_villager_spawn_egg": "Spiderling Villager Spawn Egg",
       "item.bou.keyring_tool": "Key Ring",
-      "item.bou.wand_of_variation": "Wand Of Variation"
+      "item.bou.wand_of_variation": "Wand Of Variation",
+      "item.bou.animal_chest_entity_spawn_egg": "Animal Shop Chest Spawn Egg",
+      "item.bou.baby_fox_villager_spawn_egg": "Fox Kit Villager Spawn Egg",
+      "item.bou.baby_wolf_villager_spawn_egg": "Pup Villager Spawn Egg",
+      "item.bou.baby_sheep_villager_spawn_egg": "Lamb Villager Spawn Egg",
+      "item.bou.baby_turtle_villager_spawn_egg": "Turtle Hatchling Villager Spawn Egg",
+      "entity.bou.baby_dragon_villager": "Whelp Villager",
+      "item.bou.baby_dragon_villager_spawn_egg": "Whelp Villager Spawn Egg",
+      "advancements.new_shop_owner.descr": "Player opens their first shop with a villager!",
+      "advancements.new_shop_owner.title": "New Shop Owner"
     }
   },
   "metadata": {
@@ -8027,7 +8316,6 @@
       "src/main/java/net/mcreator/beastsofunburden/init/BouModMenus.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModScreens.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModBlocks.java",
-      "src/main/java/net/mcreator/beastsofunburden/init/BouModBlockEntities.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModItems.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModEntities.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModEntityRenderers.java",

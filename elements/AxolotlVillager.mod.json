@@ -204,7 +204,7 @@
       }
     ],
     "onRightClickedOn": {
-      "name": "AxolotlBreedInWater"
+      "name": "WandOfVariationEntityHit"
     },
     "onMobTickUpdate": {
       "name": "AxolotlFindWater"

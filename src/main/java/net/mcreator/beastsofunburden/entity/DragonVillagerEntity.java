@@ -53,6 +53,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
 import net.mcreator.beastsofunburden.procedures.DragonVariationSpawnProcedure;
+import net.mcreator.beastsofunburden.procedures.BabyCowVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -224,6 +225,13 @@ public class DragonVillagerEntity extends Animal {
 			});
 		}
 		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		BabyCowVariationSpawnProcedure.execute(entity);
 		return retval;
 	}
 

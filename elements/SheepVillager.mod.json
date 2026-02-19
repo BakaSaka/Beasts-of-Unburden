@@ -275,6 +275,9 @@
         "value": 16
       }
     ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
     "onInitialSpawn": {
       "name": "SheepVariationSpawn"
     },

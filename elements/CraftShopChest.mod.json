@@ -41,9 +41,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:AnimalChest"
+      "value": "CUSTOM:AnimalChestInactive"
     },
-    "name": "craft_sales_chest",
+    "name": "craft_shop_chest",
     "namespace": "mod"
   }
 }

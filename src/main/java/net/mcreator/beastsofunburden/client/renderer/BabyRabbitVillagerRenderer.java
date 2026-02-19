@@ -178,6 +178,7 @@ public class BabyRabbitVillagerRenderer extends MobRenderer<BabyRabbitVillagerEn
 	@Override
 	protected void scale(BabyRabbitVillagerEntity entity, PoseStack poseStack, float f) {
 		poseStack.scale(0.5f, 0.5f, 0.5f);
+		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 
 	@Override

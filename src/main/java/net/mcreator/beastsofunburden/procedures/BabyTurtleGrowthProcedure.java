@@ -18,7 +18,7 @@ public class BabyTurtleGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabyTurtleVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyTurtleVillagerEntity.DATA_timer) : 0) < 201) {
+		if ((entity instanceof BabyTurtleVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyTurtleVillagerEntity.DATA_timer) : 0) < 2000) {
 			if (entity instanceof BabyTurtleVillagerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(BabyTurtleVillagerEntity.DATA_timer, (int) ((entity instanceof BabyTurtleVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyTurtleVillagerEntity.DATA_timer) : 0) + 1));
 		} else {

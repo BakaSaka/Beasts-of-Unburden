@@ -138,6 +138,11 @@ public class BabyPigVillagerRenderer extends MobRenderer<BabyPigVillagerEntity, 
 	}
 
 	@Override
+	protected void scale(BabyPigVillagerEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
+	}
+
+	@Override
 	public ResourceLocation getTextureLocation(BabyPigVillagerEntity entity) {
 		return new ResourceLocation("bou:textures/entities/blank_standin_texture.png");
 	}

@@ -18,7 +18,7 @@ public class BabyFoxGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabyFoxVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyFoxVillagerEntity.DATA_timer) : 0) < 201) {
+		if ((entity instanceof BabyFoxVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyFoxVillagerEntity.DATA_timer) : 0) < 2000) {
 			if (entity instanceof BabyFoxVillagerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(BabyFoxVillagerEntity.DATA_timer, (int) ((entity instanceof BabyFoxVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyFoxVillagerEntity.DATA_timer) : 0) + 1));
 		} else {

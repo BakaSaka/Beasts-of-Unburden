@@ -1,0 +1,13 @@
+package net.mcreator.beastsofunburden.procedures;
+
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.beastsofunburden.entity.BabyDragonVillagerEntity;
+
+public class BabyDragonAmethystProcedure {
+	public static boolean execute(Entity entity) {
+		if (entity == null)
+			return false;
+		return (entity instanceof BabyDragonVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyDragonVillagerEntity.DATA_variant) : 0) == 10;
+	}
+}

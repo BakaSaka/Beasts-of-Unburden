@@ -52,6 +52,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
+import net.mcreator.beastsofunburden.procedures.WandOfVariationEntityHitProcedure;
 import net.mcreator.beastsofunburden.procedures.ChickenVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
@@ -218,6 +219,13 @@ public class ChickenVillagerEntity extends Animal {
 			});
 		}
 		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		WandOfVariationEntityHitProcedure.execute(entity);
 		return retval;
 	}
 

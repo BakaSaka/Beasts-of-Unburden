@@ -18,7 +18,7 @@ public class BabyParrotGrowthProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_timer) : 0) < 201) {
+		if ((entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_timer) : 0) < 2000) {
 			if (entity instanceof BabyParrotVillagerEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(BabyParrotVillagerEntity.DATA_timer, (int) ((entity instanceof BabyParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyParrotVillagerEntity.DATA_timer) : 0) + 1));
 		} else {
