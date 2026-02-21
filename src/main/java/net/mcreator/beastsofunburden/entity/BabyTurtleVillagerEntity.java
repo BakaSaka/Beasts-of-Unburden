@@ -173,7 +173,7 @@ public class BabyTurtleVillagerEntity extends Animal {
 		Entity entity = this;
 		Level world = this.level;
 
-		WandOfVariationEntityHitProcedure.execute(entity);
+		WandOfVariationEntityHitProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 

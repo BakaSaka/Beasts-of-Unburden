@@ -23,7 +23,6 @@ public class BouModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, BouMod.MODID);
 	public static final RegistryObject<Item> PARROT_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_PARROT_VILLAGER_SPAWN_EGG;
-	public static final RegistryObject<Item> ANIMAL_CHEST_ENTITY_SPAWN_EGG;
 	public static final RegistryObject<Item> FOX_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> WOLF_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> AXOLOTL_VILLAGER_SPAWN_EGG;
@@ -57,6 +56,9 @@ public class BouModItems {
 	public static final RegistryObject<Item> BABY_RABBIT_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_SPIDER_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_DRAGON_VILLAGER_SPAWN_EGG;
+	public static final RegistryObject<Item> ANIMAL_CHEST_ENTITY_SPAWN_EGG;
+	public static final RegistryObject<Item> TOP_ANIMAL_CHEST_ENTITY_SPAWN_EGG;
+	public static final RegistryObject<Item> CHEST_ENTITY_SPAWN_EGG;
 	public static final RegistryObject<Item> ANIMAL_CHEST_INACTIVE;
 	public static final RegistryObject<Item> KEYRING_TOOL;
 	public static final RegistryObject<Item> WAND_OF_VARIATION;
@@ -65,7 +67,6 @@ public class BouModItems {
 	static {
 		PARROT_VILLAGER_SPAWN_EGG = REGISTRY.register("parrot_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.PARROT_VILLAGER, -15952116, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_PARROT_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_parrot_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_PARROT_VILLAGER, -15952116, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-		ANIMAL_CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("animal_chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.ANIMAL_CHEST_ENTITY, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		FOX_VILLAGER_SPAWN_EGG = REGISTRY.register("fox_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.FOX_VILLAGER, -3381760, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		WOLF_VILLAGER_SPAWN_EGG = REGISTRY.register("wolf_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.WOLF_VILLAGER, -1118482, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		AXOLOTL_VILLAGER_SPAWN_EGG = REGISTRY.register("axolotl_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.AXOLOTL_VILLAGER, -610594, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -99,6 +100,9 @@ public class BouModItems {
 		BABY_RABBIT_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_rabbit_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_RABBIT_VILLAGER, -9552611, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_SPIDER_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_spider_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_SPIDER_VILLAGER, -14868171, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_DRAGON_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_dragon_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_DRAGON_VILLAGER, -13171384, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		ANIMAL_CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("animal_chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.ANIMAL_CHEST_ENTITY, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		TOP_ANIMAL_CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("top_animal_chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.TOP_ANIMAL_CHEST_ENTITY, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.CHEST_ENTITY, -65281, -16724788, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		ANIMAL_CHEST_INACTIVE = block(BouModBlocks.ANIMAL_CHEST_INACTIVE, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
 		KEYRING_TOOL = REGISTRY.register("keyring_tool", KeyringToolItem::new);
 		WAND_OF_VARIATION = REGISTRY.register("wand_of_variation", WandOfVariationItem::new);

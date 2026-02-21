@@ -36,7 +36,7 @@ public class WandOfVariationItem extends Item {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
-		WandOfVariationEntityHitProcedure.execute(entity);
+		WandOfVariationEntityHitProcedure.execute(entity, sourceentity);
 		return true;
 	}
 

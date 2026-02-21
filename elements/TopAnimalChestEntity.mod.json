@@ -1,0 +1,274 @@
+{
+  "_fv": 79,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Animal Shop Chest Hidden",
+    "mobLabel": "",
+    "mobModelName": "Modelanimal_chest_entity_top",
+    "mobModelTexture": "blank_standin_texture.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": true
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestBasic"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_fox.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestRed"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_orange.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestOrange"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_yellow.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestYellow"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_green.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestGreen"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_cyan.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestCyan"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_blue.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestBlue"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_purple.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestPurple"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_pink.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestPink"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_white.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestPink"
+        }
+      },
+      {
+        "model": "Modelanimal_chest_entity_top",
+        "texture": "animal_chest_texture_black.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "TopChestBlack"
+        }
+      }
+    ],
+    "animations": [],
+    "modelWidth": 16.0,
+    "modelHeight": 16.0,
+    "modelShadowSize": 1.0,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Creature",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 1,
+    "attackKnockback": 0.1,
+    "knockbackResistance": 100.0,
+    "movementSpeed": 0.1,
+    "stepHeight": 0.1,
+    "armorBaseValue": 0.1,
+    "trackingRange": 0,
+    "followRange": 0,
+    "health": 1,
+    "xpAmount": 0,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": false
+    },
+    "flyingMob": false,
+    "inventorySize": 308,
+    "inventoryStackSize": 99,
+    "disableCollisions": true,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": true,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": true,
+    "immuneToTrident": false,
+    "immuneToAnvil": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": ""
+    },
+    "hurtSound": {
+      "value": "block.anvil.use"
+    },
+    "deathSound": {
+      "value": "block.bamboo_wood.break"
+    },
+    "stepSound": {
+      "value": "block.anvil.step"
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "variant",
+        "type": "integer",
+        "value": 1
+      }
+    ],
+    "onRightClickedOn": {
+      "name": "WandOfVariationEntityHit"
+    },
+    "onInitialSpawn": {
+      "name": "AnimalChestEntityOnInitialEntitySpawn"
+    },
+    "hasAI": false,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "misc",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

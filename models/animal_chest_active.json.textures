@@ -3,8 +3,7 @@
     "default": {
       "name": "default",
       "map": {
-        "1": "animal_chest_portrait",
-        "2": "animal_chest_texture"
+        "0": "animal_chest_texture"
       }
     }
   }

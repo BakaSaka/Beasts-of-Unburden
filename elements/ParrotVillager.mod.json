@@ -201,6 +201,7 @@
       "fixedValue": true
     },
     "flyingMob": false,
+    "guiBoundTo": "AnimalChestGUI",
     "inventorySize": 17,
     "inventoryStackSize": 99,
     "disableCollisions": false,
@@ -245,10 +246,31 @@
         "name": "variant",
         "type": "integer",
         "value": 13
+      },
+      {
+        "name": "vendor",
+        "type": "string",
+        "value": "vendor"
+      },
+      {
+        "name": "bound",
+        "type": "string",
+        "value": "free"
+      },
+      {
+        "name": "owner",
+        "type": "string",
+        "value": "none"
       }
     ],
-    "onRightClickedOn": {
+    "whenMobIsHurt": {
       "name": "WandOfVariationEntityHit"
+    },
+    "onRightClickedOn": {
+      "name": "ChestCheck"
+    },
+    "onMobTickUpdate": {
+      "name": "ParrotAndShop"
     },
     "onInitialSpawn": {
       "name": "ParrotVariationSpawn"

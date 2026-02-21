@@ -29,10 +29,6 @@ public class BouModEntities {
 			EntityType.Builder.<BabyParrotVillagerEntity>of(BabyParrotVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyParrotVillagerEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity",
-			EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new)
-
-					.sized(1f, 1.8f));
 	public static final RegistryObject<EntityType<FoxVillagerEntity>> FOX_VILLAGER = register("fox_villager",
 			EntityType.Builder.<FoxVillagerEntity>of(FoxVillagerEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FoxVillagerEntity::new)
 
@@ -155,6 +151,18 @@ public class BouModEntities {
 					.sized(0.5f, 1f));
 	public static final RegistryObject<EntityType<BabyDragonVillagerEntity>> BABY_DRAGON_VILLAGER = register("baby_dragon_villager", EntityType.Builder.<BabyDragonVillagerEntity>of(BabyDragonVillagerEntity::new, MobCategory.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyDragonVillagerEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity",
+			EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TopAnimalChestEntityEntity>> TOP_ANIMAL_CHEST_ENTITY = register("top_animal_chest_entity",
+			EntityType.Builder.<TopAnimalChestEntityEntity>of(TopAnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(TopAnimalChestEntityEntity::new)
+
+					.sized(16f, 16f));
+	public static final RegistryObject<EntityType<ChestEntityEntity>> CHEST_ENTITY = register("chest_entity",
+			EntityType.Builder.<ChestEntityEntity>of(ChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(ChestEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -167,7 +175,6 @@ public class BouModEntities {
 		event.enqueueWork(() -> {
 			ParrotVillagerEntity.init();
 			BabyParrotVillagerEntity.init();
-			AnimalChestEntityEntity.init();
 			FoxVillagerEntity.init();
 			WolfVillagerEntity.init();
 			AxolotlVillagerEntity.init();
@@ -201,6 +208,9 @@ public class BouModEntities {
 			BabyRabbitVillagerEntity.init();
 			BabySpiderVillagerEntity.init();
 			BabyDragonVillagerEntity.init();
+			AnimalChestEntityEntity.init();
+			TopAnimalChestEntityEntity.init();
+			ChestEntityEntity.init();
 		});
 	}
 
@@ -208,7 +218,6 @@ public class BouModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(PARROT_VILLAGER.get(), ParrotVillagerEntity.createAttributes().build());
 		event.put(BABY_PARROT_VILLAGER.get(), BabyParrotVillagerEntity.createAttributes().build());
-		event.put(ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityEntity.createAttributes().build());
 		event.put(FOX_VILLAGER.get(), FoxVillagerEntity.createAttributes().build());
 		event.put(WOLF_VILLAGER.get(), WolfVillagerEntity.createAttributes().build());
 		event.put(AXOLOTL_VILLAGER.get(), AxolotlVillagerEntity.createAttributes().build());
@@ -242,5 +251,8 @@ public class BouModEntities {
 		event.put(BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerEntity.createAttributes().build());
 		event.put(BABY_SPIDER_VILLAGER.get(), BabySpiderVillagerEntity.createAttributes().build());
 		event.put(BABY_DRAGON_VILLAGER.get(), BabyDragonVillagerEntity.createAttributes().build());
+		event.put(ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityEntity.createAttributes().build());
+		event.put(TOP_ANIMAL_CHEST_ENTITY.get(), TopAnimalChestEntityEntity.createAttributes().build());
+		event.put(CHEST_ENTITY.get(), ChestEntityEntity.createAttributes().build());
 	}
 }

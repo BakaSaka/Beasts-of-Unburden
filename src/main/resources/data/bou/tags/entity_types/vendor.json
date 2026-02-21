@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "bou:bear_villager",
+    "bou:parrot_villager",
+    "bou:fox_villager",
+    "bou:turtle_villager",
+    "bou:cow_villager",
+    "bou:chicken_villager",
+    "bou:squid_villager",
+    "bou:cat_villager",
+    "bou:spider_villager",
+    "bou:horse_villager",
+    "bou:rabbit_villager",
+    "bou:human_villager",
+    "bou:dragon_villager",
+    "villager",
+    "bou:wolf_villager",
+    "bou:bee_villager",
+    "bou:sheep_villager",
+    "bou:llama_villager",
+    "bou:pig_villager",
+    "bou:axolotl_villager"
+  ]
+}

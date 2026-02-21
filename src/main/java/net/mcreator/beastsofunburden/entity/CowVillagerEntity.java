@@ -67,6 +67,7 @@ import io.netty.buffer.Unpooled;
 @Mod.EventBusSubscriber
 public class CowVillagerEntity extends Animal {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(CowVillagerEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_vendor = SynchedEntityData.defineId(CowVillagerEntity.class, EntityDataSerializers.STRING);
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("meadow"), new ResourceLocation("mushroom_fields"), new ResourceLocation("old_growth_birch_forest"), new ResourceLocation("plains"),
 			new ResourceLocation("savanna"), new ResourceLocation("savanna_plateau"), new ResourceLocation("stony_peaks"), new ResourceLocation("sunflower_plains"), new ResourceLocation("windswept_savanna"));
 
@@ -97,6 +98,7 @@ public class CowVillagerEntity extends Animal {
 	protected void defineSynchedData() {
 		super.defineSynchedData();
 		this.entityData.define(DATA_variant, 7);
+		this.entityData.define(DATA_vendor, "vendor");
 	}
 
 	@Override
@@ -183,6 +185,7 @@ public class CowVillagerEntity extends Animal {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Datavariant", this.entityData.get(DATA_variant));
+		compound.putString("Datavendor", this.entityData.get(DATA_vendor));
 		compound.put("InventoryCustom", inventory.serializeNBT());
 	}
 
@@ -191,6 +194,8 @@ public class CowVillagerEntity extends Animal {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Datavariant"))
 			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
+		if (compound.contains("Datavendor"))
+			this.entityData.set(DATA_vendor, compound.getString("Datavendor"));
 		if (compound.get("InventoryCustom") instanceof CompoundTag inventoryTag)
 			inventory.deserializeNBT(inventoryTag);
 	}
@@ -227,7 +232,7 @@ public class CowVillagerEntity extends Animal {
 		Entity entity = this;
 		Level world = this.level;
 
-		WandOfVariationEntityHitProcedure.execute(entity);
+		WandOfVariationEntityHitProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 

@@ -44,7 +44,8 @@
         ],
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/procedures/ParrotVariationSpawnProcedure.java"
-        ]
+        ],
+        "return_type": "number"
       },
       "path": "~/Parrot"
     },
@@ -357,6 +358,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/bou/models/block/animal_chest_inactive.json",
+          "src/main/java/net/mcreator/beastsofunburden/block/entity/AnimalChestInactiveBlockEntity.java",
           "src/main/resources/data/bou/loot_tables/blocks/animal_chest_inactive.json",
           "src/main/java/net/mcreator/beastsofunburden/block/AnimalChestInactiveBlock.java",
           "src/main/resources/assets/bou/blockstates/animal_chest_inactive.json",
@@ -372,7 +374,12 @@
       "locked_code": false,
       "registry_name": "animal_chest_display_1",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/procedures/AnimalChestDisplay1Procedure.java"
         ]
@@ -709,21 +716,6 @@
       "path": "~/Parrot"
     },
     {
-      "name": "AnimalChestEntity",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animal_chest_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/client/renderer/AnimalChestEntityRenderer.java",
-          "src/main/java/net/mcreator/beastsofunburden/entity/AnimalChestEntityEntity.java",
-          "src/main/resources/assets/bou/models/item/animal_chest_entity_spawn_egg.json"
-        ]
-      },
-      "path": "~/Chests"
-    },
-    {
       "name": "CraftVendorChestKey",
       "type": "recipe",
       "compiles": true,
@@ -758,7 +750,16 @@
       "locked_code": false,
       "registry_name": "owner_use_animal_chest",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/procedures/OwnerUseAnimalChestProcedure.java"
         ]
@@ -7009,20 +7010,6 @@
       "path": "~/ShopChestKeys"
     },
     {
-      "name": "KeyringGUI",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "keyring_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/client/gui/KeyringGUIScreen.java",
-          "src/main/java/net/mcreator/beastsofunburden/world/inventory/KeyringGUIMenu.java"
-        ]
-      },
-      "path": "~/ShopChestKeys"
-    },
-    {
       "name": "WandOfVariation",
       "type": "tool",
       "compiles": true,
@@ -7045,6 +7032,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           }
         ],
@@ -8191,6 +8182,523 @@
         ]
       },
       "path": "~/Chests"
+    },
+    {
+      "name": "KeyringGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keyring_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/gui/KeyringGUIScreen.java",
+          "src/main/java/net/mcreator/beastsofunburden/world/inventory/KeyringGUIMenu.java"
+        ]
+      },
+      "path": "~/ShopChestKeys"
+    },
+    {
+      "name": "OpenKeyringGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_keyring_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/OpenKeyringGUIProcedure.java"
+        ]
+      },
+      "path": "~/ShopChestKeys"
+    },
+    {
+      "name": "AnimalChestEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animal_chest_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/AnimalChestEntityRenderer.java",
+          "src/main/java/net/mcreator/beastsofunburden/entity/AnimalChestEntityEntity.java",
+          "src/main/resources/assets/bou/models/item/animal_chest_entity_spawn_egg.json"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "CompleteKeyringGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "complete_keyring_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/world/inventory/CompleteKeyringGUIMenu.java",
+          "src/main/java/net/mcreator/beastsofunburden/client/gui/CompleteKeyringGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "AnimalChestEntityOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animal_chest_entity_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/AnimalChestEntityOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopAnimalChestEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_animal_chest_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/TopAnimalChestEntityRenderer.java",
+          "src/main/java/net/mcreator/beastsofunburden/entity/TopAnimalChestEntityEntity.java",
+          "src/main/resources/assets/bou/models/item/top_animal_chest_entity_spawn_egg.json"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestVariation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_variation",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestVariationProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestBasic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_basic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBasicProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestRed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_red",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestRedProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestOrange",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_orange",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestOrangeProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestYellow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_yellow",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestYellowProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestGreen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_green",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestGreenProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestCyan",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_cyan",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestCyanProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestBlue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_blue",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBlueProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestPurple",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_purple",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestPurpleProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestPink",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_pink",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestPinkProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestWhite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_white",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestWhiteProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "TopChestBlack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "top_chest_black",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBlackProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "ChestEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/client/renderer/ChestEntityRenderer.java",
+          "src/main/resources/assets/bou/models/item/chest_entity_spawn_egg.json",
+          "src/main/java/net/mcreator/beastsofunburden/entity/ChestEntityEntity.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "CustomerUseAnimalChest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customer_use_animal_chest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/CustomerUseAnimalChestProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "OwnerActivateAnimalChest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owner_activate_animal_chest",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/OwnerActivateAnimalChestProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "ChestCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ChestCheckProcedure.java"
+        ]
+      },
+      "path": "~/Chests"
+    },
+    {
+      "name": "ParrotAndShop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parrot_and_shop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/procedures/ParrotAndShopProcedure.java"
+        ]
+      },
+      "path": "~/Parrot"
     }
   ],
   "variable_elements": [],
@@ -8208,6 +8716,39 @@
     "ITEMS:mod:keys": [
       "CUSTOM:VendorChestKey",
       "CUSTOM:KeyringTool"
+    ],
+    "ENTITIES:mod:vendor": [
+      "CUSTOM:ParrotVillager",
+      "CUSTOM:FoxVillager",
+      "CUSTOM:WolfVillager",
+      "CUSTOM:AxolotlVillager",
+      "CUSTOM:HorseVillager",
+      "CUSTOM:CatVillager",
+      "CUSTOM:CowVillager",
+      "CUSTOM:LlamaVillager",
+      "CUSTOM:BearVillager",
+      "CUSTOM:PigVillager",
+      "CUSTOM:ChickenVillager",
+      "CUSTOM:RabbitVillager",
+      "CUSTOM:SheepVillager",
+      "CUSTOM:TurtleVillager",
+      "CUSTOM:BeeVillager",
+      "CUSTOM:SpiderVillager",
+      "CUSTOM:SquidVillager",
+      "CUSTOM:HumanVillager",
+      "CUSTOM:DragonVillager",
+      "EntityVillager"
+    ],
+    "ENTITIES:mod:shop": [
+      "CUSTOM:AnimalChestEntity",
+      "CUSTOM:TopAnimalChestEntity",
+      "CUSTOM:ChestEntity"
+    ],
+    "BLOCKS:mod:shop_chest": [
+      "CUSTOM:AnimalChestInactive"
+    ],
+    "ITEMS:mod:tool": [
+      "CUSTOM:WandOfVariation"
     ]
   },
   "tab_element_order": {},
@@ -8232,9 +8773,8 @@
       "item.bou.parrot_villager_spawn_egg": "Parrot Villager Spawn Egg",
       "entity.bou.parrot_villager": "Parrot Villager",
       "item.bou.vendor_chest_key": "Vendor Chest Key",
-      "block.bou.animal_chest_inactive": "Animal Shop Chest",
+      "block.bou.animal_chest_inactive": "Shop Chest",
       "entity.bou.baby_parrot_villager": "Hatchling Villager",
-      "entity.bou.animal_chest_entity": "Animal Shop Chest",
       "entity.bou.fox_villager": "Fox Villager",
       "item.bou.fox_villager_spawn_egg": "Fox Villager Spawn Egg",
       "entity.bou.wolf_villager": "Wolf Villager",
@@ -8297,9 +8837,8 @@
       "item.bou.baby_rabbit_villager_spawn_egg": "Rabbit Kit Villager Spawn Egg",
       "entity.bou.baby_spider_villager": "Spiderling Villager",
       "item.bou.baby_spider_villager_spawn_egg": "Spiderling Villager Spawn Egg",
-      "item.bou.keyring_tool": "Key Ring",
+      "item.bou.keyring_tool": "Shop Keys",
       "item.bou.wand_of_variation": "Wand Of Variation",
-      "item.bou.animal_chest_entity_spawn_egg": "Animal Shop Chest Spawn Egg",
       "item.bou.baby_fox_villager_spawn_egg": "Fox Kit Villager Spawn Egg",
       "item.bou.baby_wolf_villager_spawn_egg": "Pup Villager Spawn Egg",
       "item.bou.baby_sheep_villager_spawn_egg": "Lamb Villager Spawn Egg",
@@ -8307,7 +8846,13 @@
       "entity.bou.baby_dragon_villager": "Whelp Villager",
       "item.bou.baby_dragon_villager_spawn_egg": "Whelp Villager Spawn Egg",
       "advancements.new_shop_owner.descr": "Player opens their first shop with a villager!",
-      "advancements.new_shop_owner.title": "New Shop Owner"
+      "advancements.new_shop_owner.title": "New Shop Owner",
+      "entity.bou.animal_chest_entity": "Animal Shop Chest Stall",
+      "item.bou.animal_chest_entity_spawn_egg": "Animal Shop Chest Stall Spawn Egg",
+      "entity.bou.top_animal_chest_entity": "Animal Shop Chest Hidden",
+      "item.bou.top_animal_chest_entity_spawn_egg": "Animal Shop Chest Hidden Spawn Egg",
+      "item.bou.chest_entity_spawn_egg": "Chest Spawn Egg",
+      "entity.bou.chest_entity": "Chest"
     }
   },
   "metadata": {
@@ -8316,6 +8861,7 @@
       "src/main/java/net/mcreator/beastsofunburden/init/BouModMenus.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModScreens.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModBlocks.java",
+      "src/main/java/net/mcreator/beastsofunburden/init/BouModBlockEntities.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModItems.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModEntities.java",
       "src/main/java/net/mcreator/beastsofunburden/init/BouModEntityRenderers.java",

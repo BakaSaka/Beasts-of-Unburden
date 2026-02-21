@@ -1,9 +1,8 @@
 {
-  "parent": "bou:custom/animalchest_inactive",
+  "parent": "bou:custom/animal_chest_inactive",
   "textures": {
     "all": "bou:block/animal_chest_texture",
     "particle": "bou:block/animal_chest_texture",
-    "1": "bou:block/animal_chest_portrait",
-    "2": "bou:block/animal_chest_texture"
+    "0": "bou:block/animal_chest_texture"
   }
 }

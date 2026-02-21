@@ -265,6 +265,16 @@
           "y": 112,
           "locked": false
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "animal_chest_gui0.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 25,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

@@ -9,7 +9,7 @@
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "guiTexture": "",
-    "name": "Key Ring",
+    "name": "Shop Keys",
     "specialInformation": {
       "fixedValue": []
     },
@@ -31,6 +31,9 @@
     "blockDropsTier": "GOLD",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "OpenKeyringGUI"
+    }
   }
 }

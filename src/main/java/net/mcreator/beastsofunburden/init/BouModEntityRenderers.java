@@ -16,7 +16,6 @@ public class BouModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(BouModEntities.PARROT_VILLAGER.get(), ParrotVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_PARROT_VILLAGER.get(), BabyParrotVillagerRenderer::new);
-		event.registerEntityRenderer(BouModEntities.ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityRenderer::new);
 		event.registerEntityRenderer(BouModEntities.FOX_VILLAGER.get(), FoxVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.WOLF_VILLAGER.get(), WolfVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.AXOLOTL_VILLAGER.get(), AxolotlVillagerRenderer::new);
@@ -50,5 +49,8 @@ public class BouModEntityRenderers {
 		event.registerEntityRenderer(BouModEntities.BABY_RABBIT_VILLAGER.get(), BabyRabbitVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_SPIDER_VILLAGER.get(), BabySpiderVillagerRenderer::new);
 		event.registerEntityRenderer(BouModEntities.BABY_DRAGON_VILLAGER.get(), BabyDragonVillagerRenderer::new);
+		event.registerEntityRenderer(BouModEntities.ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityRenderer::new);
+		event.registerEntityRenderer(BouModEntities.TOP_ANIMAL_CHEST_ENTITY.get(), TopAnimalChestEntityRenderer::new);
+		event.registerEntityRenderer(BouModEntities.CHEST_ENTITY.get(), ChestEntityRenderer::new);
 	}
 }

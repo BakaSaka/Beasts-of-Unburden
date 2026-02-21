@@ -12,11 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
@@ -34,9 +31,8 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.beastsofunburden.procedures.WandOfVariationEntityHitProcedure;
-import net.mcreator.beastsofunburden.procedures.ChestVariationProcedure;
-import net.mcreator.beastsofunburden.init.BouModItems;
+import net.mcreator.beastsofunburden.procedures.OwnerUseAnimalChestProcedure;
+import net.mcreator.beastsofunburden.procedures.AnimalChestEntityOnInitialEntitySpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
 import javax.annotation.Nullable;
@@ -44,8 +40,9 @@ import javax.annotation.Nullable;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
-public class AnimalChestEntityEntity extends Monster {
+public class AnimalChestEntityEntity extends PathfinderMob {
 	public static final EntityDataAccessor<Integer> DATA_variant = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_shop = SynchedEntityData.defineId(AnimalChestEntityEntity.class, EntityDataSerializers.STRING);
 	private static final Set<ResourceLocation> SPAWN_BIOMES = null;
 
 	@SubscribeEvent
@@ -61,7 +58,7 @@ public class AnimalChestEntityEntity extends Monster {
 		super(type, world);
 		maxUpStep = 0.1f;
 		xpReward = 0;
-		setNoAi(false);
+		setNoAi(true);
 		setCustomName(new TextComponent(" Shop"));
 		setCustomNameVisible(true);
 		setPersistenceRequired();
@@ -75,13 +72,8 @@ public class AnimalChestEntityEntity extends Monster {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_variant, 11);
-	}
-
-	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-		this.goalSelector.addGoal(1, new TemptGoal(this, 0, Ingredient.of(BouModItems.VENDOR_CHEST_KEY.get()), false));
+		this.entityData.define(DATA_variant, 1);
+		this.entityData.define(DATA_shop, "");
 	}
 
 	@Override
@@ -128,7 +120,7 @@ public class AnimalChestEntityEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		ChestVariationProcedure.execute(this);
+		AnimalChestEntityOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
 	}
 
@@ -136,6 +128,7 @@ public class AnimalChestEntityEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Datavariant", this.entityData.get(DATA_variant));
+		compound.putString("Datashop", this.entityData.get(DATA_shop));
 	}
 
 	@Override
@@ -143,6 +136,8 @@ public class AnimalChestEntityEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Datavariant"))
 			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
+		if (compound.contains("Datashop"))
+			this.entityData.set(DATA_shop, compound.getString("Datashop"));
 	}
 
 	@Override
@@ -156,8 +151,18 @@ public class AnimalChestEntityEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level;
 
-		WandOfVariationEntityHitProcedure.execute(entity);
+		OwnerUseAnimalChestProcedure.execute(entity, sourceentity);
 		return retval;
+	}
+
+	@Override
+	public boolean isPushedByFluid() {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level;
+		Entity entity = this;
+		return false;
 	}
 
 	@Override
@@ -177,9 +182,9 @@ public class AnimalChestEntityEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.1);
-		builder = builder.add(Attributes.MAX_HEALTH, 0);
+		builder = builder.add(Attributes.MAX_HEALTH, 1);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 0);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 100);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.1);

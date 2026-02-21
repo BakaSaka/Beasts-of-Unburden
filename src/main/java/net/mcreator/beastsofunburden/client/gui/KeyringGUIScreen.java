@@ -26,8 +26,8 @@ public class KeyringGUIScreen extends AbstractContainerScreen<KeyringGUIMenu> im
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 255;
+		this.imageHeight = 160;
 	}
 
 	@Override
@@ -52,6 +52,8 @@ public class KeyringGUIScreen extends AbstractContainerScreen<KeyringGUIMenu> im
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("bou:textures/screens/keyring_gui_icons.png"));
+		this.blit(ms, this.leftPos + -12, this.topPos + -39, 0, 0, 280, 200, 280, 200);
 		RenderSystem.disableBlend();
 	}
 
