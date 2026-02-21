@@ -263,9 +263,6 @@
         "value": "none"
       }
     ],
-    "whenMobIsHurt": {
-      "name": "WandOfVariationEntityHit"
-    },
     "onRightClickedOn": {
       "name": "ChestCheck"
     },

@@ -18,7 +18,7 @@ import net.minecraft.advancements.Advancement;
 import net.mcreator.beastsofunburden.init.BouModItems;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 import net.mcreator.beastsofunburden.init.BouModBlocks;
-import net.mcreator.beastsofunburden.entity.ChestEntityEntity;
+import net.mcreator.beastsofunburden.entity.AnimalChestEntityEntity;
 
 public class ChestBecomeEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -29,7 +29,7 @@ public class ChestBecomeEntityProcedure {
 			if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == BouModBlocks.ANIMAL_CHEST_INACTIVE.get()) {
 				world.destroyBlock(new BlockPos(x, y, z), false);
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new ChestEntityEntity(BouModEntities.CHEST_ENTITY.get(), _level);
+					Entity entityToSpawn = new AnimalChestEntityEntity(BouModEntities.ANIMAL_CHEST_ENTITY.get(), _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
 						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);

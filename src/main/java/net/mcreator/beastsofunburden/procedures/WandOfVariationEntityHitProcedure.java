@@ -22,7 +22,7 @@ public class WandOfVariationEntityHitProcedure {
 		if ((entity.getPersistentData().getString("bound")).contains("bound")) {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent(("This entity works for " + entity.getPersistentData().getString("owner"))), false);
-		} else if ((entity.getPersistentData().getString("bound")).contains("free")) {
+		} else if ((entity.getPersistentData().getString("bound")).contains("free") || (entity instanceof ParrotVillagerEntity _datEntS ? _datEntS.getEntityData().get(ParrotVillagerEntity.DATA_bound) : "").contains("free")) {
 			if (sourceentity instanceof Player && getEntityGameType(sourceentity) == GameType.SURVIVAL && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == BouModItems.WAND_OF_VARIATION.get()) {
 				if (entity instanceof ParrotVillagerEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(ParrotVillagerEntity.DATA_variant, (int) ((entity instanceof ParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(ParrotVillagerEntity.DATA_variant) : 0) % 13 + 1));

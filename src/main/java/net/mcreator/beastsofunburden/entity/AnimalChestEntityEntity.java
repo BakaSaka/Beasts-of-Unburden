@@ -12,14 +12,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -31,7 +27,6 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.beastsofunburden.procedures.OwnerUseAnimalChestProcedure;
 import net.mcreator.beastsofunburden.procedures.AnimalChestEntityOnInitialEntitySpawnProcedure;
 import net.mcreator.beastsofunburden.init.BouModEntities;
 
@@ -73,7 +68,7 @@ public class AnimalChestEntityEntity extends PathfinderMob {
 	protected void defineSynchedData() {
 		super.defineSynchedData();
 		this.entityData.define(DATA_variant, 1);
-		this.entityData.define(DATA_shop, "");
+		this.entityData.define(DATA_shop, "shop");
 	}
 
 	@Override
@@ -138,21 +133,6 @@ public class AnimalChestEntityEntity extends PathfinderMob {
 			this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
 		if (compound.contains("Datashop"))
 			this.entityData.set(DATA_shop, compound.getString("Datashop"));
-	}
-
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-
-		OwnerUseAnimalChestProcedure.execute(entity, sourceentity);
-		return retval;
 	}
 
 	@Override

@@ -378,6 +378,26 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -758,11 +778,28 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/procedures/OwnerUseAnimalChestProcedure.java"
-        ]
+        ],
+        "return_type": "entity"
       },
       "path": "~/Chests"
     },
@@ -773,7 +810,36 @@
       "locked_code": false,
       "registry_name": "bind_animal_chest",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstackiterator",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/procedures/BindAnimalChestProcedure.java"
         ]
@@ -8248,19 +8314,6 @@
       "path": "~/Chests"
     },
     {
-      "name": "CompleteKeyringGUI",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "complete_keyring_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/beastsofunburden/world/inventory/CompleteKeyringGUIMenu.java",
-          "src/main/java/net/mcreator/beastsofunburden/client/gui/CompleteKeyringGUIScreen.java"
-        ]
-      }
-    },
-    {
       "name": "AnimalChestEntityOnInitialEntitySpawn",
       "type": "procedure",
       "compiles": true,
@@ -8304,11 +8357,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/TopAnimalChestEntityRenderer.java",
-          "src/main/java/net/mcreator/beastsofunburden/entity/TopAnimalChestEntityEntity.java",
-          "src/main/resources/assets/bou/models/item/top_animal_chest_entity_spawn_egg.json"
+          "src/main/java/net/mcreator/beastsofunburden/entity/TopAnimalChestEntityEntity.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestVariation",
@@ -8327,7 +8379,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestVariationProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestBasic",
@@ -8347,7 +8399,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBasicProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestRed",
@@ -8367,7 +8419,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestRedProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestOrange",
@@ -8387,7 +8439,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestOrangeProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestYellow",
@@ -8407,7 +8459,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestYellowProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestGreen",
@@ -8427,7 +8479,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestGreenProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestCyan",
@@ -8447,7 +8499,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestCyanProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestBlue",
@@ -8467,7 +8519,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBlueProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestPurple",
@@ -8487,7 +8539,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestPurpleProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestPink",
@@ -8507,7 +8559,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestPinkProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestWhite",
@@ -8527,7 +8579,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestWhiteProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "TopChestBlack",
@@ -8547,7 +8599,7 @@
           "src/main/java/net/mcreator/beastsofunburden/procedures/TopChestBlackProcedure.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "ChestEntity",
@@ -8558,11 +8610,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/beastsofunburden/client/renderer/ChestEntityRenderer.java",
-          "src/main/resources/assets/bou/models/item/chest_entity_spawn_egg.json",
           "src/main/java/net/mcreator/beastsofunburden/entity/ChestEntityEntity.java"
         ]
       },
-      "path": "~/Chests"
+      "path": "~/Chests/otherchest_test"
     },
     {
       "name": "CustomerUseAnimalChest",
@@ -8699,6 +8750,36 @@
         ]
       },
       "path": "~/Parrot"
+    },
+    {
+      "name": "Parrot1",
+      "type": "item",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "parrot_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/item/Parrot1Item.java",
+          "src/main/resources/assets/bou/models/item/parrot_1.json",
+          "src/main/java/net/mcreator/beastsofunburden/item/inventory/Parrot1InventoryCapability.java"
+        ]
+      },
+      "path": "~/ShopChestKeys"
+    },
+    {
+      "name": "Parrot2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parrot_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/beastsofunburden/item/Parrot2Item.java",
+          "src/main/resources/assets/bou/models/item/parrot_2.json",
+          "src/main/java/net/mcreator/beastsofunburden/item/inventory/Parrot2InventoryCapability.java"
+        ]
+      },
+      "path": "~/ShopChestKeys"
     }
   ],
   "variable_elements": [],
@@ -8850,9 +8931,9 @@
       "entity.bou.animal_chest_entity": "Animal Shop Chest Stall",
       "item.bou.animal_chest_entity_spawn_egg": "Animal Shop Chest Stall Spawn Egg",
       "entity.bou.top_animal_chest_entity": "Animal Shop Chest Hidden",
-      "item.bou.top_animal_chest_entity_spawn_egg": "Animal Shop Chest Hidden Spawn Egg",
-      "item.bou.chest_entity_spawn_egg": "Chest Spawn Egg",
-      "entity.bou.chest_entity": "Chest"
+      "entity.bou.chest_entity": "Chest",
+      "item.bou.parrot_1": "Cyan Parrot Villager Key",
+      "item.bou.parrot_2": "Red Parrot Villager Key"
     }
   },
   "metadata": {
@@ -8957,7 +9038,12 @@
       },
       {
         "name": "Chests",
-        "children": []
+        "children": [
+          {
+            "name": "otherchest_test",
+            "children": []
+          }
+        ]
       }
     ]
   },

@@ -13,15 +13,15 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.beastsofunburden.procedures.*;
 import net.mcreator.beastsofunburden.entity.AnimalChestEntityEntity;
-import net.mcreator.beastsofunburden.client.model.Modelanimal_chest_entity_bottom;
+import net.mcreator.beastsofunburden.client.model.Modelanimal_chest_entity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>> {
+public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>> {
 	public AnimalChestEntityRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>(context.bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION)), 1f);
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		super(context, new Modelanimal_chest_entity<AnimalChestEntityEntity>(context.bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION)), 1f);
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture.png");
 
 			@Override
@@ -32,7 +32,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestBasicProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -40,7 +40,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_fox.png");
 
 			@Override
@@ -51,7 +51,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestRedProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -59,7 +59,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_orange.png");
 
 			@Override
@@ -70,7 +70,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestOrangeProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -78,7 +78,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_yellow.png");
 
 			@Override
@@ -89,7 +89,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestYellowProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -97,7 +97,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_green.png");
 
 			@Override
@@ -108,7 +108,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestGreenProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -116,7 +116,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_cyan.png");
 
 			@Override
@@ -127,7 +127,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestCyanProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -135,7 +135,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_blue.png");
 
 			@Override
@@ -146,7 +146,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestBlueProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -154,7 +154,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_purple.png");
 
 			@Override
@@ -165,7 +165,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestPurpleProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -173,7 +173,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_pink.png");
 
 			@Override
@@ -184,7 +184,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestPinkProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -192,7 +192,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_white.png");
 
 			@Override
@@ -203,7 +203,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestWhiteProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
@@ -211,7 +211,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
-		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity_bottom<AnimalChestEntityEntity>>(this) {
+		this.addLayer(new RenderLayer<AnimalChestEntityEntity, Modelanimal_chest_entity<AnimalChestEntityEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = new ResourceLocation("bou:textures/entities/animal_chest_texture_black.png");
 
 			@Override
@@ -222,7 +222,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double z = entity.getZ();
 				if (ChestBlackProcedure.execute(entity)) {
 					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					EntityModel model = new Modelanimal_chest_entity_bottom(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity_bottom.LAYER_LOCATION));
+					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 					model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);

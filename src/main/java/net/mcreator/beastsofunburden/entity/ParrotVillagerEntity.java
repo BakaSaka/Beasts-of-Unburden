@@ -53,7 +53,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.beastsofunburden.world.inventory.AnimalChestGUIMenu;
-import net.mcreator.beastsofunburden.procedures.WandOfVariationEntityHitProcedure;
 import net.mcreator.beastsofunburden.procedures.ParrotVariationSpawnProcedure;
 import net.mcreator.beastsofunburden.procedures.ParrotAndShopProcedure;
 import net.mcreator.beastsofunburden.procedures.ChestCheckProcedure;
@@ -153,15 +152,6 @@ public class ParrotVillagerEntity extends Animal {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Level world = this.level;
-		Entity entity = this;
-		Entity sourceentity = damagesource.getEntity();
-		Entity immediatesourceentity = damagesource.getDirectEntity();
-
-		WandOfVariationEntityHitProcedure.execute(entity, sourceentity);
 		if (damagesource == DamageSource.FALL)
 			return false;
 		return super.hurt(damagesource, amount);

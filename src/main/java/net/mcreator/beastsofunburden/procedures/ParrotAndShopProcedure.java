@@ -6,7 +6,6 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.beastsofunburden.entity.ParrotVillagerEntity;
 import net.mcreator.beastsofunburden.entity.AnimalChestEntityEntity;
-import net.mcreator.beastsofunburden.BouMod;
 
 public class ParrotAndShopProcedure {
 	public static void execute(Entity entity) {
@@ -24,11 +23,5 @@ public class ParrotAndShopProcedure {
 					vendor.setTag(_nbtTag.copy());
 			}
 		}
-		BouMod.LOGGER.info(entity instanceof ParrotVillagerEntity _datEntS ? _datEntS.getEntityData().get(ParrotVillagerEntity.DATA_vendor) : "");
-		BouMod.LOGGER.info(entity instanceof ParrotVillagerEntity _datEntS ? _datEntS.getEntityData().get(ParrotVillagerEntity.DATA_bound) : "");
-		BouMod.LOGGER.info(entity instanceof ParrotVillagerEntity _datEntS ? _datEntS.getEntityData().get(ParrotVillagerEntity.DATA_owner) : "");
-		BouMod.LOGGER.info(entity instanceof ParrotVillagerEntity _datEntI ? _datEntI.getEntityData().get(ParrotVillagerEntity.DATA_variant) : 0);
-		BouMod.LOGGER.info(entity instanceof AnimalChestEntityEntity _datEntS ? _datEntS.getEntityData().get(AnimalChestEntityEntity.DATA_shop) : "");
-		BouMod.LOGGER.info(entity instanceof AnimalChestEntityEntity _datEntI ? _datEntI.getEntityData().get(AnimalChestEntityEntity.DATA_variant) : 0);
 	}
 }
