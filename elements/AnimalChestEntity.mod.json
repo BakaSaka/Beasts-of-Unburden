@@ -26,7 +26,7 @@
         "model": "Modelanimal_chest_entity",
         "texture": "animal_chest_texture.png",
         "disableHurtOverlay": true,
-        "glow": false,
+        "glow": true,
         "condition": {
           "name": "ChestBasic"
         }
@@ -123,7 +123,7 @@
       }
     ],
     "animations": [],
-    "modelWidth": 0.6,
+    "modelWidth": 1.0,
     "modelHeight": 1.8,
     "modelShadowSize": 1.0,
     "mountedYOffset": 0.0,
@@ -133,7 +133,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -6750208,
       "falpha": 0.0
     },
     "spawnEggTexture": "",
@@ -163,7 +163,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 1,
     "attackKnockback": 0.1,
@@ -177,7 +177,7 @@
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "pushedByFluids": {
       "fixedValue": false
@@ -191,7 +191,7 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": true,
     "immuneToLightning": false,
@@ -234,14 +234,11 @@
         "value": "shop"
       }
     ],
-    "onInitialSpawn": {
-      "name": "AnimalChestEntityOnInitialEntitySpawn"
-    },
-    "hasAI": false,
+    "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
-    "breedable": false,
-    "tameable": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">0</field><field name=\"condition\">null,null</field></block></next></block></xml>",
+    "breedable": true,
+    "tameable": true,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -256,7 +253,11 @@
     "mobSpawningType": "misc",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "#minecraft:village"
+      }
+    ],
     "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,

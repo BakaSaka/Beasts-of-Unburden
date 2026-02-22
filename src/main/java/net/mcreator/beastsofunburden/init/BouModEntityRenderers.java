@@ -52,5 +52,6 @@ public class BouModEntityRenderers {
 		event.registerEntityRenderer(BouModEntities.ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityRenderer::new);
 		event.registerEntityRenderer(BouModEntities.TOP_ANIMAL_CHEST_ENTITY.get(), TopAnimalChestEntityRenderer::new);
 		event.registerEntityRenderer(BouModEntities.CHEST_ENTITY.get(), ChestEntityRenderer::new);
+		event.registerEntityRenderer(BouModEntities.ANIMAL_SHOP_STALL.get(), AnimalShopStallRenderer::new);
 	}
 }

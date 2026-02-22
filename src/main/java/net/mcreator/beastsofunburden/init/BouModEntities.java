@@ -154,13 +154,17 @@ public class BouModEntities {
 	public static final RegistryObject<EntityType<AnimalChestEntityEntity>> ANIMAL_CHEST_ENTITY = register("animal_chest_entity",
 			EntityType.Builder.<AnimalChestEntityEntity>of(AnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(AnimalChestEntityEntity::new)
 
-					.sized(0.6f, 1.8f));
+					.sized(1f, 1.8f));
 	public static final RegistryObject<EntityType<TopAnimalChestEntityEntity>> TOP_ANIMAL_CHEST_ENTITY = register("top_animal_chest_entity",
 			EntityType.Builder.<TopAnimalChestEntityEntity>of(TopAnimalChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(TopAnimalChestEntityEntity::new)
 
 					.sized(16f, 16f));
 	public static final RegistryObject<EntityType<ChestEntityEntity>> CHEST_ENTITY = register("chest_entity",
 			EntityType.Builder.<ChestEntityEntity>of(ChestEntityEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(ChestEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AnimalShopStallEntity>> ANIMAL_SHOP_STALL = register("animal_shop_stall",
+			EntityType.Builder.<AnimalShopStallEntity>of(AnimalShopStallEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3).setCustomClientFactory(AnimalShopStallEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -211,6 +215,7 @@ public class BouModEntities {
 			AnimalChestEntityEntity.init();
 			TopAnimalChestEntityEntity.init();
 			ChestEntityEntity.init();
+			AnimalShopStallEntity.init();
 		});
 	}
 
@@ -254,5 +259,6 @@ public class BouModEntities {
 		event.put(ANIMAL_CHEST_ENTITY.get(), AnimalChestEntityEntity.createAttributes().build());
 		event.put(TOP_ANIMAL_CHEST_ENTITY.get(), TopAnimalChestEntityEntity.createAttributes().build());
 		event.put(CHEST_ENTITY.get(), ChestEntityEntity.createAttributes().build());
+		event.put(ANIMAL_SHOP_STALL.get(), AnimalShopStallEntity.createAttributes().build());
 	}
 }

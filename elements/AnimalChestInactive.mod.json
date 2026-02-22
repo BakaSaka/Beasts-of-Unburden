@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "animal_chest_texture",
+    "texture": "animal_chest_texture_cyan",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -27,7 +27,17 @@
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
-    "boundingBoxes": [],
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 24.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
     "customProperties": [],
     "name": "Shop Chest",
     "specialInformation": {
@@ -54,7 +64,7 @@
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": true,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
@@ -105,7 +115,7 @@
       "value": ""
     },
     "luminance": 3,
-    "unbreakable": true,
+    "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "sensitiveToVibration": false,
@@ -114,11 +124,10 @@
       "fixedValue": 7.0
     },
     "hasInventory": true,
-    "guiBoundTo": "OwnAnimalChestGUI",
     "openGUIOnRightClick": false,
-    "inventorySize": 17,
+    "inventorySize": 56,
     "inventoryStackSize": 99,
-    "inventoryDropWhenDestroyed": true,
+    "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
@@ -131,7 +140,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "ChestBecomeEntity"
+      "name": "ChestKeyJoinChestBlock"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

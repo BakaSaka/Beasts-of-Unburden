@@ -31,7 +31,7 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				double y = entity.getY();
 				double z = entity.getZ();
 				if (ChestBasicProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.eyes(LAYER_TEXTURE));
 					EntityModel model = new Modelanimal_chest_entity(Minecraft.getInstance().getEntityModels().bakeLayer(Modelanimal_chest_entity.LAYER_LOCATION));
 					this.getParentModel().copyPropertiesTo(model);
 					model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
@@ -230,6 +230,11 @@ public class AnimalChestEntityRenderer extends MobRenderer<AnimalChestEntityEnti
 				}
 			}
 		});
+	}
+
+	@Override
+	protected void scale(AnimalChestEntityEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(entity.getScale(), entity.getScale(), entity.getScale());
 	}
 
 	@Override

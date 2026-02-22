@@ -63,6 +63,7 @@ public class BouModItems {
 	public static final RegistryObject<Item> BABY_SPIDER_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> BABY_DRAGON_VILLAGER_SPAWN_EGG;
 	public static final RegistryObject<Item> ANIMAL_CHEST_ENTITY_SPAWN_EGG;
+	public static final RegistryObject<Item> ANIMAL_SHOP_STALL_SPAWN_EGG;
 	public static final RegistryObject<Item> ANIMAL_CHEST_INACTIVE;
 	public static final RegistryObject<Item> KEYRING_TOOL;
 	public static final RegistryObject<Item> WAND_OF_VARIATION;
@@ -106,7 +107,8 @@ public class BouModItems {
 		BABY_RABBIT_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_rabbit_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_RABBIT_VILLAGER, -9552611, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_SPIDER_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_spider_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_SPIDER_VILLAGER, -14868171, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		BABY_DRAGON_VILLAGER_SPAWN_EGG = REGISTRY.register("baby_dragon_villager_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.BABY_DRAGON_VILLAGER, -13171384, -5997981, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-		ANIMAL_CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("animal_chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.ANIMAL_CHEST_ENTITY, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		ANIMAL_CHEST_ENTITY_SPAWN_EGG = REGISTRY.register("animal_chest_entity_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.ANIMAL_CHEST_ENTITY, -1, -6750208, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+		ANIMAL_SHOP_STALL_SPAWN_EGG = REGISTRY.register("animal_shop_stall_spawn_egg", () -> new ForgeSpawnEggItem(BouModEntities.ANIMAL_SHOP_STALL, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 		ANIMAL_CHEST_INACTIVE = block(BouModBlocks.ANIMAL_CHEST_INACTIVE, new Item.Properties().fireResistant().tab(CreativeModeTab.TAB_TOOLS));
 		KEYRING_TOOL = REGISTRY.register("keyring_tool", KeyringToolItem::new);
 		WAND_OF_VARIATION = REGISTRY.register("wand_of_variation", WandOfVariationItem::new);

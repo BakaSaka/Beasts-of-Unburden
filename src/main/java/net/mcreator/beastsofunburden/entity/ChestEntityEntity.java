@@ -146,7 +146,7 @@ public class ChestEntityEntity extends PathfinderMob {
 		Entity entity = this;
 		Level world = this.level;
 
-		AnimalChestEntityOnInitialEntitySpawnProcedure.execute(world, x, y, z, entity);
+		AnimalChestEntityOnInitialEntitySpawnProcedure.execute();
 		return retval;
 	}
 

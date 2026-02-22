@@ -27,13 +27,12 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Containers;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.beastsofunburden.procedures.ChestBecomeEntityProcedure;
+import net.mcreator.beastsofunburden.procedures.ChestKeyJoinChestBlockProcedure;
 import net.mcreator.beastsofunburden.init.BouModBlocks;
 import net.mcreator.beastsofunburden.block.entity.AnimalChestInactiveBlockEntity;
 
@@ -41,7 +40,7 @@ public class AnimalChestInactiveBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public AnimalChestInactiveBlock() {
-		super(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS, MaterialColor.WOOD).sound(SoundType.WOOD).strength(-1, 3600000).lightLevel(s -> 3).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS, MaterialColor.WOOD).sound(SoundType.WOOD).strength(1f, 10f).lightLevel(s -> 3).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -62,7 +61,12 @@ public class AnimalChestInactiveBlock extends Block implements EntityBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.empty();
+		return switch (state.getValue(FACING)) {
+			default -> box(0, 0, 0, 16, 24, 16);
+			case NORTH -> box(0, 0, 0, 16, 24, 16);
+			case EAST -> box(0, 0, 0, 16, 24, 16);
+			case WEST -> box(0, 0, 0, 16, 24, 16);
+		};
 	}
 
 	@Override
@@ -104,7 +108,7 @@ public class AnimalChestInactiveBlock extends Block implements EntityBlock {
 		double hitY = hit.getLocation().y;
 		double hitZ = hit.getLocation().z;
 		Direction direction = hit.getDirection();
-		ChestBecomeEntityProcedure.execute(world, x, y, z, entity);
+		ChestKeyJoinChestBlockProcedure.execute(world, x, y, z, entity);
 		return InteractionResult.SUCCESS;
 	}
 
@@ -124,18 +128,6 @@ public class AnimalChestInactiveBlock extends Block implements EntityBlock {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
-	}
-
-	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof AnimalChestInactiveBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
 	}
 
 	@OnlyIn(Dist.CLIENT)

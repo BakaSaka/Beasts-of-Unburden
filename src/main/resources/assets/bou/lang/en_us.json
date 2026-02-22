@@ -97,5 +97,7 @@
   "entity.bou.top_animal_chest_entity": "Animal Shop Chest Hidden",
   "entity.bou.chest_entity": "Chest",
   "item.bou.parrot_1": "Cyan Parrot Villager Key",
-  "item.bou.parrot_2": "Red Parrot Villager Key"
+  "item.bou.parrot_2": "Red Parrot Villager Key",
+  "item.bou.animal_shop_stall_spawn_egg": "Animal Shop Stall Spawn Egg",
+  "entity.bou.animal_shop_stall": "Animal Shop Stall"
 }

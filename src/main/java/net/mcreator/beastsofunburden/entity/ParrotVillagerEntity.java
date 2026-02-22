@@ -242,7 +242,7 @@ public class ParrotVillagerEntity extends Animal {
 		Entity entity = this;
 		Level world = this.level;
 
-		ChestCheckProcedure.execute(world, x, y, z, entity, sourceentity);
+		ChestCheckProcedure.execute();
 		return retval;
 	}
 

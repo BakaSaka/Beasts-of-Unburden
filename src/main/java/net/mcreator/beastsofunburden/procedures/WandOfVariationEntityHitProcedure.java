@@ -88,16 +88,10 @@ public class WandOfVariationEntityHitProcedure {
 					_datEntSetI.getEntityData().set(BabySpiderVillagerEntity.DATA_variant, (int) ((entity instanceof BabySpiderVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabySpiderVillagerEntity.DATA_variant) : 0) % 7 + 1));
 				if (entity instanceof DragonVillagerEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(DragonVillagerEntity.DATA_variant, (int) ((entity instanceof DragonVillagerEntity _datEntI ? _datEntI.getEntityData().get(DragonVillagerEntity.DATA_variant) : 0) % 12 + 1));
-				if (entity instanceof SquidVillagerEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(SquidVillagerEntity.DATA_variant, (int) ((entity instanceof SquidVillagerEntity _datEntI ? _datEntI.getEntityData().get(SquidVillagerEntity.DATA_variant) : 0) % 5 + 1));
-				if (entity instanceof AnimalChestEntityEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(AnimalChestEntityEntity.DATA_variant, (int) ((entity instanceof AnimalChestEntityEntity _datEntI ? _datEntI.getEntityData().get(AnimalChestEntityEntity.DATA_variant) : 0) % 11 + 1));
-				if (entity instanceof TopAnimalChestEntityEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(TopAnimalChestEntityEntity.DATA_variant, (int) ((entity instanceof TopAnimalChestEntityEntity _datEntI ? _datEntI.getEntityData().get(TopAnimalChestEntityEntity.DATA_variant) : 0) % 11 + 1));
-				if (entity instanceof DragonVillagerEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(DragonVillagerEntity.DATA_variant, (int) ((entity instanceof DragonVillagerEntity _datEntI ? _datEntI.getEntityData().get(DragonVillagerEntity.DATA_variant) : 0) % 12 + 1));
 				if (entity instanceof BabyDragonVillagerEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(BabyDragonVillagerEntity.DATA_variant, (int) ((entity instanceof BabyDragonVillagerEntity _datEntI ? _datEntI.getEntityData().get(BabyDragonVillagerEntity.DATA_variant) : 0) % 12 + 1));
+				if (entity instanceof SquidVillagerEntity _datEntSetI)
+					_datEntSetI.getEntityData().set(SquidVillagerEntity.DATA_variant, (int) ((entity instanceof SquidVillagerEntity _datEntI ? _datEntI.getEntityData().get(SquidVillagerEntity.DATA_variant) : 0) % 5 + 1));
 			}
 		}
 	}

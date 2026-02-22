@@ -52,7 +52,7 @@ public class Modelanimal_chest_entity<T extends Entity> extends EntityModel<T> {
 						new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -1.0F, 1.0F, -0.3927F, 0.0F, 0.0F));
 
-		PartDefinition screen_r1 = up_frame.addOrReplaceChild("screen_r1",
+		PartDefinition head_r1 = up_frame.addOrReplaceChild("head_r1",
 				CubeListBuilder.create().texOffs(40, 51).mirror()
 						.addBox(-5.5F, -10.0F, 0.0F, 11.0F, 9.5F, 0.0F, new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offsetAndRotation(0.0F, 1.0F, 0.0F, -0.3927F, 0.0F, 0.0F));
@@ -83,6 +83,8 @@ public class Modelanimal_chest_entity<T extends Entity> extends EntityModel<T> {
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch) {
-		this.up_frame.zRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
+		this.top.yRot = ageInTicks;
+		this.bottom_entity.yRot = ageInTicks;
+		this.up_frame.zRot = ageInTicks / 20.f;
 	}
 }
